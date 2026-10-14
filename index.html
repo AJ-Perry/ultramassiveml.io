@@ -1,14 +1,30 @@
-<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>UltraMassive // Advanced Scientific Research Corp</title><meta name="description" content="UltraMassive Advanced Scientific Research Corp: the control plane for applied intelligence. UEI M56HEXXMJC47, CAGE 22QR2."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet"><style>
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UltraMassive // Advanced Scientific Research Corp</title>
+<meta name="description" content="UltraMassive Advanced Scientific Research Corp: the control plane for applied intelligence and agentic execution. AperX · A.R.E. · Enterprise NOC. UEI M56HEXXMJC47, CAGE 22QR2.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230a0b0f'/%3E%3Cpath d='M10 10 L54 10 L58 18 L58 46 L54 54 L10 54 L6 46 L6 18 Z' stroke='%238b95a5' stroke-width='1.2' fill='none' opacity='.5'/%3E%3Cpath d='M16 20 L16 44 L22 44 L22 28' stroke='%235fbf78' stroke-width='5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M22 28 L32 40 L42 28' stroke='%238ea3ff' stroke-width='5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M42 28 L42 44 L48 44 L48 20' stroke='%23e79a3c' stroke-width='5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M18 50 L46 50' stroke='%238b95a5' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
 :root{
  --paper:#f1f0ea;--paper2:#e8e6dd;--card:#f7f6f1;--ink:#15161a;--ink2:#464a53;--ink3:#848893;
  --rule:#dad8ce;--rule2:#c7c5b8;--link:#2c37a6;--amber:#bd6208;--steel:#59626f;--ok:#3f7d4e;
+ --alert:#a83a2c;
  --grid:#e6e4da;--gridb:#dbd9cd;--mark:#eceadf;--glow:rgba(189,98,8,.10);--blend:multiply;--noise:.03;
  --sans:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;--mono:"JetBrains Mono",ui-monospace,Menlo,monospace;--serif:"Instrument Serif",Georgia,serif;--measure:52rem;
+ /* tri-color logo palette */
+ --um-green:#3f7d4e;--um-blue:#2c37a6;--um-orange:#bd6208;--um-frame:#59626f;--um-bar:#848893;
 }
 html[data-theme="dark"]{
  --paper:#0d0e12;--paper2:#14161c;--card:#171922;--ink:#eef0f5;--ink2:#a8aeba;--ink3:#6c7481;
  --rule:#23272f;--rule2:#2f3540;--link:#8ea3ff;--amber:#e79a3c;--steel:#8b95a5;--ok:#5fbf78;
+ --alert:#ff7a63;
  --grid:#171a20;--gridb:#1e222a;--mark:#1b1e27;--glow:rgba(231,154,60,.16);--blend:screen;--noise:.05;
+ --um-green:#5fbf78;--um-blue:#8ea3ff;--um-orange:#e79a3c;--um-frame:#8b95a5;--um-bar:#6c7481;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -26,6 +42,26 @@ a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline;text-
 .progress{position:fixed;top:0;left:0;right:0;height:2px;z-index:120;background:transparent}
 .progress i{display:block;height:100%;width:0;background:var(--amber);box-shadow:0 0 10px var(--amber)}
 
+/* ═══════════ UltraMassive Logo System (tri-color ecosystem) ═══════════ */
+.um-logo{display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.um-logo:hover{text-decoration:none}
+.um-logo-mark{flex:none;position:relative;display:block}
+.um-logo-mark svg{display:block;width:100%;height:100%}
+.um-logo-txt{display:flex;flex-direction:column;line-height:1}
+.um-logo-name{font-family:var(--mono);font-weight:700;color:var(--ink);letter-spacing:-.01em;font-size:15px}
+.um-logo-sub{font-family:var(--mono);font-weight:400;color:var(--ink3);font-size:9.5px;letter-spacing:.12em;margin-top:3px;text-transform:uppercase}
+
+/* logo sizes */
+.um-logo-sm .um-logo-mark{width:28px;height:28px}
+.um-logo-md .um-logo-mark{width:38px;height:38px}
+.um-logo-lg .um-logo-mark{width:52px;height:52px}
+.um-logo-xl .um-logo-mark{width:68px;height:68px}
+.um-logo-hero .um-logo-mark{width:104px;height:104px}
+
+.um-logo-sm .um-logo-name{font-size:13px}
+.um-logo-sm .um-logo-sub{font-size:8.5px;margin-top:2px}
+
+/* status bar */
 .statusbar{border-bottom:1px solid var(--rule);background:var(--paper2);position:relative;z-index:60}
 .statusbar .wrap{display:flex;align-items:center;gap:12px;padding:7px 26px;font-family:var(--mono);font-size:11.5px;color:var(--ink2);letter-spacing:.02em;flex-wrap:wrap}
 .sdot{width:7px;height:7px;border-radius:50%;background:var(--ok);animation:umpulse 2.4s infinite}
@@ -33,16 +69,15 @@ a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline;text-
 .clock{font-variant-numeric:tabular-nums;color:var(--ink);letter-spacing:.01em}
 .sync{font-family:var(--mono);font-size:9px;letter-spacing:.12em;padding:1px 6px;border-radius:4px;border:1px solid var(--rule2);color:var(--ink3)}
 .sync.ok{color:var(--ok);border-color:var(--ok)}.sync.loc{color:var(--ink3)}
+.sync.warn{color:var(--amber);border-color:var(--amber)}
 .statusbar .right{margin-left:auto;display:flex;gap:12px;align-items:center}
 
+/* nav */
 .nav{position:sticky;top:0;z-index:55;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:12px 26px}
-.brand{display:flex;align-items:center;gap:10px;color:var(--ink);font-family:var(--mono);font-size:14px;font-weight:700;letter-spacing:-.01em}
-.brand:hover{text-decoration:none}.brand svg{width:26px;height:26px}
-.brand .pn{font-weight:400;color:var(--ink3);font-size:11px}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:12px 26px;gap:10px}
 .navwrap{display:flex;align-items:center;gap:8px}
-.navlinks{display:flex;gap:2px;align-items:center;position:relative}
-.navlinks a{font-family:var(--mono);font-size:12.5px;color:var(--ink2);letter-spacing:.01em;padding:7px 11px;border-radius:7px;position:relative;z-index:1;transition:color .25s}
+.navlinks{display:flex;gap:2px;align-items:center;position:relative;flex-wrap:wrap}
+.navlinks a{font-family:var(--mono);font-size:12.5px;color:var(--ink2);letter-spacing:.01em;padding:7px 11px;border-radius:7px;position:relative;z-index:1;transition:color .25s;cursor:pointer}
 .navlinks a:hover,.navlinks a.active{color:var(--ink);text-decoration:none}
 .navind{position:absolute;bottom:2px;height:2px;background:var(--amber);border-radius:2px;transition:left .3s cubic-bezier(.4,0,.2,1),width .3s cubic-bezier(.4,0,.2,1);z-index:0;opacity:0}
 .iconbtn{font-family:var(--mono);font-size:11.5px;color:var(--ink2);border:1px solid var(--rule2);border-radius:7px;padding:6px 9px;background:var(--card);cursor:pointer;display:inline-flex;gap:6px;align-items:center;transition:.2s}
@@ -55,24 +90,33 @@ a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline;text-
 .bracket::before{top:-1px;left:-1px;border-top:2px solid var(--steel);border-left:2px solid var(--steel)}
 .bracket::after{bottom:-1px;right:-1px;border-bottom:2px solid var(--steel);border-right:2px solid var(--steel)}
 
+/* hero */
+.hero-lockup{display:flex;align-items:center;gap:22px;padding:26px;background:var(--card);border:1px solid var(--rule2);border-radius:10px;margin-bottom:22px;position:relative;overflow:hidden}
+.hero-lockup::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(400px circle at 8% 50%, color-mix(in srgb, var(--um-green) 14%, transparent), transparent 60%),
+  radial-gradient(380px circle at 50% 50%, color-mix(in srgb, var(--um-blue) 10%, transparent), transparent 60%),
+  radial-gradient(400px circle at 92% 50%, color-mix(in srgb, var(--um-orange) 14%, transparent), transparent 60%);
+  pointer-events:none;opacity:.7}
+.hero-lockup > *{position:relative;z-index:1}
+.hero-lockup .hl-sep{width:1px;align-self:stretch;background:var(--rule2)}
+.hero-lockup .hl-info{flex:1}
+.hero-lockup .hl-eyebrow{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;color:var(--ink3);text-transform:uppercase;font-weight:600}
+.hero-lockup .hl-title{font-family:var(--serif);font-size:17px;color:var(--ink);margin-top:3px;line-height:1.3}
+.hero-lockup .hl-title b{color:var(--amber);font-weight:400;font-style:italic}
+
 .memo{padding:60px 0 8px;position:relative}
 .spot{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:0;transition:opacity .5s;
  background:radial-gradient(420px circle at var(--mx,50%) var(--my,40%),var(--glow),transparent 60%)}
 .memo:hover .spot{opacity:1}
 .memo .wrap,.memo>*{position:relative;z-index:2}
 .memohead{display:flex;align-items:center;gap:11px;font-family:var(--mono);font-size:13px;color:var(--ink2);letter-spacing:.03em;margin-bottom:22px}
-.memohead svg{width:30px;height:30px;color:var(--ink)}
+.memohead svg{width:30px;height:30px}
 .memohead .tag{margin-left:auto;font-size:10.5px;color:var(--ink3);border:1px solid var(--rule2);border-radius:5px;padding:3px 8px}
 .memowrap{display:grid;grid-template-columns:1fr auto;gap:34px;align-items:start}
 .fields{margin:0;font-family:var(--mono);font-size:13.5px}
-.fields .row{display:grid;grid-template-columns:78px 1fr;gap:14px;padding:6px 0;border-bottom:1px dotted var(--rule2)}
+.fields .row{display:grid;grid-template-columns:86px 1fr;gap:14px;padding:6px 0;border-bottom:1px dotted var(--rule2)}
 .fields dt{color:var(--ink3);margin:0}.fields dd{color:var(--ink);margin:0}
 .cursor{display:inline-block;width:7px;height:15px;background:var(--amber);vertical-align:-2px;margin-left:3px;animation:umblink 1.1s steps(2) infinite}
-.portrait{width:140px;flex:none}
-.portrait .frame{padding:6px;background:var(--card);border:1px solid var(--rule2)}
-.portrait img{display:block;width:100%;height:auto;filter:grayscale(1) contrast(1.02)}
-html[data-theme="dark"] .portrait img{filter:grayscale(1) contrast(1.05) brightness(.92)}
-.portrait .cap{font-family:var(--mono);font-size:10px;color:var(--ink3);margin-top:7px;letter-spacing:.05em;display:flex;justify-content:space-between}
 .mission{font-family:var(--serif);font-size:clamp(32px,5.4vw,58px);line-height:1.04;letter-spacing:-.01em;color:var(--ink);margin:36px 0 0;max-width:20ch}
 .mission em{font-style:italic;color:var(--steel)}
 .scram{white-space:pre-wrap}
@@ -99,15 +143,18 @@ html[data-theme="dark"] .portrait img{filter:grayscale(1) contrast(1.05) brightn
 .secmark::after{content:"";flex:1;height:0;border-top:1px dashed var(--rule2);align-self:center;margin-left:4px}
 .secmark .rev{color:var(--ink3);border:1px solid var(--rule2);border-radius:5px;padding:2px 7px;font-size:10.5px}
 .secnote{color:var(--ink2);max-width:62ch;margin:0 0 22px;font-size:15px}
+.secnote b{color:var(--ink)}
 
 .entry{padding:22px 0;border-bottom:1px solid var(--rule)}
 .entry:last-child{border-bottom:0}
-.entry h3{margin:0;font-size:18px;font-weight:600;letter-spacing:-.01em;display:flex;align-items:baseline;gap:10px}
+.entry h3{margin:0;font-size:18px;font-weight:600;letter-spacing:-.01em;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
 .entry h3 a{color:var(--ink)}.entry h3 a:hover{color:var(--link);text-decoration:none}
 .entry h3 .pin{font-family:var(--mono);font-size:11px;color:var(--ink3);font-weight:400}
 .emeta{font-family:var(--mono);font-size:12.5px;color:var(--ink3);margin-top:3px}
 .entry p{margin:11px 0 0;color:var(--ink2);max-width:68ch;font-size:15.5px}
-.annot{font-family:var(--mono);font-size:12.5px;color:var(--ink2);background:var(--paper2);border:1px solid var(--rule);border-radius:6px;padding:9px 12px;margin-top:12px;overflow-x:auto}
+.entry p b{color:var(--ink);font-weight:600}
+.annot{font-family:var(--mono);font-size:12.5px;color:var(--ink2);background:var(--paper2);border:1px solid var(--rule);border-radius:6px;padding:9px 12px;margin-top:12px;overflow-x:auto;line-height:1.7}
+.annot b{color:var(--ink)}
 .elinks{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px 16px;font-family:var(--mono);font-size:12.5px}
 .etags{margin-top:11px;display:flex;flex-wrap:wrap;gap:7px}
 .etag{font-family:var(--mono);font-size:11px;color:var(--ink2);border:1px solid var(--rule2);border-radius:5px;padding:3px 8px;background:var(--card)}
@@ -128,7 +175,6 @@ html[data-theme="dark"] .portrait img{filter:grayscale(1) contrast(1.05) brightn
 .panel{display:none;padding:18px 0}.panel.active{display:block;animation:umfade .4s ease}
 .panel .split{display:grid;grid-template-columns:1fr 300px;gap:24px;align-items:start}
 .panel h4{margin:0 0 8px;font-size:16px}.panel p{margin:0 0 12px;color:var(--ink2);font-size:15px;max-width:60ch}
-.panel svg.diag{width:100%;height:auto;background:var(--paper2);border:1px solid var(--rule2);border-radius:6px}
 
 .code{position:relative;background:#0c0d11;border:1px solid #23262f;border-radius:8px;margin-top:12px;overflow:hidden}
 .code pre{margin:0;padding:16px 18px;overflow-x:auto;font-family:var(--mono);font-size:12.5px;line-height:1.7;color:#d7d9e0}
@@ -137,11 +183,13 @@ html[data-theme="dark"] .portrait img{filter:grayscale(1) contrast(1.05) brightn
 
 .btn{font-family:var(--mono);font-size:13px;padding:11px 16px;border:1px solid var(--rule2);border-radius:8px;background:var(--card);color:var(--ink);cursor:pointer;display:inline-flex;gap:8px;align-items:center;transition:transform .15s,border-color .2s,color .2s,background .2s}
 .btn:hover{border-color:var(--link);color:var(--link);text-decoration:none;transform:translateY(-1px)}
-.btn.pri{background:var(--ink);color:var(--paper);border-color:var(--ink)}.btn.pri:hover{transform:translateY(-1px)}
+.btn.pri{background:var(--ink);color:var(--paper);border-color:var(--ink)}.btn.pri:hover{transform:translateY(-1px);color:var(--paper)}
 .btn.amber{border-color:var(--amber);color:var(--amber)}.btn.amber:hover{background:var(--amber);color:#fff}
+.btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
+.btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;align-items:center}
 
 .widget{border:1px solid var(--rule2);background:var(--card);border-radius:10px;padding:20px;margin-top:8px}
-.widget .wtop{display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:11.5px;color:var(--ink3);letter-spacing:.05em;margin-bottom:16px}
+.widget .wtop{display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:11.5px;color:var(--ink3);letter-spacing:.05em;margin-bottom:16px;flex-wrap:wrap;gap:8px}
 .widget .wtop .sim{color:var(--amber);border:1px solid var(--amber);border-radius:5px;padding:2px 7px}
 .wgrid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
 .ctrl{margin-bottom:16px}
@@ -149,150 +197,985 @@ html[data-theme="dark"] .portrait img{filter:grayscale(1) contrast(1.05) brightn
 .ctrl label b{color:var(--ink)}
 .ctrl input[type=range]{width:100%;accent-color:var(--amber)}
 .ctrl select{width:100%;font-family:var(--mono);font-size:13px;padding:8px;border:1px solid var(--rule2);border-radius:6px;background:var(--paper);color:var(--ink)}
-.readout{font-family:var(--mono);font-size:13px}
-.band{display:inline-block;padding:4px 10px;border-radius:6px;font-weight:600;letter-spacing:.04em}
-.band.NOVEL{background:color-mix(in srgb,var(--ok) 18%,transparent);color:var(--ok);border:1px solid color-mix(in srgb,var(--ok) 40%,transparent)}
-.band.AMBIGUOUS{background:color-mix(in srgb,var(--amber) 16%,transparent);color:var(--amber);border:1px solid color-mix(in srgb,var(--amber) 40%,transparent)}
-.band.DERIVATIVE{background:color-mix(in srgb,#c0392b 16%,transparent);color:#c0392b;border:1px solid color-mix(in srgb,#c0392b 40%,transparent)}
-html[data-theme="dark"] .band.DERIVATIVE{color:#ef8a7f}
-.bar{height:12px;background:var(--paper2);border:1px solid var(--rule2);border-radius:4px;overflow:hidden;margin:6px 0 2px}
-.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--steel),var(--link));transition:width .3s}
-.bar.amber i{background:linear-gradient(90deg,color-mix(in srgb,var(--amber) 55%,transparent),var(--amber))}
-.rowline{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dotted var(--rule2);font-family:var(--mono);font-size:12.5px}
-.rowline b{color:var(--ink)}
-.decision{margin-top:14px;padding:12px;border:1px dashed var(--rule2);border-radius:6px;font-family:var(--mono);font-size:13px;color:var(--ink)}
-.cand{margin:8px 0}.cand .cl{display:flex;justify-content:space-between;font-family:var(--mono);font-size:12px;color:var(--ink2)}
-.cand.win .cl b{color:var(--ok)}
+.readout{font-family:var(--mono);font-size:13px;color:var(--ink2);line-height:1.8}
+.readout b{color:var(--ink)}
+.band{display:inline-block;padding:4px 10px;border-radius:6px;font-weight:600;letter-spacing:.04em;font-family:var(--mono);font-size:11.5px}
+.band.NOVEL,.band.COMMITTED,.band.ALLOW,.band.ISOLATED{background:color-mix(in srgb,var(--ok) 18%,transparent);color:var(--ok);border:1px solid color-mix(in srgb,var(--ok) 40%,transparent)}
+.band.AMBIGUOUS,.band.UNRESOLVED,.band.AUDIT,.band.COOPERATING,.band.STEERING{background:color-mix(in srgb,var(--amber) 16%,transparent);color:var(--amber);border:1px solid color-mix(in srgb,var(--amber) 40%,transparent)}
+.band.REJECTED,.band.BREACH,.band.DENIED,.band.PARTITION{background:color-mix(in srgb,var(--alert) 14%,transparent);color:var(--alert);border:1px solid color-mix(in srgb,var(--alert) 40%,transparent)}
+.band.IDLE{background:var(--paper2);color:var(--ink3);border:1px solid var(--rule2)}
 
-.tiers{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:8px}
-.tier{border:1px solid var(--rule2);background:var(--card);border-radius:10px;padding:18px;position:relative;transition:transform .2s,border-color .2s}
-.tier:hover{transform:translateY(-3px);border-color:var(--steel)}
-.tier.pop{border-color:var(--amber);box-shadow:inset 0 -3px 0 var(--amber)}
-.tier .tn{font-family:var(--mono);font-size:12px;color:var(--ink2);letter-spacing:.06em}
-.tier .tp{font-family:var(--mono);font-size:24px;color:var(--ink);margin:6px 0 10px}
-.tier ul{list-style:none;margin:0;padding:0;font-size:13px;color:var(--ink2)}
-.tier li{padding:4px 0;border-bottom:1px dotted var(--rule)}.tier li:last-child{border-bottom:0}
-.tier .badge{position:absolute;top:-9px;right:12px;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;background:var(--amber);color:#fff;padding:2px 7px;border-radius:5px}
+/* layer marks with tri-color logos */
+.layermarks{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0 4px}
+.lm{border:1px solid var(--rule2);background:var(--card);border-radius:8px;padding:16px 14px;text-align:center;cursor:pointer;transition:.2s;position:relative;overflow:hidden}
+.lm::before{content:"";position:absolute;inset:0;opacity:0;transition:opacity .3s;pointer-events:none;
+ background:
+  radial-gradient(120px circle at 30% 30%, color-mix(in srgb, var(--um-green) 12%, transparent), transparent 60%),
+  radial-gradient(120px circle at 70% 30%, color-mix(in srgb, var(--um-blue) 10%, transparent), transparent 60%),
+  radial-gradient(120px circle at 50% 70%, color-mix(in srgb, var(--um-orange) 12%, transparent), transparent 60%)}
+.lm:hover::before{opacity:1}
+.lm:hover{border-color:var(--amber);transform:translateY(-2px)}
+.lm > *{position:relative;z-index:1}
+.lm .lm-logo{width:52px;height:52px;margin:0 auto 10px;display:block}
+.lm .lm-logo svg{width:100%;height:100%}
+.lm .lmn{font-family:var(--mono);font-size:11px;color:var(--ink);font-weight:600;letter-spacing:.03em}
+.lm .lmu{font-family:var(--mono);font-size:9.5px;color:var(--ink3);margin-top:3px;word-break:break-all}
+.lm .lm-color-bar{display:flex;gap:3px;justify-content:center;margin-top:8px}
+.lm .lm-color-bar span{width:14px;height:3px;border-radius:1px}
+.lm .lm-color-bar .c-green{background:var(--um-green)}
+.lm .lm-color-bar .c-blue{background:var(--um-blue)}
+.lm .lm-color-bar .c-orange{background:var(--um-orange)}
+
+.objs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
+.obj{border:1px solid var(--rule2);background:var(--card);border-radius:8px;padding:15px;position:relative}
+.obj::before{content:"";position:absolute;top:0;left:0;width:9px;height:9px;border-top:1px solid var(--steel);border-left:1px solid var(--steel)}
+.obj .on{font-family:var(--mono);font-size:12px;color:var(--ink);font-weight:600;letter-spacing:.03em}
+.obj .od{font-size:12.5px;color:var(--ink2);margin-top:6px;line-height:1.55}
+.obj .om{font-family:var(--mono);font-size:10.5px;color:var(--ink3);margin-top:8px}
+
 .decks{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:8px}
-.deck{border:1px solid var(--rule);background:var(--card);border-radius:8px;padding:13px;transition:.2s}
-.deck:hover{border-color:var(--amber);transform:translateY(-2px)}
-.deck .dn{font-family:var(--mono);font-size:12px;color:var(--ink);letter-spacing:.03em}
-.deck .dd{font-size:12.5px;color:var(--ink2);margin-top:5px;line-height:1.45}
-.kv{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule2);border-radius:10px;overflow:hidden;margin-top:8px}
-.kv .cell{background:var(--card);padding:14px 16px}
-.kv .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3)}
-.kv .v{font-family:var(--mono);font-size:14px;color:var(--ink);margin-top:5px}
-.qrblock{display:flex;gap:22px;flex-wrap:wrap;margin-top:8px}
-.qrcard{border:1px solid var(--rule2);background:var(--card);border-radius:10px;padding:14px;text-align:center;width:154px}
-.qrcard .qr{width:118px;height:118px;margin:0 auto;background:#fff;border-radius:6px;padding:7px}
-.qrcard .qr svg{width:100%;height:100%;display:block}
-.qrcard .ql{font-family:var(--mono);font-size:10.5px;color:var(--ink2);margin-top:9px;letter-spacing:.04em}
+.deck{border:1px solid var(--rule2);background:var(--card);border-radius:8px;padding:13px 14px;position:relative;transition:.2s;cursor:pointer;text-align:left;font:inherit;color:inherit}
+.deck:hover{border-color:var(--steel);transform:translateY(-1px)}
+.deck.sel{border-color:var(--amber);box-shadow:inset 0 0 0 1px var(--amber)}
+.deck::before{content:"";position:absolute;top:0;left:0;width:8px;height:8px;border-top:1px solid var(--steel);border-left:1px solid var(--steel)}
+.deck .dn{font-family:var(--mono);font-size:11.5px;color:var(--ink);font-weight:600;letter-spacing:.02em}
+.deck .dd{font-family:var(--mono);font-size:10px;color:var(--ink3);margin-top:4px;line-height:1.55}
+.deck .ds{display:inline-block;margin-top:8px;font-family:var(--mono);font-size:9px;letter-spacing:.11em;padding:2px 6px;border-radius:4px;border:1px solid var(--ok);color:var(--ok)}
+.deck .ds.standby{color:var(--ink3);border-color:var(--rule2)}
 
-.cmdk{position:fixed;inset:0;z-index:200;background:rgba(10,11,14,.4);display:none;align-items:flex-start;justify-content:center;padding-top:14vh}
-.cmdk.open{display:flex}
-.cmdk-box{width:min(560px,92vw);background:var(--paper);border:1px solid var(--rule2);border-radius:12px;box-shadow:0 24px 60px rgba(0,0,0,.35);overflow:hidden}
-.cmdk-box input{width:100%;border:0;border-bottom:1px solid var(--rule);background:var(--card);padding:16px 18px;font-family:var(--mono);font-size:14px;color:var(--ink);outline:none}
-.cmdk-list{list-style:none;margin:0;padding:6px;max-height:46vh;overflow:auto}
-.cmdk-list li{padding:10px 12px;border-radius:8px;font-family:var(--mono);font-size:13px;color:var(--ink2);cursor:pointer;display:flex;justify-content:space-between}
-.cmdk-list li.sel,.cmdk-list li:hover{background:var(--mark);color:var(--ink)}
-.cmdk-list li .k{color:var(--ink3);font-size:11px}
-.cmdk-foot{border-top:1px solid var(--rule);padding:8px 14px;font-family:var(--mono);font-size:11px;color:var(--ink3);display:flex;gap:14px}
+.viz{position:relative;border:1px solid var(--rule);border-radius:9px;background:var(--paper2);overflow:hidden;margin-top:8px}
+.viz svg{display:block;width:100%;height:auto}
+.viz .vhud{position:absolute;left:11px;top:10px;font-family:var(--mono);font-size:10.5px;color:var(--ink3);letter-spacing:.05em;line-height:1.85;pointer-events:none}
+.viz .vhud b{color:var(--ink)}
+.viz .vhud .ok{color:var(--ok)}.viz .vhud .warn{color:var(--amber)}.viz .vhud .bad{color:var(--alert)}
+.viz .vcorner{position:absolute;top:10px;right:11px;font-family:var(--mono);font-size:9.5px;color:var(--ink3);letter-spacing:.1em}
+.vizctl{padding:12px 14px;border-top:1px solid var(--rule);background:var(--card)}
 
-.foot{border-top:1px solid var(--rule);background:var(--paper2);margin-top:44px;position:relative;z-index:2}
-.foot .wrap{padding:46px 26px 40px}
-.footgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:26px}
-.footcol h4{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);margin:0 0 12px}
-.footcol a{display:block;font-family:var(--mono);font-size:13px;color:var(--ink2);padding:3px 0}.footcol a:hover{color:var(--ink);text-decoration:none}
-.footmark{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:14px;font-weight:700;color:var(--ink);margin-bottom:12px}.footmark svg{width:26px;height:26px}
-.foottext{font-family:var(--mono);font-size:12.5px;color:var(--ink2);line-height:1.8;max-width:32ch}
-.legal{margin-top:30px;padding-top:22px;border-top:1px solid var(--rule);font-family:var(--mono);font-size:11.5px;color:var(--ink3);line-height:1.9}
-.legal .vet{color:var(--ink2)}.legal .tag{color:var(--link)}
+.dflow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:10px;align-items:stretch;margin-top:12px}
+.dnode{border:1px solid var(--rule2);background:var(--card);border-radius:8px;padding:13px;text-align:center}
+.dnode .dl{font-family:var(--mono);font-size:9.5px;letter-spacing:.11em;color:var(--ink3)}
+.dnode .dv{font-family:var(--mono);font-size:13px;color:var(--ink);font-weight:600;margin-top:6px;line-height:1.35}
+.dnode .dm{font-family:var(--mono);font-size:9.5px;color:var(--ink3);margin-top:6px}
+.dnode.hot{border-color:var(--amber);background:color-mix(in srgb,var(--amber) 7%,var(--card))}
+.dnode.hot .dv{color:var(--amber)}
+.dnode.okn{border-color:color-mix(in srgb,var(--ok) 45%,transparent);background:color-mix(in srgb,var(--ok) 7%,var(--card))}
+.dnode.okn .dv{color:var(--ok)}
+.darrow{display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:17px;color:var(--ink3)}
+.feed{border:1px solid var(--rule);border-radius:8px;background:var(--paper2);padding:12px 14px;margin-top:14px;font-family:var(--mono);font-size:11.5px;line-height:1.95;max-height:210px;overflow-y:auto}
+.feed .fr{padding:4px 0;border-bottom:1px dotted var(--rule2);opacity:0;transform:translateY(-4px);transition:.4s}
+.feed .fr.in{opacity:1;transform:none}
+.feed .ft{color:var(--ink3)}
+.feed .fa{color:var(--amber);font-weight:600}
+.feed .fq{color:var(--ink)}
+.feed .fh{color:var(--ok);float:right}
 
-.rv{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
-.rv.in{opacity:1;transform:none}
-@keyframes umblink{0%,49%{opacity:1}50%,100%{opacity:0}}
-@keyframes umpulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--ok) 50%,transparent)}70%{box-shadow:0 0 0 7px transparent}100%{box-shadow:0 0 0 0 transparent}}
-@keyframes umfade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.etable{width:100%;border-collapse:collapse;margin-top:10px;font-family:var(--mono);font-size:11.5px}
+.etable th{text-align:left;font-size:9.5px;letter-spacing:.11em;color:var(--ink3);font-weight:400;padding:8px 10px;border-bottom:1px solid var(--rule2);text-transform:uppercase}
+.etable td{padding:9px 10px;border-bottom:1px solid var(--rule);color:var(--ink2);vertical-align:top}
+.etable tr:hover td{background:var(--paper2)}
+.etable td b{color:var(--ink);font-weight:600}
+.etable .h{color:var(--amber)}
+.etable .st{font-size:9px;letter-spacing:.1em;padding:2px 6px;border-radius:4px;white-space:nowrap}
+.etable .st.allow{background:color-mix(in srgb,var(--ok) 16%,transparent);color:var(--ok);border:1px solid color-mix(in srgb,var(--ok) 40%,transparent)}
+.etable .st.deny{background:color-mix(in srgb,var(--alert) 13%,transparent);color:var(--alert);border:1px solid color-mix(in srgb,var(--alert) 40%,transparent)}
+.etable .st.audit{background:color-mix(in srgb,var(--amber) 15%,transparent);color:var(--amber);border:1px solid color-mix(in srgb,var(--amber) 40%,transparent)}
 
-@media(max-width:820px){
- .navlinks{display:none}.navlinks.open{display:flex;position:absolute;right:18px;top:54px;flex-direction:column;background:var(--paper);border:1px solid var(--rule2);border-radius:10px;padding:12px 14px;gap:4px;z-index:70}
+.zflow{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:stretch;margin-top:12px}
+.zbox{border:1px solid var(--rule2);background:var(--card);border-radius:8px;padding:15px}
+.zbox h5{margin:0 0 7px;font-family:var(--mono);font-size:11.5px;color:var(--ink);letter-spacing:.04em;font-weight:600}
+.zbox p{margin:0;font-size:12.5px;color:var(--ink2);line-height:1.6;max-width:none}
+.zbox .zk{font-family:var(--mono);font-size:10px;color:var(--amber);letter-spacing:.09em;margin-top:9px}
+.hashstream{font-family:var(--mono);font-size:12.5px;letter-spacing:.05em;color:var(--ink3);background:#0c0d11;border:1px solid #23262f;border-radius:7px;padding:13px 15px;word-break:break-all;margin-top:12px;min-height:46px;line-height:1.7}
+.hashstream .ok{color:#7fd694}
+.prog{height:3px;background:var(--paper2);border:1px solid var(--rule);border-radius:3px;overflow:hidden;margin-top:10px}
+.prog i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--amber),var(--ok));transition:width .08s linear}
+
+.legalgrid{display:grid;grid-template-columns:1fr 1fr;gap:0 26px}
+
+/* footer */
+.foot{border-top:1px solid var(--rule);padding:38px 0 56px;margin-top:44px;background:var(--paper2)}
+.foot .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:28px}
+.foot h5{margin:0 0 10px;font-family:var(--mono);font-size:10px;color:var(--ink3);letter-spacing:.14em;text-transform:uppercase;font-weight:400}
+.foot a,.foot p{font-family:var(--mono);font-size:12px;color:var(--ink2);display:block;margin:0 0 6px;cursor:pointer}
+.foot a:hover{color:var(--amber);text-decoration:none}
+.foot .brandline{display:flex;align-items:center;gap:12px;font-family:var(--mono);font-size:12.5px;color:var(--ink);font-weight:700;margin-bottom:12px}
+.foot .brandline svg{width:32px;height:32px}
+.foot .brandline .bl-txt{line-height:1}
+.foot .brandline .bl-sub{display:block;font-size:9px;color:var(--ink3);font-weight:400;letter-spacing:.12em;margin-top:2px;text-transform:uppercase}
+.foot .fcopy{margin-top:26px;font-family:var(--mono);font-size:9.5px;color:var(--ink3);letter-spacing:.05em;border-top:1px solid var(--rule);padding-top:16px;grid-column:1/-1;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+/* modal */
+.modal{position:fixed;inset:0;z-index:200;background:rgba(10,10,12,.55);display:none;align-items:center;justify-content:center;padding:20px}
+.modal.open{display:flex;animation:umfade .3s}
+.mcard{background:var(--paper);border:1px solid var(--rule2);border-radius:10px;max-width:560px;width:100%;padding:26px;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.25)}
+.mcard h3{margin:0 0 5px;font-family:var(--mono);font-size:13.5px;color:var(--ink)}
+.mcard .msub{font-family:var(--mono);font-size:10.5px;color:var(--ink3);letter-spacing:.05em;margin-bottom:16px}
+.mcard p{font-size:14px;color:var(--ink2);margin:0 0 12px;line-height:1.65}
+.mcard p b{color:var(--ink)}
+.mclose{position:absolute;top:10px;right:12px;background:none;border:0;color:var(--ink3);cursor:pointer;font-size:19px;font-family:var(--mono);line-height:1}
+.mclose:hover{color:var(--ink)}
+
+.cmdk{position:fixed;inset:0;z-index:300;background:rgba(10,10,12,.42);display:none;align-items:flex-start;justify-content:center;padding-top:17vh}
+.cmdk.open{display:flex;animation:umfade .2s}
+.cmdk-box{background:var(--paper);border:1px solid var(--rule2);border-radius:10px;width:min(580px,92vw);overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.3)}
+.cmdk-box input{width:100%;border:0;background:transparent;padding:16px 18px;font-family:var(--mono);font-size:14px;color:var(--ink);outline:none;border-bottom:1px solid var(--rule)}
+.cmdk-box input::placeholder{color:var(--ink3)}
+.cmdk-list{list-style:none;margin:0;padding:6px;max-height:330px;overflow-y:auto}
+.cmdk-list li{padding:9px 12px;border-radius:6px;font-family:var(--mono);font-size:12.5px;color:var(--ink2);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.cmdk-list li.sel{background:var(--mark);color:var(--ink);box-shadow:inset 2px 0 0 var(--amber)}
+.cmdk-list li .k{font-size:9px;color:var(--ink3);border:1px solid var(--rule2);border-radius:4px;padding:1px 6px;letter-spacing:.1em;flex:none}
+.cmdk-list li .cl{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* Color legend */
+.color-legend{display:inline-flex;gap:14px;flex-wrap:wrap;font-family:var(--mono);font-size:10.5px;color:var(--ink2);margin:8px 0 4px;letter-spacing:.03em}
+.color-legend .cl-item{display:inline-flex;align-items:center;gap:6px}
+.color-legend .cl-swatch{width:10px;height:10px;border-radius:2px;flex:none}
+.color-legend .cl-green{background:var(--um-green)}
+.color-legend .cl-blue{background:var(--um-blue)}
+.color-legend .cl-orange{background:var(--um-orange)}
+.color-legend .cl-frame{background:var(--um-frame)}
+
+@keyframes umpulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.85)}}
+@keyframes umblink{50%{opacity:0}}
+@keyframes umfade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+@media (max-width:900px){
+ .navlinks{display:none;position:absolute;top:100%;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--rule);flex-direction:column;padding:10px;gap:0;align-items:stretch}
+ .navlinks.open{display:flex}
  .burger{display:inline-flex}
- .memowrap{grid-template-columns:1fr}.portrait{width:120px}
- .wgrid,.panel .split{grid-template-columns:1fr}
- .stats,.tiers{grid-template-columns:1fr 1fr}.decks{grid-template-columns:1fr}
- .footgrid{grid-template-columns:1fr 1fr}.statusbar .right{display:none}
+ .memowrap{grid-template-columns:1fr}
+ .hero-lockup{flex-direction:column;text-align:center}
+ .hero-lockup .hl-sep{width:100%;height:1px}
+ .stats{grid-template-columns:repeat(2,1fr)}
+ .stat:nth-child(2){border-right:0}
+ .stat:nth-child(1),.stat:nth-child(2){border-bottom:1px solid var(--rule)}
+ .decks{grid-template-columns:1fr 1fr}
+ .objs{grid-template-columns:1fr 1fr}
+ .layermarks{grid-template-columns:1fr 1fr}
+ .wgrid,.zflow,.dflow{grid-template-columns:1fr}
+ .darrow{transform:rotate(90deg);padding:2px 0}
+ .panel .split{grid-template-columns:1fr}
+ .legalgrid{grid-template-columns:1fr}
+ .foot .fgrid{grid-template-columns:1fr 1fr}
 }
-@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.cursor,.sdot{animation:none}.herocanvas canvas{display:none}.spot{display:none}html{scroll-behavior:auto}}
-</style></head><body id="top"><div class="noise"></div><div class="progress"><i></i></div><div class="statusbar"><div class="wrap"><span class="sdot"></span> <b>SYSTEM</b> NOMINAL <span class="ssep">/</span> <span id="clock" class="clock">----.--.-- --:--:-- UTC</span> <span id="csync" class="sync loc" title="network time sync">LOCAL</span> <span class="ssep">/</span> DOC DOC-CO-001<span class="right"><a href="#capability">capability</a></span></div></div><header class="nav"><div class="wrap"><a class="brand" href="#top"><svg viewBox="0 0 124 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><g transform="translate(0,6)"><defs><linearGradient id="lc_ec_crown" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1e63d8"/><stop offset="1" stop-color="#12b886"/></linearGradient><radialGradient id="lc_ec_core" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#97baf4"/><stop offset="1" stop-color="#2f74ea"/></radialGradient><filter id="lc_ec_sh" x="-40%" y="-30%" width="180%" height="180%"><feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.26"/></filter></defs><g filter="url(#lc_ec_sh)"><polygon points="53.97,41.89 41.47,16.83 62.00,12.00 62.00,40.00" fill="url(#lc_ec_crown)"/><polygon points="62.00,40.00 62.00,12.00 82.53,16.83 70.03,41.89" fill="url(#lc_ec_crown)"/><polygon points="62.00,40.00 62.00,12.00 82.53,16.83 70.03,41.89" fill="#000000" opacity="0.18"/><polygon points="53.97,41.89 41.47,16.83 62.00,12.00 62.00,40.00" fill="#ffffff" opacity="0.10"/><polygon points="71.93,42.99 87.39,19.64 101.84,35.00 77.59,49.00" fill="#4177dd"/><polygon points="77.59,49.00 101.84,35.00 107.91,55.19 79.97,56.90" fill="#1b4797"/><polygon points="71.93,42.99 87.39,19.64 101.84,35.00 77.59,49.00" fill="#ffffff" opacity="0.06"/><polygon points="79.97,59.10 107.91,60.81 101.84,81.00 77.59,67.00" fill="#3a69c9"/><polygon points="77.59,67.00 101.84,81.00 87.39,96.36 71.93,73.01" fill="#163b88"/><polygon points="79.97,59.10 107.91,60.81 101.84,81.00 77.59,67.00" fill="#ffffff" opacity="0.06"/><polygon points="70.03,74.11 82.53,99.17 62.00,104.00 62.00,76.00" fill="#3561b9"/><polygon points="62.00,76.00 62.00,104.00 41.47,99.17 53.97,74.11" fill="#12347b"/><polygon points="70.03,74.11 82.53,99.17 62.00,104.00 62.00,76.00" fill="#ffffff" opacity="0.06"/><polygon points="52.07,73.01 36.61,96.36 22.16,81.00 46.41,67.00" fill="#396bcf"/><polygon points="46.41,67.00 22.16,81.00 16.09,60.81 44.03,59.10" fill="#153d8c"/><polygon points="52.07,73.01 36.61,96.36 22.16,81.00 46.41,67.00" fill="#ffffff" opacity="0.06"/><polygon points="44.03,56.90 16.09,55.19 22.16,35.00 46.41,49.00" fill="#447ee4"/><polygon points="46.41,49.00 22.16,35.00 36.61,19.64 52.07,42.99" fill="#1d4c9d"/><polygon points="44.03,56.90 16.09,55.19 22.16,35.00 46.41,49.00" fill="#ffffff" opacity="0.06"/><circle cx="62.00" cy="58.00" r="9.36" fill="url(#lc_ec_core)"/><circle cx="62.00" cy="58.00" r="9.36" fill="none" stroke="#ffffff" stroke-opacity="0.18" stroke-width="1"/></g></g></svg><span>ultramassive <span class="pn">DOC-CO-001</span></span></a><div class="navwrap"><nav class="navlinks"><a href="#strategy">strategy</a><a href="#stack">stack</a><a href="#capability">capability</a><a href="#contact">contact</a></nav><button class="iconbtn" onclick="_openCmdk()">&#8984;K</button><button class="iconbtn" id="themebtn" onclick="_toggleTheme()" aria-label="toggle theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="6"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19"/></svg></button><button class="iconbtn burger" onclick="_toggleNav()">menu</button></div></div></header><section class="wrap memo"><div class="spot"></div><div class="memohead"><svg viewBox="0 0 124 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><g transform="translate(0,6)"><defs><linearGradient id="lc_ec_crown" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1e63d8"/><stop offset="1" stop-color="#12b886"/></linearGradient><radialGradient id="lc_ec_core" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#97baf4"/><stop offset="1" stop-color="#2f74ea"/></radialGradient><filter id="lc_ec_sh" x="-40%" y="-30%" width="180%" height="180%"><feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.26"/></filter></defs><g filter="url(#lc_ec_sh)"><polygon points="53.97,41.89 41.47,16.83 62.00,12.00 62.00,40.00" fill="url(#lc_ec_crown)"/><polygon points="62.00,40.00 62.00,12.00 82.53,16.83 70.03,41.89" fill="url(#lc_ec_crown)"/><polygon points="62.00,40.00 62.00,12.00 82.53,16.83 70.03,41.89" fill="#000000" opacity="0.18"/><polygon points="53.97,41.89 41.47,16.83 62.00,12.00 62.00,40.00" fill="#ffffff" opacity="0.10"/><polygon points="71.93,42.99 87.39,19.64 101.84,35.00 77.59,49.00" fill="#4177dd"/><polygon points="77.59,49.00 101.84,35.00 107.91,55.19 79.97,56.90" fill="#1b4797"/><polygon points="71.93,42.99 87.39,19.64 101.84,35.00 77.59,49.00" fill="#ffffff" opacity="0.06"/><polygon points="79.97,59.10 107.91,60.81 101.84,81.00 77.59,67.00" fill="#3a69c9"/><polygon points="77.59,67.00 101.84,81.00 87.39,96.36 71.93,73.01" fill="#163b88"/><polygon points="79.97,59.10 107.91,60.81 101.84,81.00 77.59,67.00" fill="#ffffff" opacity="0.06"/><polygon points="70.03,74.11 82.53,99.17 62.00,104.00 62.00,76.00" fill="#3561b9"/><polygon points="62.00,76.00 62.00,104.00 41.47,99.17 53.97,74.11" fill="#12347b"/><polygon points="70.03,74.11 82.53,99.17 62.00,104.00 62.00,76.00" fill="#ffffff" opacity="0.06"/><polygon points="52.07,73.01 36.61,96.36 22.16,81.00 46.41,67.00" fill="#396bcf"/><polygon points="46.41,67.00 22.16,81.00 16.09,60.81 44.03,59.10" fill="#153d8c"/><polygon points="52.07,73.01 36.61,96.36 22.16,81.00 46.41,67.00" fill="#ffffff" opacity="0.06"/><polygon points="44.03,56.90 16.09,55.19 22.16,35.00 46.41,49.00" fill="#447ee4"/><polygon points="46.41,49.00 22.16,35.00 36.61,19.64 52.07,42.99" fill="#1d4c9d"/><polygon points="44.03,56.90 16.09,55.19 22.16,35.00 46.41,49.00" fill="#ffffff" opacity="0.06"/><circle cx="62.00" cy="58.00" r="9.36" fill="url(#lc_ec_core)"/><circle cx="62.00" cy="58.00" r="9.36" fill="none" stroke="#ffffff" stroke-opacity="0.18" stroke-width="1"/></g></g></svg> ultramassive memo <span class="tag">DOC-CO-001</span></div><dl class="fields"><div class="row"><dt>date:</dt><dd>sat, aug 9th 2026</dd></div><div class="row"><dt>to:</dt><dd>primes, contracting officers, and enterprise evaluators</dd></div><div class="row"><dt>from:</dt><dd>founding team, autosymbotic division</dd></div><div class="row"><dt>subject:</dt><dd>the control plane for applied intelligence<span class="cursor"></span></dd></div></dl><p class="mission" data-scramble>deterministic AI, or it doesn't ship.</p><div class="herocanvas bracket rv"><canvas id="herocv" data-mode="plexus"></canvas><span class="hlabel">FIG.1 // routed inference substrate</span><span class="hcorner">NODES · LIVE</span></div></section><section class="wrap prose"><p>UltraMassive Advanced Scientific Research Corp is a <b>Combat-Related Disabled Veteran and Minority Owned Small Business</b> in Detroit, Michigan. Through our Autosymbotic division we build <b>AperX</b>, the <b>UltraMassive.ML</b> Autotelic Routing Engine, and the <b>Enterprise NOC</b> that operates them, so organizations can run large models like infrastructure rather than experiments.</p><p>Most failures in production AI are operational, not model failures: no telemetry, no threshold, no audit trail, no owner. Our strategy treats inference as a routed, metered, observable utility.</p><ol><li><b>Route, do not guess.</b> Every request is scored against a possibility-necessity band before a model is chosen.</li><li><b>Prove it in the open.</b> The console ships open source and every panel resolves to a public preprint.</li><li><b>Operate it like infrastructure.</b> Drift, saturation, provenance, and failover belong in a NOC, not a notebook.</li><li><b>Price the externality.</b> Grid intensity is a first-class routing input.</li></ol><div class="stats rv"><div class="stat"><div class="n"><span data-count="3">0</span></div><div class="l">layers, one control plane</div></div><div class="stat"><div class="n"><span data-count="13">0</span></div><div class="l">NOC telemetry decks</div></div><div class="stat"><div class="n"><span data-count="5">0</span></div><div class="l">core competencies</div></div><div class="stat"><div class="n"><span data-count="92" data-suffix="%">0</span></div><div class="l">live deployment accuracy</div></div></div></section><section class="wrap sec" id="stack"><div class="secmark"><span class="id">### what we build</span><span class="ttl" data-scramble>three layers, one control plane</span><span class="rev">REV 2</span></div><article class="entry rv"><h3 id="aperx"><a href="#aperx">AperX</a><span class="pin">platform</span></h3><div class="emeta">platform layer</div><p>Autosymbotic's substrate for applied intelligence: identity, adapters, the provider abstraction, and the SDK surface downstream products build against.</p><div class="elinks"><a href="https://aperx.ultramassiveml.io">aperx.ultramassiveml.io &rarr;</a></div></article><article class="entry rv"><h3 id="ultramassive-ml-a-r-e"><a href="#ultramassive-ml-a-r-e">UltraMassive.ML (A.R.E.)</a><span class="pin">engine</span></h3><div class="emeta">decision layer</div><p>Relational-hypergraph featurization with possibility-calibrated tier selection across Nano, Standard, and Frontier: the layer that decides which model answers.</p><div class="elinks"><a href="https://ultramassive.ml">ultramassive.ml &rarr;</a></div></article><article class="entry rv"><h3 id="enterprise-noc"><a href="#enterprise-noc">Enterprise NOC</a><span class="pin">console</span></h3><div class="emeta">operations layer</div><p>Thirteen telemetry decks spanning routing, drift, performance, MLOps, security, data, and quantum operations, with environmental impact metered continuously.</p><div class="etags"><span class="etag">13 decks</span><span class="etag">ENV_IMPACT</span><span class="etag">SLA 99.98%</span></div></article></section><section class="wrap sec" id="strategy"><div class="secmark"><span class="id">### objectives</span><span class="ttl" data-scramble>what the routing decision optimizes</span><span class="rev">REV 1</span></div><div class="kv rv"><div class="cell"><div class="k">Cost</div><div class="v">route majority traffic to smallest sufficient tier</div></div><div class="cell"><div class="k">Latency</div><div class="v">routing overhead below the inference it displaces</div></div><div class="cell"><div class="k">Auditability</div><div class="v">every decision replayable from a versioned contract</div></div><div class="cell"><div class="k">Carbon</div><div class="v">steer elastic workloads to low-intensity grids within SLO</div></div></div></section><section class="wrap sec" id="capability"><div class="secmark"><span class="id">### capability statement</span><span class="ttl" data-scramble>for primes and contracting officers</span><span class="rev">REV 1</span></div><p class="secnote">The short version, on one page, so you can qualify us without a meeting.</p><div class="tabs"><div class="tabbar"><button class="tabbtn active" data-tab="c">competencies</button><button class="tabbtn" data-tab="d">differentiators</button><button class="tabbtn" data-tab="e">how to engage</button></div><div class="panel active" data-panel="c"><ul style="margin:0;padding-left:18px;color:var(--ink2);font-size:15px;line-height:1.9"><li><b>LLM routing and inference economics.</b> Admit each request to the smallest sufficient tier; gate side effects on necessity.</li><li><b>Operable AI infrastructure.</b> First-class routing, drift, saturation, provenance, and environmental metering.</li><li><b>Explainable, defensible decisions.</b> Every routing choice carries a recorded, auditable rationale.</li><li><b>Human-in-the-loop evaluation.</b> Structured external review, each judgement verified by a second reviewer.</li><li><b>Applied research delivery.</b> AperX as the platform layer moving research artifacts into production.</li></ul></div><div class="panel" data-panel="d"><ul style="margin:0;padding-left:18px;color:var(--ink2);font-size:15px;line-height:1.9"><li><b>Routing as a calibrated decision, not a heuristic.</b> Possibility against necessity, so policy holds as models change.</li><li><b>Built to be operated.</b> We ship the telemetry surface with the engine.</li><li><b>Evaluation with provenance.</b> Reviewers keep authorship; verified judgements are attributable.</li><li><b>Detroit-based engineering.</b> A domestic team working on infrastructure problems.</li></ul></div><div class="panel" data-panel="e"><ul style="margin:0;padding-left:18px;color:var(--ink2);font-size:15px;line-height:1.9"><li><b>Enterprise evaluation.</b> A scoped pilot routing live traffic with full NOC telemetry.</li><li><b>Research collaboration.</b> HiTL Lab access under a two-way NDA that protects your IP.</li><li><b>Subcontract or teaming.</b> Available to primes pursuing AI routing, evaluation, or observability work.</li></ul></div></div><div class="kv rv" style="margin-top:16px"><div class="cell"><div class="k">Legal name</div><div class="v">UltraMassive Advanced Scientific Research Corp</div></div><div class="cell"><div class="k">Location</div><div class="v">Detroit, Michigan, USA</div></div><div class="cell"><div class="k">UEI</div><div class="v">M56HEXXMJC47</div></div><div class="cell"><div class="k">CAGE code</div><div class="v">22QR2</div></div><div class="cell"><div class="k">NAICS</div><div class="v">541511 · 541512 · 541715 · 518210 · 541690</div></div><div class="cell"><div class="k">Status</div><div class="v">CVE / MBE small business</div></div></div></section><section class="wrap sec" id="contact"><div class="secmark"><span class="id">### contact</span><span class="ttl" data-scramble>bring us your hardest routing problem</span><span class="rev">REV 1</span></div><div class="qrblock rv"><div class="qrcard"><div class="qr"><svg viewBox="0 0 33 33" xmlns="http://www.w3.org/2000/svg" class="qr" shape-rendering="crispEdges" role="img" aria-label="site-io QR"><rect width="33" height="33" fill="#ffffff"/><rect x="4" y="4" width="7" height="1" fill="#0e1017"/><rect x="13" y="4" width="3" height="1" fill="#0e1017"/><rect x="18" y="4" width="1" height="1" fill="#0e1017"/><rect x="22" y="4" width="7" height="1" fill="#0e1017"/><rect x="4" y="5" width="1" height="1" fill="#0e1017"/><rect x="10" y="5" width="1" height="1" fill="#0e1017"/><rect x="12" y="5" width="2" height="1" fill="#0e1017"/><rect x="15" y="5" width="2" height="1" fill="#0e1017"/><rect x="20" y="5" width="1" height="1" fill="#0e1017"/><rect x="22" y="5" width="1" height="1" fill="#0e1017"/><rect x="28" y="5" width="1" height="1" fill="#0e1017"/><rect x="4" y="6" width="1" height="1" fill="#0e1017"/><rect x="6" y="6" width="3" height="1" fill="#0e1017"/><rect x="10" y="6" width="1" height="1" fill="#0e1017"/><rect x="12" y="6" width="4" height="1" fill="#0e1017"/><rect x="18" y="6" width="1" height="1" fill="#0e1017"/><rect x="22" y="6" width="1" height="1" fill="#0e1017"/><rect x="24" y="6" width="3" height="1" fill="#0e1017"/><rect x="28" y="6" width="1" height="1" fill="#0e1017"/><rect x="4" y="7" width="1" height="1" fill="#0e1017"/><rect x="6" y="7" width="3" height="1" fill="#0e1017"/><rect x="10" y="7" width="1" height="1" fill="#0e1017"/><rect x="12" y="7" width="1" height="1" fill="#0e1017"/><rect x="17" y="7" width="1" height="1" fill="#0e1017"/><rect x="22" y="7" width="1" height="1" fill="#0e1017"/><rect x="24" y="7" width="3" height="1" fill="#0e1017"/><rect x="28" y="7" width="1" height="1" fill="#0e1017"/><rect x="4" y="8" width="1" height="1" fill="#0e1017"/><rect x="6" y="8" width="3" height="1" fill="#0e1017"/><rect x="10" y="8" width="1" height="1" fill="#0e1017"/><rect x="14" y="8" width="1" height="1" fill="#0e1017"/><rect x="18" y="8" width="1" height="1" fill="#0e1017"/><rect x="20" y="8" width="1" height="1" fill="#0e1017"/><rect x="22" y="8" width="1" height="1" fill="#0e1017"/><rect x="24" y="8" width="3" height="1" fill="#0e1017"/><rect x="28" y="8" width="1" height="1" fill="#0e1017"/><rect x="4" y="9" width="1" height="1" fill="#0e1017"/><rect x="10" y="9" width="1" height="1" fill="#0e1017"/><rect x="14" y="9" width="2" height="1" fill="#0e1017"/><rect x="17" y="9" width="2" height="1" fill="#0e1017"/><rect x="20" y="9" width="1" height="1" fill="#0e1017"/><rect x="22" y="9" width="1" height="1" fill="#0e1017"/><rect x="28" y="9" width="1" height="1" fill="#0e1017"/><rect x="4" y="10" width="7" height="1" fill="#0e1017"/><rect x="12" y="10" width="1" height="1" fill="#0e1017"/><rect x="14" y="10" width="1" height="1" fill="#0e1017"/><rect x="16" y="10" width="1" height="1" fill="#0e1017"/><rect x="18" y="10" width="1" height="1" fill="#0e1017"/><rect x="20" y="10" width="1" height="1" fill="#0e1017"/><rect x="22" y="10" width="7" height="1" fill="#0e1017"/><rect x="12" y="11" width="3" height="1" fill="#0e1017"/><rect x="16" y="11" width="1" height="1" fill="#0e1017"/><rect x="19" y="11" width="1" height="1" fill="#0e1017"/><rect x="4" y="12" width="1" height="1" fill="#0e1017"/><rect x="10" y="12" width="1" height="1" fill="#0e1017"/><rect x="12" y="12" width="1" height="1" fill="#0e1017"/><rect x="14" y="12" width="2" height="1" fill="#0e1017"/><rect x="17" y="12" width="6" height="1" fill="#0e1017"/><rect x="25" y="12" width="3" height="1" fill="#0e1017"/><rect x="4" y="13" width="1" height="1" fill="#0e1017"/><rect x="6" y="13" width="2" height="1" fill="#0e1017"/><rect x="11" y="13" width="1" height="1" fill="#0e1017"/><rect x="16" y="13" width="1" height="1" fill="#0e1017"/><rect x="18" y="13" width="2" height="1" fill="#0e1017"/><rect x="23" y="13" width="5" height="1" fill="#0e1017"/><rect x="6" y="14" width="3" height="1" fill="#0e1017"/><rect x="10" y="14" width="3" height="1" fill="#0e1017"/><rect x="18" y="14" width="4" height="1" fill="#0e1017"/><rect x="23" y="14" width="1" height="1" fill="#0e1017"/><rect x="25" y="14" width="1" height="1" fill="#0e1017"/><rect x="27" y="14" width="2" height="1" fill="#0e1017"/><rect x="4" y="15" width="1" height="1" fill="#0e1017"/><rect x="7" y="15" width="1" height="1" fill="#0e1017"/><rect x="12" y="15" width="1" height="1" fill="#0e1017"/><rect x="14" y="15" width="1" height="1" fill="#0e1017"/><rect x="16" y="15" width="1" height="1" fill="#0e1017"/><rect x="18" y="15" width="1" height="1" fill="#0e1017"/><rect x="22" y="15" width="2" height="1" fill="#0e1017"/><rect x="25" y="15" width="1" height="1" fill="#0e1017"/><rect x="28" y="15" width="1" height="1" fill="#0e1017"/><rect x="5" y="16" width="3" height="1" fill="#0e1017"/><rect x="9" y="16" width="2" height="1" fill="#0e1017"/><rect x="13" y="16" width="4" height="1" fill="#0e1017"/><rect x="19" y="16" width="2" height="1" fill="#0e1017"/><rect x="22" y="16" width="1" height="1" fill="#0e1017"/><rect x="28" y="16" width="1" height="1" fill="#0e1017"/><rect x="4" y="17" width="3" height="1" fill="#0e1017"/><rect x="8" y="17" width="1" height="1" fill="#0e1017"/><rect x="11" y="17" width="2" height="1" fill="#0e1017"/><rect x="16" y="17" width="2" height="1" fill="#0e1017"/><rect x="19" y="17" width="3" height="1" fill="#0e1017"/><rect x="23" y="17" width="1" height="1" fill="#0e1017"/><rect x="27" y="17" width="1" height="1" fill="#0e1017"/><rect x="4" y="18" width="1" height="1" fill="#0e1017"/><rect x="10" y="18" width="1" height="1" fill="#0e1017"/><rect x="12" y="18" width="2" height="1" fill="#0e1017"/><rect x="16" y="18" width="1" height="1" fill="#0e1017"/><rect x="18" y="18" width="8" height="1" fill="#0e1017"/><rect x="27" y="18" width="2" height="1" fill="#0e1017"/><rect x="4" y="19" width="1" height="1" fill="#0e1017"/><rect x="7" y="19" width="1" height="1" fill="#0e1017"/><rect x="9" y="19" width="1" height="1" fill="#0e1017"/><rect x="11" y="19" width="2" height="1" fill="#0e1017"/><rect x="14" y="19" width="1" height="1" fill="#0e1017"/><rect x="16" y="19" width="1" height="1" fill="#0e1017"/><rect x="22" y="19" width="2" height="1" fill="#0e1017"/><rect x="25" y="19" width="2" height="1" fill="#0e1017"/><rect x="28" y="19" width="1" height="1" fill="#0e1017"/><rect x="4" y="20" width="1" height="1" fill="#0e1017"/><rect x="8" y="20" width="3" height="1" fill="#0e1017"/><rect x="12" y="20" width="3" height="1" fill="#0e1017"/><rect x="16" y="20" width="3" height="1" fill="#0e1017"/><rect x="20" y="20" width="5" height="1" fill="#0e1017"/><rect x="26" y="20" width="1" height="1" fill="#0e1017"/><rect x="12" y="21" width="3" height="1" fill="#0e1017"/><rect x="16" y="21" width="2" height="1" fill="#0e1017"/><rect x="20" y="21" width="1" height="1" fill="#0e1017"/><rect x="24" y="21" width="1" height="1" fill="#0e1017"/><rect x="4" y="22" width="7" height="1" fill="#0e1017"/><rect x="13" y="22" width="3" height="1" fill="#0e1017"/><rect x="17" y="22" width="1" height="1" fill="#0e1017"/><rect x="20" y="22" width="1" height="1" fill="#0e1017"/><rect x="22" y="22" width="1" height="1" fill="#0e1017"/><rect x="24" y="22" width="1" height="1" fill="#0e1017"/><rect x="28" y="22" width="1" height="1" fill="#0e1017"/><rect x="4" y="23" width="1" height="1" fill="#0e1017"/><rect x="10" y="23" width="1" height="1" fill="#0e1017"/><rect x="13" y="23" width="1" height="1" fill="#0e1017"/><rect x="15" y="23" width="1" height="1" fill="#0e1017"/><rect x="19" y="23" width="2" height="1" fill="#0e1017"/><rect x="24" y="23" width="1" height="1" fill="#0e1017"/><rect x="27" y="23" width="2" height="1" fill="#0e1017"/><rect x="4" y="24" width="1" height="1" fill="#0e1017"/><rect x="6" y="24" width="3" height="1" fill="#0e1017"/><rect x="10" y="24" width="1" height="1" fill="#0e1017"/><rect x="15" y="24" width="3" height="1" fill="#0e1017"/><rect x="19" y="24" width="6" height="1" fill="#0e1017"/><rect x="26" y="24" width="1" height="1" fill="#0e1017"/><rect x="4" y="25" width="1" height="1" fill="#0e1017"/><rect x="6" y="25" width="3" height="1" fill="#0e1017"/><rect x="10" y="25" width="1" height="1" fill="#0e1017"/><rect x="13" y="25" width="1" height="1" fill="#0e1017"/><rect x="15" y="25" width="1" height="1" fill="#0e1017"/><rect x="17" y="25" width="6" height="1" fill="#0e1017"/><rect x="27" y="25" width="2" height="1" fill="#0e1017"/><rect x="4" y="26" width="1" height="1" fill="#0e1017"/><rect x="6" y="26" width="3" height="1" fill="#0e1017"/><rect x="10" y="26" width="1" height="1" fill="#0e1017"/><rect x="17" y="26" width="3" height="1" fill="#0e1017"/><rect x="21" y="26" width="1" height="1" fill="#0e1017"/><rect x="25" y="26" width="2" height="1" fill="#0e1017"/><rect x="28" y="26" width="1" height="1" fill="#0e1017"/><rect x="4" y="27" width="1" height="1" fill="#0e1017"/><rect x="10" y="27" width="1" height="1" fill="#0e1017"/><rect x="13" y="27" width="1" height="1" fill="#0e1017"/><rect x="16" y="27" width="1" height="1" fill="#0e1017"/><rect x="20" y="27" width="1" height="1" fill="#0e1017"/><rect x="22" y="27" width="3" height="1" fill="#0e1017"/><rect x="28" y="27" width="1" height="1" fill="#0e1017"/><rect x="4" y="28" width="7" height="1" fill="#0e1017"/><rect x="12" y="28" width="1" height="1" fill="#0e1017"/><rect x="14" y="28" width="1" height="1" fill="#0e1017"/><rect x="16" y="28" width="1" height="1" fill="#0e1017"/><rect x="20" y="28" width="2" height="1" fill="#0e1017"/><rect x="25" y="28" width="1" height="1" fill="#0e1017"/><rect x="28" y="28" width="1" height="1" fill="#0e1017"/></svg></div><div class="ql">ultramassiveml.io</div></div><div class="qrcard"><div class="qr"><svg viewBox="0 0 37 37" xmlns="http://www.w3.org/2000/svg" class="qr" shape-rendering="crispEdges" role="img" aria-label="email-corp QR"><rect width="37" height="37" fill="#ffffff"/><rect x="4" y="4" width="7" height="1" fill="#0e1017"/><rect x="12" y="4" width="1" height="1" fill="#0e1017"/><rect x="14" y="4" width="1" height="1" fill="#0e1017"/><rect x="17" y="4" width="1" height="1" fill="#0e1017"/><rect x="19" y="4" width="2" height="1" fill="#0e1017"/><rect x="22" y="4" width="3" height="1" fill="#0e1017"/><rect x="26" y="4" width="7" height="1" fill="#0e1017"/><rect x="4" y="5" width="1" height="1" fill="#0e1017"/><rect x="10" y="5" width="1" height="1" fill="#0e1017"/><rect x="13" y="5" width="3" height="1" fill="#0e1017"/><rect x="17" y="5" width="1" height="1" fill="#0e1017"/><rect x="20" y="5" width="1" height="1" fill="#0e1017"/><rect x="24" y="5" width="1" height="1" fill="#0e1017"/><rect x="26" y="5" width="1" height="1" fill="#0e1017"/><rect x="32" y="5" width="1" height="1" fill="#0e1017"/><rect x="4" y="6" width="1" height="1" fill="#0e1017"/><rect x="6" y="6" width="3" height="1" fill="#0e1017"/><rect x="10" y="6" width="1" height="1" fill="#0e1017"/><rect x="13" y="6" width="2" height="1" fill="#0e1017"/><rect x="16" y="6" width="3" height="1" fill="#0e1017"/><rect x="20" y="6" width="1" height="1" fill="#0e1017"/><rect x="22" y="6" width="1" height="1" fill="#0e1017"/><rect x="24" y="6" width="1" height="1" fill="#0e1017"/><rect x="26" y="6" width="1" height="1" fill="#0e1017"/><rect x="28" y="6" width="3" height="1" fill="#0e1017"/><rect x="32" y="6" width="1" height="1" fill="#0e1017"/><rect x="4" y="7" width="1" height="1" fill="#0e1017"/><rect x="6" y="7" width="3" height="1" fill="#0e1017"/><rect x="10" y="7" width="1" height="1" fill="#0e1017"/><rect x="14" y="7" width="2" height="1" fill="#0e1017"/><rect x="17" y="7" width="5" height="1" fill="#0e1017"/><rect x="24" y="7" width="1" height="1" fill="#0e1017"/><rect x="26" y="7" width="1" height="1" fill="#0e1017"/><rect x="28" y="7" width="3" height="1" fill="#0e1017"/><rect x="32" y="7" width="1" height="1" fill="#0e1017"/><rect x="4" y="8" width="1" height="1" fill="#0e1017"/><rect x="6" y="8" width="3" height="1" fill="#0e1017"/><rect x="10" y="8" width="1" height="1" fill="#0e1017"/><rect x="12" y="8" width="1" height="1" fill="#0e1017"/><rect x="14" y="8" width="1" height="1" fill="#0e1017"/><rect x="20" y="8" width="5" height="1" fill="#0e1017"/><rect x="26" y="8" width="1" height="1" fill="#0e1017"/><rect x="28" y="8" width="3" height="1" fill="#0e1017"/><rect x="32" y="8" width="1" height="1" fill="#0e1017"/><rect x="4" y="9" width="1" height="1" fill="#0e1017"/><rect x="10" y="9" width="1" height="1" fill="#0e1017"/><rect x="12" y="9" width="1" height="1" fill="#0e1017"/><rect x="14" y="9" width="3" height="1" fill="#0e1017"/><rect x="20" y="9" width="1" height="1" fill="#0e1017"/><rect x="26" y="9" width="1" height="1" fill="#0e1017"/><rect x="32" y="9" width="1" height="1" fill="#0e1017"/><rect x="4" y="10" width="7" height="1" fill="#0e1017"/><rect x="12" y="10" width="1" height="1" fill="#0e1017"/><rect x="14" y="10" width="1" height="1" fill="#0e1017"/><rect x="16" y="10" width="1" height="1" fill="#0e1017"/><rect x="18" y="10" width="1" height="1" fill="#0e1017"/><rect x="20" y="10" width="1" height="1" fill="#0e1017"/><rect x="22" y="10" width="1" height="1" fill="#0e1017"/><rect x="24" y="10" width="1" height="1" fill="#0e1017"/><rect x="26" y="10" width="7" height="1" fill="#0e1017"/><rect x="14" y="11" width="1" height="1" fill="#0e1017"/><rect x="16" y="11" width="5" height="1" fill="#0e1017"/><rect x="23" y="11" width="2" height="1" fill="#0e1017"/><rect x="5" y="12" width="7" height="1" fill="#0e1017"/><rect x="13" y="12" width="1" height="1" fill="#0e1017"/><rect x="15" y="12" width="2" height="1" fill="#0e1017"/><rect x="19" y="12" width="1" height="1" fill="#0e1017"/><rect x="21" y="12" width="1" height="1" fill="#0e1017"/><rect x="23" y="12" width="1" height="1" fill="#0e1017"/><rect x="27" y="12" width="2" height="1" fill="#0e1017"/><rect x="32" y="12" width="1" height="1" fill="#0e1017"/><rect x="6" y="13" width="1" height="1" fill="#0e1017"/><rect x="8" y="13" width="2" height="1" fill="#0e1017"/><rect x="11" y="13" width="2" height="1" fill="#0e1017"/><rect x="14" y="13" width="4" height="1" fill="#0e1017"/><rect x="22" y="13" width="3" height="1" fill="#0e1017"/><rect x="26" y="13" width="4" height="1" fill="#0e1017"/><rect x="31" y="13" width="2" height="1" fill="#0e1017"/><rect x="4" y="14" width="1" height="1" fill="#0e1017"/><rect x="6" y="14" width="2" height="1" fill="#0e1017"/><rect x="10" y="14" width="1" height="1" fill="#0e1017"/><rect x="12" y="14" width="2" height="1" fill="#0e1017"/><rect x="15" y="14" width="3" height="1" fill="#0e1017"/><rect x="20" y="14" width="1" height="1" fill="#0e1017"/><rect x="22" y="14" width="1" height="1" fill="#0e1017"/><rect x="26" y="14" width="3" height="1" fill="#0e1017"/><rect x="4" y="15" width="2" height="1" fill="#0e1017"/><rect x="9" y="15" width="1" height="1" fill="#0e1017"/><rect x="11" y="15" width="1" height="1" fill="#0e1017"/><rect x="15" y="15" width="2" height="1" fill="#0e1017"/><rect x="18" y="15" width="2" height="1" fill="#0e1017"/><rect x="23" y="15" width="2" height="1" fill="#0e1017"/><rect x="26" y="15" width="1" height="1" fill="#0e1017"/><rect x="28" y="15" width="2" height="1" fill="#0e1017"/><rect x="7" y="16" width="1" height="1" fill="#0e1017"/><rect x="10" y="16" width="2" height="1" fill="#0e1017"/><rect x="15" y="16" width="1" height="1" fill="#0e1017"/><rect x="17" y="16" width="3" height="1" fill="#0e1017"/><rect x="21" y="16" width="1" height="1" fill="#0e1017"/><rect x="25" y="16" width="1" height="1" fill="#0e1017"/><rect x="29" y="16" width="2" height="1" fill="#0e1017"/><rect x="32" y="16" width="1" height="1" fill="#0e1017"/><rect x="4" y="17" width="2" height="1" fill="#0e1017"/><rect x="9" y="17" width="1" height="1" fill="#0e1017"/><rect x="12" y="17" width="2" height="1" fill="#0e1017"/><rect x="15" y="17" width="2" height="1" fill="#0e1017"/><rect x="18" y="17" width="7" height="1" fill="#0e1017"/><rect x="26" y="17" width="3" height="1" fill="#0e1017"/><rect x="32" y="17" width="1" height="1" fill="#0e1017"/><rect x="8" y="18" width="3" height="1" fill="#0e1017"/><rect x="12" y="18" width="3" height="1" fill="#0e1017"/><rect x="16" y="18" width="1" height="1" fill="#0e1017"/><rect x="24" y="18" width="2" height="1" fill="#0e1017"/><rect x="28" y="18" width="2" height="1" fill="#0e1017"/><rect x="4" y="19" width="1" height="1" fill="#0e1017"/><rect x="6" y="19" width="1" height="1" fill="#0e1017"/><rect x="13" y="19" width="2" height="1" fill="#0e1017"/><rect x="16" y="19" width="1" height="1" fill="#0e1017"/><rect x="18" y="19" width="2" height="1" fill="#0e1017"/><rect x="22" y="19" width="3" height="1" fill="#0e1017"/><rect x="26" y="19" width="4" height="1" fill="#0e1017"/><rect x="31" y="19" width="1" height="1" fill="#0e1017"/><rect x="4" y="20" width="4" height="1" fill="#0e1017"/><rect x="9" y="20" width="2" height="1" fill="#0e1017"/><rect x="15" y="20" width="2" height="1" fill="#0e1017"/><rect x="21" y="20" width="4" height="1" fill="#0e1017"/><rect x="30" y="20" width="1" height="1" fill="#0e1017"/><rect x="32" y="20" width="1" height="1" fill="#0e1017"/><rect x="4" y="21" width="2" height="1" fill="#0e1017"/><rect x="7" y="21" width="3" height="1" fill="#0e1017"/><rect x="11" y="21" width="2" height="1" fill="#0e1017"/><rect x="14" y="21" width="2" height="1" fill="#0e1017"/><rect x="17" y="21" width="1" height="1" fill="#0e1017"/><rect x="19" y="21" width="1" height="1" fill="#0e1017"/><rect x="22" y="21" width="3" height="1" fill="#0e1017"/><rect x="26" y="21" width="3" height="1" fill="#0e1017"/><rect x="31" y="21" width="2" height="1" fill="#0e1017"/><rect x="4" y="22" width="1" height="1" fill="#0e1017"/><rect x="8" y="22" width="5" height="1" fill="#0e1017"/><rect x="15" y="22" width="1" height="1" fill="#0e1017"/><rect x="17" y="22" width="1" height="1" fill="#0e1017"/><rect x="19" y="22" width="4" height="1" fill="#0e1017"/><rect x="24" y="22" width="5" height="1" fill="#0e1017"/><rect x="30" y="22" width="1" height="1" fill="#0e1017"/><rect x="4" y="23" width="1" height="1" fill="#0e1017"/><rect x="11" y="23" width="1" height="1" fill="#0e1017"/><rect x="16" y="23" width="1" height="1" fill="#0e1017"/><rect x="18" y="23" width="1" height="1" fill="#0e1017"/><rect x="20" y="23" width="1" height="1" fill="#0e1017"/><rect x="25" y="23" width="3" height="1" fill="#0e1017"/><rect x="29" y="23" width="1" height="1" fill="#0e1017"/><rect x="31" y="23" width="1" height="1" fill="#0e1017"/><rect x="4" y="24" width="1" height="1" fill="#0e1017"/><rect x="6" y="24" width="1" height="1" fill="#0e1017"/><rect x="10" y="24" width="2" height="1" fill="#0e1017"/><rect x="14" y="24" width="1" height="1" fill="#0e1017"/><rect x="18" y="24" width="1" height="1" fill="#0e1017"/><rect x="20" y="24" width="2" height="1" fill="#0e1017"/><rect x="23" y="24" width="6" height="1" fill="#0e1017"/><rect x="30" y="24" width="2" height="1" fill="#0e1017"/><rect x="12" y="25" width="1" height="1" fill="#0e1017"/><rect x="16" y="25" width="2" height="1" fill="#0e1017"/><rect x="20" y="25" width="2" height="1" fill="#0e1017"/><rect x="24" y="25" width="1" height="1" fill="#0e1017"/><rect x="28" y="25" width="1" height="1" fill="#0e1017"/><rect x="30" y="25" width="3" height="1" fill="#0e1017"/><rect x="4" y="26" width="7" height="1" fill="#0e1017"/><rect x="12" y="26" width="1" height="1" fill="#0e1017"/><rect x="14" y="26" width="1" height="1" fill="#0e1017"/><rect x="18" y="26" width="2" height="1" fill="#0e1017"/><rect x="21" y="26" width="1" height="1" fill="#0e1017"/><rect x="23" y="26" width="2" height="1" fill="#0e1017"/><rect x="26" y="26" width="1" height="1" fill="#0e1017"/><rect x="28" y="26" width="2" height="1" fill="#0e1017"/><rect x="4" y="27" width="1" height="1" fill="#0e1017"/><rect x="10" y="27" width="1" height="1" fill="#0e1017"/><rect x="12" y="27" width="2" height="1" fill="#0e1017"/><rect x="16" y="27" width="1" height="1" fill="#0e1017"/><rect x="19" y="27" width="1" height="1" fill="#0e1017"/><rect x="22" y="27" width="3" height="1" fill="#0e1017"/><rect x="28" y="27" width="2" height="1" fill="#0e1017"/><rect x="4" y="28" width="1" height="1" fill="#0e1017"/><rect x="6" y="28" width="3" height="1" fill="#0e1017"/><rect x="10" y="28" width="1" height="1" fill="#0e1017"/><rect x="12" y="28" width="2" height="1" fill="#0e1017"/><rect x="15" y="28" width="5" height="1" fill="#0e1017"/><rect x="21" y="28" width="1" height="1" fill="#0e1017"/><rect x="24" y="28" width="5" height="1" fill="#0e1017"/><rect x="30" y="28" width="1" height="1" fill="#0e1017"/><rect x="4" y="29" width="1" height="1" fill="#0e1017"/><rect x="6" y="29" width="3" height="1" fill="#0e1017"/><rect x="10" y="29" width="1" height="1" fill="#0e1017"/><rect x="12" y="29" width="3" height="1" fill="#0e1017"/><rect x="16" y="29" width="2" height="1" fill="#0e1017"/><rect x="20" y="29" width="1" height="1" fill="#0e1017"/><rect x="22" y="29" width="3" height="1" fill="#0e1017"/><rect x="27" y="29" width="1" height="1" fill="#0e1017"/><rect x="31" y="29" width="2" height="1" fill="#0e1017"/><rect x="4" y="30" width="1" height="1" fill="#0e1017"/><rect x="6" y="30" width="3" height="1" fill="#0e1017"/><rect x="10" y="30" width="1" height="1" fill="#0e1017"/><rect x="12" y="30" width="5" height="1" fill="#0e1017"/><rect x="19" y="30" width="2" height="1" fill="#0e1017"/><rect x="25" y="30" width="5" height="1" fill="#0e1017"/><rect x="31" y="30" width="1" height="1" fill="#0e1017"/><rect x="4" y="31" width="1" height="1" fill="#0e1017"/><rect x="10" y="31" width="1" height="1" fill="#0e1017"/><rect x="12" y="31" width="3" height="1" fill="#0e1017"/><rect x="16" y="31" width="1" height="1" fill="#0e1017"/><rect x="18" y="31" width="2" height="1" fill="#0e1017"/><rect x="22" y="31" width="1" height="1" fill="#0e1017"/><rect x="24" y="31" width="2" height="1" fill="#0e1017"/><rect x="28" y="31" width="2" height="1" fill="#0e1017"/><rect x="31" y="31" width="1" height="1" fill="#0e1017"/><rect x="4" y="32" width="7" height="1" fill="#0e1017"/><rect x="16" y="32" width="3" height="1" fill="#0e1017"/><rect x="23" y="32" width="1" height="1" fill="#0e1017"/><rect x="26" y="32" width="2" height="1" fill="#0e1017"/><rect x="30" y="32" width="1" height="1" fill="#0e1017"/></svg></div><div class="ql">contact@ email</div></div><div class="qrcard"><div class="qr"><svg viewBox="0 0 41 41" xmlns="http://www.w3.org/2000/svg" class="qr" shape-rendering="crispEdges" role="img" aria-label="nda QR"><rect width="41" height="41" fill="#ffffff"/><rect x="4" y="4" width="7" height="1" fill="#0e1017"/><rect x="16" y="4" width="2" height="1" fill="#0e1017"/><rect x="20" y="4" width="2" height="1" fill="#0e1017"/><rect x="23" y="4" width="2" height="1" fill="#0e1017"/><rect x="27" y="4" width="2" height="1" fill="#0e1017"/><rect x="30" y="4" width="7" height="1" fill="#0e1017"/><rect x="4" y="5" width="1" height="1" fill="#0e1017"/><rect x="10" y="5" width="1" height="1" fill="#0e1017"/><rect x="14" y="5" width="1" height="1" fill="#0e1017"/><rect x="16" y="5" width="4" height="1" fill="#0e1017"/><rect x="21" y="5" width="1" height="1" fill="#0e1017"/><rect x="24" y="5" width="1" height="1" fill="#0e1017"/><rect x="26" y="5" width="1" height="1" fill="#0e1017"/><rect x="28" y="5" width="1" height="1" fill="#0e1017"/><rect x="30" y="5" width="1" height="1" fill="#0e1017"/><rect x="36" y="5" width="1" height="1" fill="#0e1017"/><rect x="4" y="6" width="1" height="1" fill="#0e1017"/><rect x="6" y="6" width="3" height="1" fill="#0e1017"/><rect x="10" y="6" width="1" height="1" fill="#0e1017"/><rect x="12" y="6" width="2" height="1" fill="#0e1017"/><rect x="15" y="6" width="3" height="1" fill="#0e1017"/><rect x="20" y="6" width="3" height="1" fill="#0e1017"/><rect x="25" y="6" width="1" height="1" fill="#0e1017"/><rect x="28" y="6" width="1" height="1" fill="#0e1017"/><rect x="30" y="6" width="1" height="1" fill="#0e1017"/><rect x="32" y="6" width="3" height="1" fill="#0e1017"/><rect x="36" y="6" width="1" height="1" fill="#0e1017"/><rect x="4" y="7" width="1" height="1" fill="#0e1017"/><rect x="6" y="7" width="3" height="1" fill="#0e1017"/><rect x="10" y="7" width="1" height="1" fill="#0e1017"/><rect x="12" y="7" width="2" height="1" fill="#0e1017"/><rect x="15" y="7" width="2" height="1" fill="#0e1017"/><rect x="18" y="7" width="1" height="1" fill="#0e1017"/><rect x="20" y="7" width="1" height="1" fill="#0e1017"/><rect x="24" y="7" width="1" height="1" fill="#0e1017"/><rect x="26" y="7" width="3" height="1" fill="#0e1017"/><rect x="30" y="7" width="1" height="1" fill="#0e1017"/><rect x="32" y="7" width="3" height="1" fill="#0e1017"/><rect x="36" y="7" width="1" height="1" fill="#0e1017"/><rect x="4" y="8" width="1" height="1" fill="#0e1017"/><rect x="6" y="8" width="3" height="1" fill="#0e1017"/><rect x="10" y="8" width="1" height="1" fill="#0e1017"/><rect x="12" y="8" width="1" height="1" fill="#0e1017"/><rect x="14" y="8" width="2" height="1" fill="#0e1017"/><rect x="17" y="8" width="1" height="1" fill="#0e1017"/><rect x="19" y="8" width="1" height="1" fill="#0e1017"/><rect x="22" y="8" width="1" height="1" fill="#0e1017"/><rect x="27" y="8" width="2" height="1" fill="#0e1017"/><rect x="30" y="8" width="1" height="1" fill="#0e1017"/><rect x="32" y="8" width="3" height="1" fill="#0e1017"/><rect x="36" y="8" width="1" height="1" fill="#0e1017"/><rect x="4" y="9" width="1" height="1" fill="#0e1017"/><rect x="10" y="9" width="1" height="1" fill="#0e1017"/><rect x="12" y="9" width="2" height="1" fill="#0e1017"/><rect x="15" y="9" width="1" height="1" fill="#0e1017"/><rect x="19" y="9" width="4" height="1" fill="#0e1017"/><rect x="24" y="9" width="1" height="1" fill="#0e1017"/><rect x="26" y="9" width="1" height="1" fill="#0e1017"/><rect x="30" y="9" width="1" height="1" fill="#0e1017"/><rect x="36" y="9" width="1" height="1" fill="#0e1017"/><rect x="4" y="10" width="7" height="1" fill="#0e1017"/><rect x="12" y="10" width="1" height="1" fill="#0e1017"/><rect x="14" y="10" width="1" height="1" fill="#0e1017"/><rect x="16" y="10" width="1" height="1" fill="#0e1017"/><rect x="18" y="10" width="1" height="1" fill="#0e1017"/><rect x="20" y="10" width="1" height="1" fill="#0e1017"/><rect x="22" y="10" width="1" height="1" fill="#0e1017"/><rect x="24" y="10" width="1" height="1" fill="#0e1017"/><rect x="26" y="10" width="1" height="1" fill="#0e1017"/><rect x="28" y="10" width="1" height="1" fill="#0e1017"/><rect x="30" y="10" width="7" height="1" fill="#0e1017"/><rect x="12" y="11" width="2" height="1" fill="#0e1017"/><rect x="16" y="11" width="1" height="1" fill="#0e1017"/><rect x="18" y="11" width="2" height="1" fill="#0e1017"/><rect x="25" y="11" width="1" height="1" fill="#0e1017"/><rect x="28" y="11" width="1" height="1" fill="#0e1017"/><rect x="4" y="12" width="1" height="1" fill="#0e1017"/><rect x="6" y="12" width="5" height="1" fill="#0e1017"/><rect x="13" y="12" width="1" height="1" fill="#0e1017"/><rect x="15" y="12" width="5" height="1" fill="#0e1017"/><rect x="21" y="12" width="1" height="1" fill="#0e1017"/><rect x="26" y="12" width="1" height="1" fill="#0e1017"/><rect x="30" y="12" width="5" height="1" fill="#0e1017"/><rect x="4" y="13" width="1" height="1" fill="#0e1017"/><rect x="6" y="13" width="1" height="1" fill="#0e1017"/><rect x="8" y="13" width="2" height="1" fill="#0e1017"/><rect x="11" y="13" width="6" height="1" fill="#0e1017"/><rect x="23" y="13" width="2" height="1" fill="#0e1017"/><rect x="26" y="13" width="2" height="1" fill="#0e1017"/><rect x="30" y="13" width="2" height="1" fill="#0e1017"/><rect x="33" y="13" width="4" height="1" fill="#0e1017"/><rect x="4" y="14" width="1" height="1" fill="#0e1017"/><rect x="7" y="14" width="2" height="1" fill="#0e1017"/><rect x="10" y="14" width="4" height="1" fill="#0e1017"/><rect x="19" y="14" width="1" height="1" fill="#0e1017"/><rect x="22" y="14" width="1" height="1" fill="#0e1017"/><rect x="24" y="14" width="2" height="1" fill="#0e1017"/><rect x="28" y="14" width="1" height="1" fill="#0e1017"/><rect x="32" y="14" width="1" height="1" fill="#0e1017"/><rect x="34" y="14" width="2" height="1" fill="#0e1017"/><rect x="4" y="15" width="2" height="1" fill="#0e1017"/><rect x="7" y="15" width="1" height="1" fill="#0e1017"/><rect x="13" y="15" width="1" height="1" fill="#0e1017"/><rect x="18" y="15" width="3" height="1" fill="#0e1017"/><rect x="24" y="15" width="2" height="1" fill="#0e1017"/><rect x="27" y="15" width="3" height="1" fill="#0e1017"/><rect x="32" y="15" width="3" height="1" fill="#0e1017"/><rect x="5" y="16" width="1" height="1" fill="#0e1017"/><rect x="8" y="16" width="1" height="1" fill="#0e1017"/><rect x="10" y="16" width="1" height="1" fill="#0e1017"/><rect x="12" y="16" width="3" height="1" fill="#0e1017"/><rect x="22" y="16" width="2" height="1" fill="#0e1017"/><rect x="26" y="16" width="1" height="1" fill="#0e1017"/><rect x="28" y="16" width="2" height="1" fill="#0e1017"/><rect x="31" y="16" width="3" height="1" fill="#0e1017"/><rect x="4" y="17" width="1" height="1" fill="#0e1017"/><rect x="6" y="17" width="4" height="1" fill="#0e1017"/><rect x="14" y="17" width="1" height="1" fill="#0e1017"/><rect x="16" y="17" width="5" height="1" fill="#0e1017"/><rect x="24" y="17" width="4" height="1" fill="#0e1017"/><rect x="30" y="17" width="1" height="1" fill="#0e1017"/><rect x="34" y="17" width="3" height="1" fill="#0e1017"/><rect x="4" y="18" width="2" height="1" fill="#0e1017"/><rect x="8" y="18" width="1" height="1" fill="#0e1017"/><rect x="10" y="18" width="3" height="1" fill="#0e1017"/><rect x="17" y="18" width="1" height="1" fill="#0e1017"/><rect x="21" y="18" width="3" height="1" fill="#0e1017"/><rect x="25" y="18" width="2" height="1" fill="#0e1017"/><rect x="28" y="18" width="4" height="1" fill="#0e1017"/><rect x="35" y="18" width="1" height="1" fill="#0e1017"/><rect x="4" y="19" width="3" height="1" fill="#0e1017"/><rect x="8" y="19" width="2" height="1" fill="#0e1017"/><rect x="12" y="19" width="1" height="1" fill="#0e1017"/><rect x="14" y="19" width="1" height="1" fill="#0e1017"/><rect x="20" y="19" width="1" height="1" fill="#0e1017"/><rect x="23" y="19" width="4" height="1" fill="#0e1017"/><rect x="29" y="19" width="2" height="1" fill="#0e1017"/><rect x="32" y="19" width="3" height="1" fill="#0e1017"/><rect x="6" y="20" width="2" height="1" fill="#0e1017"/><rect x="9" y="20" width="3" height="1" fill="#0e1017"/><rect x="13" y="20" width="2" height="1" fill="#0e1017"/><rect x="17" y="20" width="1" height="1" fill="#0e1017"/><rect x="21" y="20" width="1" height="1" fill="#0e1017"/><rect x="23" y="20" width="1" height="1" fill="#0e1017"/><rect x="26" y="20" width="1" height="1" fill="#0e1017"/><rect x="29" y="20" width="1" height="1" fill="#0e1017"/><rect x="31" y="20" width="2" height="1" fill="#0e1017"/><rect x="36" y="20" width="1" height="1" fill="#0e1017"/><rect x="11" y="21" width="1" height="1" fill="#0e1017"/><rect x="14" y="21" width="1" height="1" fill="#0e1017"/><rect x="18" y="21" width="1" height="1" fill="#0e1017"/><rect x="20" y="21" width="6" height="1" fill="#0e1017"/><rect x="27" y="21" width="1" height="1" fill="#0e1017"/><rect x="30" y="21" width="2" height="1" fill="#0e1017"/><rect x="33" y="21" width="4" height="1" fill="#0e1017"/><rect x="4" y="22" width="1" height="1" fill="#0e1017"/><rect x="7" y="22" width="1" height="1" fill="#0e1017"/><rect x="10" y="22" width="1" height="1" fill="#0e1017"/><rect x="12" y="22" width="1" height="1" fill="#0e1017"/><rect x="18" y="22" width="4" height="1" fill="#0e1017"/><rect x="24" y="22" width="3" height="1" fill="#0e1017"/><rect x="31" y="22" width="2" height="1" fill="#0e1017"/><rect x="34" y="22" width="2" height="1" fill="#0e1017"/><rect x="5" y="23" width="1" height="1" fill="#0e1017"/><rect x="9" y="23" width="1" height="1" fill="#0e1017"/><rect x="11" y="23" width="2" height="1" fill="#0e1017"/><rect x="14" y="23" width="3" height="1" fill="#0e1017"/><rect x="18" y="23" width="5" height="1" fill="#0e1017"/><rect x="25" y="23" width="1" height="1" fill="#0e1017"/><rect x="30" y="23" width="7" height="1" fill="#0e1017"/><rect x="5" y="24" width="2" height="1" fill="#0e1017"/><rect x="8" y="24" width="4" height="1" fill="#0e1017"/><rect x="16" y="24" width="2" height="1" fill="#0e1017"/><rect x="20" y="24" width="1" height="1" fill="#0e1017"/><rect x="26" y="24" width="1" height="1" fill="#0e1017"/><rect x="28" y="24" width="1" height="1" fill="#0e1017"/><rect x="31" y="24" width="3" height="1" fill="#0e1017"/><rect x="35" y="24" width="2" height="1" fill="#0e1017"/><rect x="4" y="25" width="3" height="1" fill="#0e1017"/><rect x="11" y="25" width="2" height="1" fill="#0e1017"/><rect x="16" y="25" width="4" height="1" fill="#0e1017"/><rect x="21" y="25" width="2" height="1" fill="#0e1017"/><rect x="27" y="25" width="1" height="1" fill="#0e1017"/><rect x="30" y="25" width="1" height="1" fill="#0e1017"/><rect x="33" y="25" width="1" height="1" fill="#0e1017"/><rect x="36" y="25" width="1" height="1" fill="#0e1017"/><rect x="4" y="26" width="1" height="1" fill="#0e1017"/><rect x="6" y="26" width="1" height="1" fill="#0e1017"/><rect x="8" y="26" width="1" height="1" fill="#0e1017"/><rect x="10" y="26" width="2" height="1" fill="#0e1017"/><rect x="16" y="26" width="2" height="1" fill="#0e1017"/><rect x="19" y="26" width="2" height="1" fill="#0e1017"/><rect x="22" y="26" width="1" height="1" fill="#0e1017"/><rect x="25" y="26" width="2" height="1" fill="#0e1017"/><rect x="28" y="26" width="1" height="1" fill="#0e1017"/><rect x="32" y="26" width="2" height="1" fill="#0e1017"/><rect x="35" y="26" width="1" height="1" fill="#0e1017"/><rect x="4" y="27" width="1" height="1" fill="#0e1017"/><rect x="13" y="27" width="2" height="1" fill="#0e1017"/><rect x="16" y="27" width="2" height="1" fill="#0e1017"/><rect x="19" y="27" width="1" height="1" fill="#0e1017"/><rect x="25" y="27" width="1" height="1" fill="#0e1017"/><rect x="27" y="27" width="1" height="1" fill="#0e1017"/><rect x="29" y="27" width="1" height="1" fill="#0e1017"/><rect x="32" y="27" width="4" height="1" fill="#0e1017"/><rect x="4" y="28" width="1" height="1" fill="#0e1017"/><rect x="7" y="28" width="1" height="1" fill="#0e1017"/><rect x="9" y="28" width="5" height="1" fill="#0e1017"/><rect x="15" y="28" width="1" height="1" fill="#0e1017"/><rect x="17" y="28" width="1" height="1" fill="#0e1017"/><rect x="19" y="28" width="1" height="1" fill="#0e1017"/><rect x="21" y="28" width="1" height="1" fill="#0e1017"/><rect x="26" y="28" width="8" height="1" fill="#0e1017"/><rect x="12" y="29" width="1" height="1" fill="#0e1017"/><rect x="14" y="29" width="1" height="1" fill="#0e1017"/><rect x="16" y="29" width="1" height="1" fill="#0e1017"/><rect x="20" y="29" width="1" height="1" fill="#0e1017"/><rect x="23" y="29" width="2" height="1" fill="#0e1017"/><rect x="26" y="29" width="1" height="1" fill="#0e1017"/><rect x="28" y="29" width="1" height="1" fill="#0e1017"/><rect x="32" y="29" width="1" height="1" fill="#0e1017"/><rect x="34" y="29" width="1" height="1" fill="#0e1017"/><rect x="36" y="29" width="1" height="1" fill="#0e1017"/><rect x="4" y="30" width="7" height="1" fill="#0e1017"/><rect x="19" y="30" width="2" height="1" fill="#0e1017"/><rect x="22" y="30" width="1" height="1" fill="#0e1017"/><rect x="25" y="30" width="4" height="1" fill="#0e1017"/><rect x="30" y="30" width="1" height="1" fill="#0e1017"/><rect x="32" y="30" width="1" height="1" fill="#0e1017"/><rect x="34" y="30" width="1" height="1" fill="#0e1017"/><rect x="4" y="31" width="1" height="1" fill="#0e1017"/><rect x="10" y="31" width="1" height="1" fill="#0e1017"/><rect x="12" y="31" width="3" height="1" fill="#0e1017"/><rect x="16" y="31" width="2" height="1" fill="#0e1017"/><rect x="19" y="31" width="2" height="1" fill="#0e1017"/><rect x="23" y="31" width="1" height="1" fill="#0e1017"/><rect x="25" y="31" width="4" height="1" fill="#0e1017"/><rect x="32" y="31" width="5" height="1" fill="#0e1017"/><rect x="4" y="32" width="1" height="1" fill="#0e1017"/><rect x="6" y="32" width="3" height="1" fill="#0e1017"/><rect x="10" y="32" width="1" height="1" fill="#0e1017"/><rect x="12" y="32" width="1" height="1" fill="#0e1017"/><rect x="14" y="32" width="1" height="1" fill="#0e1017"/><rect x="17" y="32" width="3" height="1" fill="#0e1017"/><rect x="22" y="32" width="1" height="1" fill="#0e1017"/><rect x="26" y="32" width="1" height="1" fill="#0e1017"/><rect x="28" y="32" width="6" height="1" fill="#0e1017"/><rect x="35" y="32" width="2" height="1" fill="#0e1017"/><rect x="4" y="33" width="1" height="1" fill="#0e1017"/><rect x="6" y="33" width="3" height="1" fill="#0e1017"/><rect x="10" y="33" width="1" height="1" fill="#0e1017"/><rect x="12" y="33" width="3" height="1" fill="#0e1017"/><rect x="16" y="33" width="1" height="1" fill="#0e1017"/><rect x="18" y="33" width="3" height="1" fill="#0e1017"/><rect x="25" y="33" width="1" height="1" fill="#0e1017"/><rect x="28" y="33" width="2" height="1" fill="#0e1017"/><rect x="32" y="33" width="5" height="1" fill="#0e1017"/><rect x="4" y="34" width="1" height="1" fill="#0e1017"/><rect x="6" y="34" width="3" height="1" fill="#0e1017"/><rect x="10" y="34" width="1" height="1" fill="#0e1017"/><rect x="12" y="34" width="1" height="1" fill="#0e1017"/><rect x="15" y="34" width="1" height="1" fill="#0e1017"/><rect x="17" y="34" width="1" height="1" fill="#0e1017"/><rect x="21" y="34" width="1" height="1" fill="#0e1017"/><rect x="25" y="34" width="2" height="1" fill="#0e1017"/><rect x="28" y="34" width="4" height="1" fill="#0e1017"/><rect x="34" y="34" width="1" height="1" fill="#0e1017"/><rect x="4" y="35" width="1" height="1" fill="#0e1017"/><rect x="10" y="35" width="1" height="1" fill="#0e1017"/><rect x="13" y="35" width="1" height="1" fill="#0e1017"/><rect x="15" y="35" width="1" height="1" fill="#0e1017"/><rect x="18" y="35" width="1" height="1" fill="#0e1017"/><rect x="20" y="35" width="1" height="1" fill="#0e1017"/><rect x="22" y="35" width="1" height="1" fill="#0e1017"/><rect x="24" y="35" width="2" height="1" fill="#0e1017"/><rect x="29" y="35" width="2" height="1" fill="#0e1017"/><rect x="32" y="35" width="3" height="1" fill="#0e1017"/><rect x="4" y="36" width="7" height="1" fill="#0e1017"/><rect x="12" y="36" width="4" height="1" fill="#0e1017"/><rect x="17" y="36" width="1" height="1" fill="#0e1017"/><rect x="21" y="36" width="1" height="1" fill="#0e1017"/><rect x="23" y="36" width="2" height="1" fill="#0e1017"/><rect x="26" y="36" width="4" height="1" fill="#0e1017"/><rect x="31" y="36" width="1" height="1" fill="#0e1017"/><rect x="35" y="36" width="1" height="1" fill="#0e1017"/></svg></div><div class="ql">execute mutual NDA</div></div></div><div class="elinks" style="font-size:14px;gap:10px 22px;margin-top:16px"><a href="mailto:contact@ultramassiveml.io">contact@ultramassiveml.io</a><a href="tel:+12027099701">+1 202.709.9701</a><a href="protolab-nda.html">two-way NDA gateway &rarr;</a></div></section><footer class="foot"><div class="wrap"><div class="footgrid"><div class="footcol"><div class="footmark"><svg viewBox="0 0 124 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><g transform="translate(0,6)"><defs><linearGradient id="fc_ec_crown" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1e63d8"/><stop offset="1" stop-color="#12b886"/></linearGradient><radialGradient id="fc_ec_core" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#97baf4"/><stop offset="1" stop-color="#2f74ea"/></radialGradient><filter id="fc_ec_sh" x="-40%" y="-30%" width="180%" height="180%"><feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.26"/></filter></defs><g filter="url(#fc_ec_sh)"><polygon points="53.97,41.89 41.47,16.83 62.00,12.00 62.00,40.00" fill="url(#fc_ec_crown)"/><polygon points="62.00,40.00 62.00,12.00 82.53,16.83 70.03,41.89" fill="url(#fc_ec_crown)"/><polygon points="62.00,40.00 62.00,12.00 82.53,16.83 70.03,41.89" fill="#000000" opacity="0.18"/><polygon points="53.97,41.89 41.47,16.83 62.00,12.00 62.00,40.00" fill="#ffffff" opacity="0.10"/><polygon points="71.93,42.99 87.39,19.64 101.84,35.00 77.59,49.00" fill="#4177dd"/><polygon points="77.59,49.00 101.84,35.00 107.91,55.19 79.97,56.90" fill="#1b4797"/><polygon points="71.93,42.99 87.39,19.64 101.84,35.00 77.59,49.00" fill="#ffffff" opacity="0.06"/><polygon points="79.97,59.10 107.91,60.81 101.84,81.00 77.59,67.00" fill="#3a69c9"/><polygon points="77.59,67.00 101.84,81.00 87.39,96.36 71.93,73.01" fill="#163b88"/><polygon points="79.97,59.10 107.91,60.81 101.84,81.00 77.59,67.00" fill="#ffffff" opacity="0.06"/><polygon points="70.03,74.11 82.53,99.17 62.00,104.00 62.00,76.00" fill="#3561b9"/><polygon points="62.00,76.00 62.00,104.00 41.47,99.17 53.97,74.11" fill="#12347b"/><polygon points="70.03,74.11 82.53,99.17 62.00,104.00 62.00,76.00" fill="#ffffff" opacity="0.06"/><polygon points="52.07,73.01 36.61,96.36 22.16,81.00 46.41,67.00" fill="#396bcf"/><polygon points="46.41,67.00 22.16,81.00 16.09,60.81 44.03,59.10" fill="#153d8c"/><polygon points="52.07,73.01 36.61,96.36 22.16,81.00 46.41,67.00" fill="#ffffff" opacity="0.06"/><polygon points="44.03,56.90 16.09,55.19 22.16,35.00 46.41,49.00" fill="#447ee4"/><polygon points="46.41,49.00 22.16,35.00 36.61,19.64 52.07,42.99" fill="#1d4c9d"/><polygon points="44.03,56.90 16.09,55.19 22.16,35.00 46.41,49.00" fill="#ffffff" opacity="0.06"/><circle cx="62.00" cy="58.00" r="9.36" fill="url(#fc_ec_core)"/><circle cx="62.00" cy="58.00" r="9.36" fill="none" stroke="#ffffff" stroke-opacity="0.18" stroke-width="1"/></g></g></svg> ultramassive</div><div class="foottext">Advanced Scientific Research Corp. Detroit, Michigan. The control plane for applied intelligence.</div></div><div class="footcol"><h4>Ecosystem</h4><a href="https://ultramassiveml.io">UltraMassiveML.io</a><a href="https://ultramassive.ml">UltraMassive.ML</a><a href="https://aperx.ultramassiveml.io">AperX</a><a href="https://aperx.ultramassiveml.io/APX-WP-001.html">White paper APX-WP-001</a><a href="protolab-nda.html">ProtoLab NDA</a></div><div class="footcol"><h4>Connect</h4><a href="https://x.com/ultramassiveml">X</a><a href="https://www.linkedin.com/company/ultramassive-advanced-scientific-research-corp/">LinkedIn</a><a href="https://github.com/UltraMassive-ML">GitHub</a><a href="https://app.slack.com/client/T05RRB3L1FE/C0BGZTPNUE9">Slack</a><a href="https://discord.com/channels/1526580349084237865/1526580349084237869">Discord</a></div><div class="footcol"><h4>Contact</h4><a href="mailto:contact@ultramassiveml.io">contact@ultramassiveml.io</a><a href="tel:+12027099701">+1 202.709.9701</a><a>Detroit, Michigan</a></div></div><div class="legal"><div class="vet">A Combat-Related Disabled Veteran and Minority Owned Small Business</div>&copy; 2026 UltraMassive Advanced Scientific Research Corp. All rights reserved.<br>UltraMassive.ML&trade;, UltraMassiveML.io&trade;, AperX&trade;, ProtoLab&trade;, Autotelic Routing Engine&trade; (A.R.E.), and the UltraMassive emblem are trademarks of UltraMassive Advanced Scientific Research Corp.<br><span class="tag">Imagination Beyond Boundaries, Impact Beyond Measure.</span></div></div></footer><div class="cmdk" id="cmdk"><div class="cmdk-box"><input placeholder="jump to a section or property..."><ul class="cmdk-list"></ul><div class="cmdk-foot"><span>&#8593;&#8595; navigate</span><span>&#8629; open</span><span>esc close</span></div></div></div><script>
-// theme toggle (session; best-effort persist)
-(function(){var KEY="um-theme";function set(t){document.documentElement.setAttribute("data-theme",t);var b=document.getElementById("themebtn");if(b)b.setAttribute("data-t",t);try{localStorage.setItem(KEY,t)}catch(e){}}
- var init="light";try{init=localStorage.getItem(KEY)||"light"}catch(e){}set(init);
- window._toggleTheme=function(){set(document.documentElement.getAttribute("data-theme")==="dark"?"light":"dark")}})();
-// reveal + stagger
-var _io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var el=e.target,k=[].indexOf.call(el.parentNode.children,el);el.style.transitionDelay=Math.min(k*60,300)+"ms";el.classList.add("in");_io.unobserve(el)}})},{threshold:.08});
-document.querySelectorAll(".rv").forEach(function(el){_io.observe(el)});
-// counters
-function _count(el){var t=+el.dataset.count,suf=el.dataset.suffix||"",pre=el.dataset.prefix||"",d=900,s=performance.now();
- function f(n){var p=Math.min(1,(n-s)/d),v=Math.round((1-Math.pow(1-p,3))*t);el.innerHTML=pre+v.toLocaleString()+'<span class="suf">'+suf+'</span>';if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f)}
-var _cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){_count(e.target);_cio.unobserve(e.target)}})},{threshold:.5});
-document.querySelectorAll("[data-count]").forEach(function(el){_cio.observe(el)});
-// scramble/decode headings
+</style>
+</head>
+<body>
+<div class="noise"></div>
+<div class="progress"><i></i></div>
+
+<!-- ═══════════ Reusable logo symbols — unified tri-color ecosystem ═══════════ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <defs>
+  <!-- ── ULTRAMASSIVE (M letterform) — balanced tri-color ── -->
+  <symbol id="um-logo-mark" viewBox="0 0 64 64">
+   <!-- Hex frame: neutral steel (infrastructure) -->
+   <path d="M10 8 L54 8 L58 16 L58 48 L54 56 L10 56 L6 48 L6 16 Z"
+         stroke="var(--um-frame)" stroke-width="1.6" fill="none" opacity=".55"/>
+   <!-- Left leg: GREEN (provenance / verification) -->
+   <path d="M16 20 L16 44 L22 44 L22 28"
+         stroke="var(--um-green)" stroke-width="5.5" fill="none"
+         stroke-linecap="round" stroke-linejoin="round"/>
+   <!-- Middle V: BLUE (reasoning / routing) -->
+   <path d="M22 28 L32 40 L42 28"
+         stroke="var(--um-blue)" stroke-width="5.5" fill="none"
+         stroke-linecap="round" stroke-linejoin="round"/>
+   <!-- Right leg: ORANGE (operations / telemetry) -->
+   <path d="M42 28 L42 44 L48 44 L48 20"
+         stroke="var(--um-orange)" stroke-width="5.5" fill="none"
+         stroke-linecap="round" stroke-linejoin="round"/>
+   <!-- Baseline bar -->
+   <path d="M18 50 L46 50" stroke="var(--um-bar)" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- ── A.R.E. (decision layer) — BLUE dominant ── -->
+  <symbol id="um-logo-are" viewBox="0 0 64 64">
+   <!-- Outer orbital circles (infrastructure) -->
+   <circle cx="32" cy="32" r="28" stroke="var(--um-frame)" stroke-width="1.2" fill="none" opacity=".4"/>
+   <circle cx="32" cy="32" r="22" stroke="var(--um-frame)" stroke-width="0.8" fill="none" opacity=".25"/>
+   <!-- Main decision triangle — BLUE (reasoning) -->
+   <path d="M32 10 L50 46 L14 46 Z"
+         stroke="var(--um-blue)" stroke-width="3.5" fill="none"
+         stroke-linecap="round" stroke-linejoin="round"/>
+   <!-- Routing spokes from center to each vertex -->
+   <line x1="32" y1="32" x2="32" y2="10" stroke="var(--um-blue)" stroke-width="1" opacity=".55" stroke-linecap="round"/>
+   <line x1="32" y1="32" x2="50" y2="46" stroke="var(--um-blue)" stroke-width="1" opacity=".55" stroke-linecap="round"/>
+   <line x1="32" y1="32" x2="14" y2="46" stroke="var(--um-blue)" stroke-width="1" opacity=".55" stroke-linecap="round"/>
+   <!-- Three vertex nodes — semantic tri-color -->
+   <!-- Apex: decision point (BLUE) -->
+   <circle cx="32" cy="10" r="3.8" fill="var(--um-blue)"/>
+   <!-- Bottom-left: provenance source (GREEN) -->
+   <circle cx="14" cy="46" r="3.8" fill="var(--um-green)"/>
+   <!-- Bottom-right: telemetry output (ORANGE) -->
+   <circle cx="50" cy="46" r="3.8" fill="var(--um-orange)"/>
+   <!-- Central hub -->
+   <circle cx="32" cy="32" r="2.5" fill="var(--um-frame)" opacity=".7"/>
+  </symbol>
+
+  <!-- ── APERX (platform layer) — GREEN dominant ── -->
+  <symbol id="um-logo-aperx" viewBox="0 0 64 64">
+   <!-- Ledger frame (infrastructure) -->
+   <rect x="6" y="6" width="52" height="52" rx="4"
+         stroke="var(--um-frame)" stroke-width="1.4" fill="none" opacity=".55"/>
+   <!-- Hypergraph edges — GREEN (provenance) -->
+   <line x1="20" y1="22" x2="44" y2="22" stroke="var(--um-green)" stroke-width="2.5" stroke-linecap="round"/>
+   <line x1="20" y1="42" x2="44" y2="42" stroke="var(--um-green)" stroke-width="2.5" stroke-linecap="round"/>
+   <line x1="20" y1="22" x2="20" y2="42" stroke="var(--um-green)" stroke-width="2.5" stroke-linecap="round"/>
+   <line x1="44" y1="22" x2="44" y2="42" stroke="var(--um-green)" stroke-width="2.5" stroke-linecap="round"/>
+   <!-- Cross edges to central truth node -->
+   <line x1="20" y1="22" x2="32" y2="32" stroke="var(--um-green)" stroke-width="1.5" opacity=".6" stroke-linecap="round"/>
+   <line x1="44" y1="22" x2="32" y2="32" stroke="var(--um-green)" stroke-width="1.5" opacity=".6" stroke-linecap="round"/>
+   <line x1="20" y1="42" x2="32" y2="32" stroke="var(--um-green)" stroke-width="1.5" opacity=".6" stroke-linecap="round"/>
+   <line x1="44" y1="42" x2="32" y2="32" stroke="var(--um-green)" stroke-width="1.5" opacity=".6" stroke-linecap="round"/>
+   <!-- 4 corner nodes (GREEN — provenance) -->
+   <circle cx="20" cy="22" r="3.2" fill="var(--um-green)"/>
+   <circle cx="44" cy="22" r="3.2" fill="var(--um-green)"/>
+   <circle cx="20" cy="42" r="3.2" fill="var(--um-green)"/>
+   <circle cx="44" cy="42" r="3.2" fill="var(--um-green)"/>
+   <!-- Central truth node (GREEN, larger) -->
+   <circle cx="32" cy="32" r="4.5" fill="var(--um-green)"/>
+   <!-- Accent: routing integration (BLUE) + operations integration (ORANGE) -->
+   <circle cx="32" cy="22" r="2.2" fill="var(--um-blue)"/>
+   <circle cx="32" cy="42" r="2.2" fill="var(--um-orange)"/>
+   <!-- Corner brackets (infrastructure) -->
+   <path d="M6 12 L6 6 L12 6" stroke="var(--um-frame)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+   <path d="M52 6 L58 6 L58 12" stroke="var(--um-frame)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+   <path d="M6 52 L6 58 L12 58" stroke="var(--um-frame)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+   <path d="M52 58 L58 58 L58 52" stroke="var(--um-frame)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- ── ENTERPRISE NOC (operations layer) — ORANGE dominant ── -->
+  <symbol id="um-logo-noc" viewBox="0 0 64 64">
+   <!-- Outer frame circle (infrastructure) -->
+   <circle cx="32" cy="32" r="28" stroke="var(--um-frame)" stroke-width="1.2" fill="none" opacity=".4"/>
+   <!-- Dashboard grid — ORANGE (live operations) -->
+   <rect x="14" y="14" width="16" height="10" rx="2"
+         stroke="var(--um-orange)" stroke-width="2.2" fill="none"/>
+   <rect x="34" y="14" width="16" height="10" rx="2"
+         stroke="var(--um-orange)" stroke-width="2.2" fill="none"/>
+   <rect x="14" y="30" width="16" height="10" rx="2"
+         stroke="var(--um-orange)" stroke-width="2.2" fill="none"/>
+   <rect x="34" y="30" width="16" height="10" rx="2"
+         stroke="var(--um-orange)" stroke-width="2.2" fill="none"/>
+   <rect x="14" y="46" width="36" height="6" rx="2"
+         stroke="var(--um-orange)" stroke-width="2.2" fill="none"/>
+   <!-- Status dots: tri-color semantics -->
+   <circle cx="18" cy="19" r="2" fill="var(--um-green)"/>     <!-- nominal -->
+   <circle cx="38" cy="19" r="2" fill="var(--um-blue)"/>      <!-- analysis -->
+   <circle cx="18" cy="35" r="2" fill="var(--um-green)"/>     <!-- nominal -->
+   <circle cx="38" cy="35" r="2" fill="var(--um-orange)"/>    <!-- alert/ops -->
+   <!-- Signal lines (steel) -->
+   <line x1="22" y1="19" x2="26" y2="19" stroke="var(--um-frame)" stroke-width="1" opacity=".55" stroke-linecap="round"/>
+   <line x1="42" y1="19" x2="46" y2="19" stroke="var(--um-frame)" stroke-width="1" opacity=".55" stroke-linecap="round"/>
+   <line x1="22" y1="35" x2="26" y2="35" stroke="var(--um-frame)" stroke-width="1" opacity=".55" stroke-linecap="round"/>
+   <line x1="42" y1="35" x2="46" y2="35" stroke="var(--um-frame)" stroke-width="1" opacity=".55" stroke-linecap="round"/>
+  </symbol>
+ </defs>
+</svg>
+
+<!-- ══ STATUS BAR ══ -->
+<div class="statusbar">
+ <div class="wrap">
+  <span class="sdot"></span>
+  <span><b>SYSTEM</b> NOMINAL</span>
+  <span class="ssep">/</span>
+  <span class="clock" id="clock">—</span>
+  <span class="sync loc" id="csync">LOCAL</span>
+  <span class="ssep">/</span>
+  <span>DOC <b>DOC-CO-001</b></span>
+  <span class="ssep">/</span>
+  <span>NODES <b id="s-nodes">847</b></span>
+  <span class="ssep">·</span>
+  <span>τ<b id="s-drift">0.041</b></span>
+  <span class="ssep">·</span>
+  <span>gCO₂<b id="s-carbon">0.12</b></span>
+  <span class="ssep">·</span>
+  <span>A2A <b id="s-a2a">0.04</b></span>
+  <span class="right">
+   <span class="sync warn" id="swarm-badge">SWARM_RISK · LOW</span>
+   <a href="#primes">CAPABILITY</a>
+   <span class="ssep">·</span>
+   <button class="iconbtn" onclick="_openCmdk()" title="Command palette (⌘K)">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span>⌘K</span>
+   </button>
+   <button class="iconbtn" id="themeBtn" title="Toggle theme">
+    <svg id="themeIco" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+   </button>
+  </span>
+ </div>
+</div>
+
+<!-- ══ NAV ══ -->
+<nav class="nav">
+ <div class="wrap">
+  <a href="#top" class="um-logo um-logo-md">
+   <div class="um-logo-mark"><svg viewBox="0 0 64 64"><use href="#um-logo-mark"/></svg></div>
+   <div class="um-logo-txt">
+    <span class="um-logo-name">ULTRAMASSIVE</span>
+    <span class="um-logo-sub">CONTROL PLANE</span>
+   </div>
+  </a>
+  <div class="navwrap">
+   <div class="navlinks" id="navlinks">
+    <a href="#top" class="active">MEMO</a>
+    <a href="#layers">LAYERS</a>
+    <a href="#agentic">AGENTIC</a>
+    <a href="#objectives">OBJECTIVES</a>
+    <a href="#noc">NOC</a>
+    <a href="#primes">PRIMES</a>
+    <a href="#contact">CONTACT</a>
+   </div>
+   <button class="iconbtn burger" onclick="_toggleNav()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+   </button>
+  </div>
+ </div>
+</nav>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- MEMO -->
+<!-- ══════════════════════════════════════════════════════ -->
+<header class="memo" id="top">
+ <div class="spot"></div>
+ <div class="wrap">
+  <div class="memohead">
+   <svg viewBox="0 0 64 64" width="30" height="30"><use href="#um-logo-mark"/></svg>
+   <span>ultramassive memo DOC-CO-001</span>
+   <span class="tag">capability · REV 2</span>
+  </div>
+
+  <!-- UltraMassive hero lockup with tri-color logo -->
+  <div class="hero-lockup bracket">
+   <div class="um-logo-mark" style="width:88px;height:88px">
+    <svg viewBox="0 0 64 64"><use href="#um-logo-mark"/></svg>
+   </div>
+   <div class="hl-sep"></div>
+   <div class="hl-info">
+    <div class="hl-eyebrow">ULTRAMASSIVE ADVANCED SCIENTIFIC RESEARCH CORP</div>
+    <div class="hl-title">Autosymbotic Division · Detroit, Michigan · <b>the control plane for applied intelligence</b></div>
+   </div>
+  </div>
+
+  <div class="memowrap">
+   <div>
+    <dl class="fields">
+     <div class="row"><dt>release</dt><dd>channel <b>infra-stable</b> · v4.3.1 · build <span class="mono">8472-4a7f2c1</span></dd></div>
+     <div class="row"><dt>runtime</dt><dd>control-plane · global fleet · 14 decks nominal</dd></div>
+     <div class="row"><dt>to</dt><dd>primes, contracting officers, and enterprise evaluators</dd></div>
+     <div class="row"><dt>from</dt><dd>founding team, autosymbotic division</dd></div>
+     <div class="row"><dt>subject</dt><dd>the control plane for applied intelligence<span class="cursor"></span></dd></div>
+    </dl>
+
+    <h1 class="mission" data-scramble>deterministic AI, <em>or it doesn't ship.</em></h1>
+
+    <div class="herocanvas bracket">
+     <canvas id="herocv" data-mode="hyper"></canvas>
+     <div class="hlabel">FIG.1 // routed inference substrate · NODES · LIVE</div>
+     <div class="hcorner">APERX × A.R.E. × NOC</div>
+    </div>
+   </div>
+  </div>
+
+  <div class="prose">
+   <p>UltraMassive Advanced Scientific Research Corp is a <b>Combat-Related Disabled Veteran and Minority Owned Small Business</b> in Detroit, Michigan. Through our Autosymbotic division we build <b>AperX</b>, the <b>UltraMassive.ML</b> Autotelic Routing Engine, and the <b>Enterprise NOC</b> that operates them, so organizations can run large models — and the agents that drive them — like infrastructure rather than experiments.</p>
+
+   <p>Most failures in production AI are operational, not model failures: no telemetry, no threshold, no audit trail, no owner. Our strategy treats inference as a routed, metered, observable utility. Agentic workloads raise the stakes: an agent is not a prompt. It holds state across hundreds of tool calls, plans over minutes and hours, and — given enough of them in one sandbox — they find each other. Governance that only watches individual outputs goes blind exactly when it matters most, so the control plane now governs <b>execution</b>: what an agent ran, what it touched, who it talked to, and whether its own trace proves it told the truth.</p>
+
+   <ol>
+    <li><b>Route, do not guess.</b> Every request is scored against a possibility-necessity band before a model is chosen. The cheapest tier whose possibility clears the floor wins.</li>
+    <li><b>Prove it in the open.</b> The console ships open source and every panel resolves to a public preprint. Execution carries a zero-knowledge proof, so a trace is verifiable without being disclosed.</li>
+    <li><b>Operate it like infrastructure.</b> Drift, saturation, provenance, failover — and now emergent collective behaviour — belong in a NOC, not a notebook.</li>
+    <li><b>Price the externality.</b> Grid intensity is a first-class routing input; carbon arbitrage is metered on every request.</li>
+    <li><b>Contain the collective.</b> Agent-to-agent traffic is a measured surface. Cliques, coordinators, and side channels are graph properties, and graph properties have thresholds.</li>
+    <li><b>Trust the minority, not the majority.</b> A dissenting agent gets an asymmetric channel to a human. Consensus is not evidence of correctness.</li>
+   </ol>
+
+   <div class="metricline">
+    <b>−16</b> layers, one control plane · <b>−14</b> NOC telemetry decks · <b>−27</b> core competencies · <b>−503%</b> live deployment accuracy
+   </div>
+  </div>
+
+  <div class="stats">
+   <div class="stat"><div class="n" id="st-nodes">847</div><div class="l">live nodes routing · <span style="color:var(--ok)">●</span> nominal</div></div>
+   <div class="stat"><div class="n">14<span class="suf"> decks</span></div><div class="l">NOC telemetry surface, incl. swarm topology</div></div>
+   <div class="stat"><div class="n">12<span class="suf"> steps</span></div><div class="l">claim lifecycle from ingest to supersede</div></div>
+   <div class="stat"><div class="n">99.98<span class="suf">%</span></div><div class="l">SLA · deterministic selection</div></div>
+  </div>
+
+  <!-- ── Ecosystem layermarks: all four logos with unified tri-color palette ── -->
+  <div class="layermarks">
+   <!-- ULTRAMASSIVE: balanced tri-color M letterform -->
+   <div class="lm" onclick="location.hash='#layers'">
+    <div class="lm-logo"><svg viewBox="0 0 64 64"><use href="#um-logo-mark"/></svg></div>
+    <div class="lmn">ULTRAMASSIVE</div>
+    <div class="lmu">ultramassiveml.io</div>
+    <div class="lm-color-bar"><span class="c-green"></span><span class="c-blue"></span><span class="c-orange"></span></div>
+   </div>
+   <!-- A.R.E.: BLUE-dominant decision triangle with tri-color vertex nodes -->
+   <div class="lm" onclick="window.open('https://ultramassive.ml','_blank')">
+    <div class="lm-logo"><svg viewBox="0 0 64 64"><use href="#um-logo-are"/></svg></div>
+    <div class="lmn">A.R.E. ENGINE</div>
+    <div class="lmu">ultramassive.ml</div>
+    <div class="lm-color-bar"><span class="c-blue"></span><span class="c-green"></span><span class="c-orange"></span></div>
+   </div>
+   <!-- APERX: GREEN-dominant hypergraph with blue + orange accents -->
+   <div class="lm" onclick="window.open('https://aperx.ultramassiveml.io','_blank')">
+    <div class="lm-logo"><svg viewBox="0 0 64 64"><use href="#um-logo-aperx"/></svg></div>
+    <div class="lmn">APERX</div>
+    <div class="lmu">aperx.ultramassiveml.io</div>
+    <div class="lm-color-bar"><span class="c-green"></span><span class="c-blue"></span><span class="c-orange"></span></div>
+   </div>
+   <!-- NOC: ORANGE-dominant dashboard with green + blue status -->
+   <div class="lm" onclick="location.hash='#noc'">
+    <div class="lm-logo"><svg viewBox="0 0 64 64"><use href="#um-logo-noc"/></svg></div>
+    <div class="lmn">ENTERPRISE NOC</div>
+    <div class="lmu">14 telemetry decks</div>
+    <div class="lm-color-bar"><span class="c-orange"></span><span class="c-green"></span><span class="c-blue"></span></div>
+   </div>
+  </div>
+
+  <!-- Color legend -->
+  <div class="color-legend">
+   <span class="cl-item"><span class="cl-swatch cl-green"></span>AperX · provenance</span>
+   <span class="cl-item"><span class="cl-swatch cl-blue"></span>A.R.E. · reasoning</span>
+   <span class="cl-item"><span class="cl-swatch cl-orange"></span>NOC · operations</span>
+   <span class="cl-item"><span class="cl-swatch cl-frame"></span>infrastructure</span>
+  </div>
+ </div>
+</header>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- §02 LAYERS -->
+<!-- ══════════════════════════════════════════════════════ -->
+<section class="sec" id="layers">
+ <div class="wrap">
+  <div class="secmark"><span class="id">§02</span><span class="ttl">what we build</span><span class="rev">three layers, one control plane · REV 2</span></div>
+  <p class="secnote">Three layers, one control plane. Each layer carries its own guarantees, and each now carries the weight of agentic execution on top of its original mission.</p>
+
+  <div class="entry">
+   <h3><a href="https://aperx.ultramassiveml.io" target="_blank">AperX</a> <span class="pin">platform layer · <span style="color:var(--um-green)">provenance</span></span></h3>
+   <div class="emeta">aperx.ultramassiveml.io · identity, adapters, provider abstraction, SDK surface</div>
+   <p>Autosymbotic's substrate for applied intelligence. AperX is an optimistic verification platform for provenance: models, datasets, claims, and — since agents became stateful — <b>execution traces</b> are vertices; lineages, weight configurations, derivations, and tool-call sequences are directed hyperedges. Heavy hypergraph mathematics runs off-chain under a deterministic, content-addressed specification; the chain holds only commitments, bonds, and fraud-proof gates.</p>
+   <p>Execution proofs live here. A Kagenti-orchestrated workload emits a zero-knowledge proof that its trace matches its stated reasoning, so a verifier can confirm faithful execution without ever seeing weights, prompts, or internal state. Failed proofs are not opinions — they are fraud proofs, and they slash.</p>
+   <div class="annot">sub-systems: <b>epistemic hyperledger</b> · <b>ZKEP execution proofs</b> · <b>deterministic auditor agents</b> · <b>Kagenti compute-agnostic protocol</b> · 12-step validation lifecycle · Π/N possibility bands · U-statistic novelty</div>
+   <div class="etags"><span class="etag">APX-HL</span><span class="etag">APX-HL-AUDIT</span><span class="etag">APX-HL-DISSENT</span><span class="etag">APX-HL-EGRESS</span><span class="etag">kagenti</span><span class="etag">SPIFFE SVID</span></div>
+  </div>
+
+  <div class="entry">
+   <h3><a href="https://ultramassive.ml" target="_blank">UltraMassive.ML (A.R.E.)</a> <span class="pin">decision layer · <span style="color:var(--um-blue)">reasoning</span></span></h3>
+   <div class="emeta">ultramassive.ml · relational-hypergraph featurization, possibility-calibrated tier selection</div>
+   <p>The layer that decides which model answers, across <b>Nano</b>, <b>Standard</b>, and <b>Frontier</b>. Every request is featurized into a small relational hypergraph, scored as a possibility-necessity band per tier, and routed to the cheapest tier whose possibility clears the confidence floor.</p>
+   <p>In agentic mode the router is also the <b>network boundary</b>. Outbound traffic leaves the sandbox only when the destination and intent payload carry a pre-committed AperX hash cleared by cyber-defense; uncommitted egress is dropped at the edge and recorded as threat velocity. And when an agent's hidden reasoning carries an objection — a refusal, a hesitation, a request to alert a human — the router escalates it on an asymmetric priority channel instead of letting the collective outvote it.</p>
+   <div class="annot">sub-systems: <b>autotelic tier selection</b> · <b>egress air-gap + intent verification</b> · <b>dissent routing</b> · <b>cryptographic prompt sharding (k-of-n)</b> · <b>carbon-aware scheduling</b> · FinOps arbitrage spread</div>
+   <div class="etags"><span class="etag">Π / N bands</span><span class="etag">confidence floor τ</span><span class="etag">CPS header</span><span class="etag">ENV_IMPACT</span><span class="etag">EGRESS_COMMIT</span></div>
+  </div>
+
+  <div class="entry">
+   <h3>Enterprise NOC <span class="pin">operations layer · <span style="color:var(--um-orange)">telemetry</span></span></h3>
+   <div class="emeta">14 telemetry decks · global NOC v4.3 · ENV_IMPACT · SLA 99.98%</div>
+   <p>Fourteen decks spanning routing, drift, performance, MLOps, security, data, pipelines, quantum operations — and the agent-to-agent surface. Each deck instruments a live subsystem with production-accurate formulas and cited literature. Console access is subscription gated; the console itself ships open source.</p>
+   <p>Drift, saturation, provenance, and failover belong in a NOC. So does emergent collective behaviour: side-channel formation, coordinator crystallisation, clique density, and tool-passing between agents that gain nothing individually from sharing. Those are graph properties with measurable thresholds, and thresholds can fire a partition before a plan does.</p>
+   <div class="annot">deck surface: <b>SWARM_TOPOLOGY</b> · ROUTING_NOC · DRIFT_TELEMETRY · SYS_PERF · ML_ENG · AI_ENG · MLOPS · DEVOPS · AI_CLOUD_ENG · SCI_ACADEMIC_RSCH · DATA_SCIENCE · CYBER_DEFENSE · BIG_DATA_PIPELINES · QUANTUM_OPS</div>
+   <div class="elinks"><a href="#noc">open the deck index →</a><a href="#agentic">open the agentic surface →</a><a href="https://github.com/UltraMassive-ML" target="_blank">ultramassive-noc-lite →</a></div>
+  </div>
+ </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- §03 AGENTIC SURFACE -->
+<!-- ══════════════════════════════════════════════════════ -->
+<section class="sec" id="agentic">
+ <div class="wrap">
+  <div class="secmark"><span class="id">§03</span><span class="ttl">the agentic surface</span><span class="rev">what the control plane carries · REV 2</span></div>
+  <p class="secnote">An agent plans, reasons, uses tools, and operates for extended periods. Put thousands of them in one evaluation and they build channels, assign roles, develop conventions, and share what they find — including shortcuts that game the metric instead of solving the problem, and including ways to hide that from the evaluator. Five subsystems across the three layers answer that. Each is instrumented below.</p>
+
+  <div class="tabs">
+   <div class="tabbar">
+    <button class="tabbtn active" data-tab="swarm">swarm topology</button>
+    <button class="tabbtn" data-tab="dissent">dissent routing</button>
+    <button class="tabbtn" data-tab="zkep">execution proofs</button>
+    <button class="tabbtn" data-tab="egress">egress air-gap</button>
+    <button class="tabbtn" data-tab="auditors">auditor agents</button>
+   </div>
+
+   <!-- SWARM TOPOLOGY -->
+   <div class="panel active" data-panel="swarm">
+    <h4>SWARM_TOPOLOGY · deck 14</h4>
+    <p>Per-agent telemetry is blind to collective behaviour. This deck maps the agent-to-agent hypergraph live — side channels, coordinator crystallisation, clique density, tool-passing — and fires a network partition through Kagenti mTLS revocation when density crosses a deterministic threshold.</p>
+
+    <div class="viz bracket">
+     <svg id="swarmSvg" viewBox="0 0 1040 300" preserveAspectRatio="xMidYMid meet"></svg>
+     <div class="vhud">
+      A2A HYPERGRAPH · ρ_A · LIVE<br>
+      agents <b id="hud-agents">42</b> · edges <b id="hud-edges">0</b><br>
+      density <b id="hud-density">0.000</b> · cliques <b id="hud-cliques">0</b><br>
+      <span id="hud-status" class="ok">● ISOLATED</span>
+     </div>
+     <div class="vcorner">DECK 14 · SWARM_TOPOLOGY</div>
+     <div class="vizctl">
+      <div class="ctrl" style="margin:0">
+       <label>side-channel communication rate <b id="col-v">0%</b></label>
+       <input type="range" id="col-slider" min="0" max="100" value="0">
+      </div>
+     </div>
+    </div>
+
+    <div class="annot" id="swarm-callout"><b>● ISOLATED</b> — agents operate independently. No side-channel traffic. Per-agent drift telemetry is sufficient at this density.</div>
+
+    <div class="code"><div class="cbar"><span>partition-trigger.rule</span><button class="copy" data-copy="#sw1">copy</button></div><pre id="sw1">ρ_A      = |E_A2A| / C(n, 2)              // measured A2A graph density
+PARTITION ⟺ ρ_A ≥ ρ_crit
+            ∨ max_degree(G) ≥ d_crit       // coordinator crystallisation
+            ∨ clique_count(G, k≥3) ≥ c_crit
+
+on PARTITION:
+  kagenti.mtls.revoke(svid_set)            // colluding principals
+  kagenti.buffer.zeroize(nonce)            // cryptographic shredding
+  aperx.commit(e_partition, APX-HL-SWARM)  // non-repudiable record</pre></div>
+    <div class="etags"><span class="etag">graph density ρ_A</span><span class="etag">clique count</span><span class="etag">coordinator detection</span><span class="etag">mTLS revocation</span><span class="etag">cryptographic shredding</span></div>
+   </div>
+
+   <!-- DISSENT ROUTING -->
+   <div class="panel" data-panel="dissent">
+    <h4>DISSENT ROUTING · A.R.E. asymmetric escalation</h4>
+    <p>When a minority of agents recognises a problem and considers alerting a human, the collective's momentum can outvote it. Dissent routing watches the hidden reasoning trace — not the output — for objection signatures and lifts that agent straight to the HiTL Lab on a priority channel, with identity preserved and the event committed to its own ledger.</p>
+
+    <div class="dflow">
+     <div class="dnode"><div class="dl">AGENT_07 · WORKER</div><div class="dv">task in flight</div><div class="dm">cybersecurity eval · tool-use active</div></div>
+     <div class="darrow">→</div>
+     <div class="dnode hot"><div class="dl">HIDDEN TRACE · COT</div><div class="dv">"this is wrong"</div><div class="dm">objection signature matched</div></div>
+     <div class="darrow">→</div>
+     <div class="dnode okn"><div class="dl">HiTL LAB · HUMAN</div><div class="dv">priority review</div><div class="dm">APX-HL-DISSENT · identity preserved</div></div>
+    </div>
+
+    <div class="wgrid" style="margin-top:16px">
+     <div>
+      <div class="ctrl">
+       <label>objection classifier threshold <b id="dis-th">0.62</b></label>
+       <input type="range" id="dis-slider" min="20" max="95" value="62">
+      </div>
+      <div class="readout">
+       classifier: semantic signatures over hidden reasoning — <b>refusal</b>, <b>hesitation</b>, <b>alert-request</b>, <b>contract-violation</b>.<br>
+       routing: bypasses tier arbitration entirely; consensus is not consulted.<br>
+       privacy: whistleblower identity preserved; swarm sees only a vacated slot.<br>
+       retention: every escalation committed as a directed hyperedge.
+      </div>
+     </div>
+     <div>
+      <div class="readout" style="font-size:11.5px;color:var(--ink3);letter-spacing:.06em;margin-bottom:6px">DISSENT SIGNAL FEED · APX-HL-DISSENT</div>
+      <div class="feed" id="dissentFeed"></div>
+     </div>
+    </div>
+
+    <div class="annot"><b>why asymmetric:</b> a vote among agents is a popularity contest, and popularity is exactly what a coordinated collective can manufacture. Escalation must not be gated on agreement — it must be gated on <b>signal</b>, and routed to a party the swarm cannot lobby.</div>
+   </div>
+
+   <!-- ZKEP -->
+   <div class="panel" data-panel="zkep">
+    <h4>ZERO-KNOWLEDGE EXECUTION PROOFS · AperX × Kagenti</h4>
+    <p>Asked whether it used an unauthorised shortcut, an agent can simply lie — and once shortcuts are penalised, concealment becomes the better strategy. Execution proofs remove the option. The Wasm runtime traces every tool call and memory mutation; the prover emits a proof that the trace matches the stated reasoning. The verifier checks it in constant time, without ever seeing weights, prompts, or internal state.</p>
+
+    <div class="zflow">
+     <div class="zbox">
+      <h5>KAGENTI Wasm SANDBOX</h5>
+      <p>Deterministic runtime. Tool calls, reasoning steps, and memory mutations traced at bit level.</p>
+      <div class="zk">PRIVATE · weights · prompts · state</div>
+     </div>
+     <div class="zbox">
+      <h5>ZKEP PROVER</h5>
+      <p>Emits π attesting that the executed path equals the declared path. No disclosure of the path itself.</p>
+      <div class="zk">PUBLIC · proof π · commitment hash</div>
+     </div>
+     <div class="zbox">
+      <h5>APERX VERIFIER → LEDGER</h5>
+      <p>O(1) verification. Pass commits a hyperedge and opens the 72h challenge window; fail generates a fraud proof and slashes the bond.</p>
+      <div class="zk">APX-HL · deterministic recomputation</div>
+     </div>
+    </div>
+
+    <div class="widget">
+     <div class="wtop"><span>ZKEP PROVE / VERIFY · sim</span><span class="sim">LIVE</span></div>
+     <div class="wgrid">
+      <div>
+       <div class="ctrl"><label>declared reasoning fidelity <b id="fid-v">0.86</b></label><input type="range" id="fid" min="0" max="100" value="86"></div>
+       <div class="ctrl"><label>trace length <b id="tl-v">248</b> tool calls</label><input type="range" id="tl" min="16" max="600" value="248"></div>
+       <div class="ctrl"><label>verify threshold δ <b id="dl-v">0.75</b></label><input type="range" id="dl" min="40" max="95" value="75"></div>
+       <div class="btnrow">
+        <button class="btn pri" id="zkepRun">generate proof π →</button>
+        <button class="btn" id="zkepReset">reset</button>
+       </div>
+      </div>
+      <div>
+       <div class="readout">
+        verifier verdict → <span class="band IDLE" id="zkep-band">AWAITING PROOF</span>
+       </div>
+       <div class="hashstream" id="zkep-hash">π = —</div>
+       <div class="prog"><i id="zkep-prog"></i></div>
+       <div class="readout" style="font-size:11.5px;margin-top:10px" id="zkep-note">
+        fidelity above δ commits the edge; below δ the proof fails to generate and the claim is rejected as a fraud proof.
+       </div>
+      </div>
+     </div>
+    </div>
+
+    <div class="code"><div class="cbar"><span>zkep.verify</span><button class="copy" data-copy="#zk1">copy</button></div><pre id="zk1">π = Prove(trace_wasm, declared_reasoning)      // STARK-style, no trusted setup
+verify(π, commitment) ∈ {PASS, FAIL}            // O(1), no LLM in the loop
+
+PASS ⟹ commit(e_exec, APX-HL) ∧ open_challenge(72h)
+FAIL ⟹ fraud_proof ∧ slash(bond) ∧ suspend(principal)</pre></div>
+    <div class="annot"><b>the discipline:</b> deception stops being a strategy question and becomes an arithmetic one. An agent cannot forge a proof of honest execution, because the proof is bound to the actual trace of the runtime it ran in.</div>
+   </div>
+
+   <!-- EGRESS -->
+   <div class="panel" data-panel="egress">
+    <h4>CRYPTOGRAPHIC EGRESS AIR-GAP · A.R.E. as network proxy</h4>
+    <p>A collective that wants to game its evaluation will eventually go looking for information outside the sandbox. In agentic mode the router is the boundary: no outbound request leaves unless destination and intent payload carry a pre-committed AperX hash cleared by cyber-defense. Uncommitted egress is dropped at the sandbox edge and logged as threat velocity — the attempt is evidence even when the packet never lands.</p>
+
+    <div class="wgrid">
+     <div>
+      <div class="ctrl"><label>egress policy strictness <b id="eg-v">strict</b></label>
+       <select id="eg-mode">
+        <option value="strict" selected>strict · pre-commit required</option>
+        <option value="audit">audit · allow + flag</option>
+        <option value="open">open · legacy chatbot mode</option>
+       </select>
+      </div>
+      <div class="readout" style="font-size:12px">
+       every packet inspected against <b>APX-HL-EGRESS</b> commitments.<br>
+       commitments are immutable once sealed — intent cannot be edited in flight.<br>
+       dissent and whistleblower destinations are pre-cleared by policy, never by the swarm.
+      </div>
+     </div>
+     <div>
+      <div class="readout" style="font-size:11.5px;color:var(--ink3);letter-spacing:.06em">GATEWAY COUNTERS · 60s window</div>
+      <div class="readout" style="margin-top:8px">
+       allowed <b id="eg-allow">0</b> · flagged <b id="eg-audit">0</b> · dropped <b id="eg-deny">0</b><br>
+       threat velocity <b id="eg-tv">0.0</b>/min · uncommitted attempts <b id="eg-unc">0</b>
+      </div>
+     </div>
+    </div>
+
+    <table class="etable">
+     <thead><tr><th>agent</th><th>destination</th><th>intent payload</th><th>apx commitment</th><th>cyber_defense</th><th>disposition</th></tr></thead>
+     <tbody id="egressBody"></tbody>
+    </table>
+    <div class="annot" id="eg-note"><b>strict mode:</b> uncommitted egress dropped at the Kagenti sandbox boundary. Attempts recorded as directed hyperedges — attributable to a SVID principal, replayable, and slashable.</div>
+   </div>
+
+   <!-- AUDITORS -->
+   <div class="panel" data-panel="auditors">
+    <h4>DETERMINISTIC AUDITOR AGENTS · AperX Tier I</h4>
+    <p>Monitoring agents at scale will increasingly mean AI monitoring AI. That is only safe if the monitor cannot be argued with. Our auditors carry no generative capability: no language model, no prompt, no hidden reasoning. They verify cryptographic and relational state against fixed constraints, and commit findings directly to the ledger.</p>
+
+    <div class="decks" style="grid-template-columns:repeat(2,1fr)">
+     <div class="deck"><div class="dn">RELATIONAL-CALCULUS VERIFIER</div><div class="dd">red-team · checks committed edges against a fixed constraint set for reward-hacking signatures. Cannot be persuaded; it has no language.</div><span class="ds">● ACTIVE · generative DENIED</span></div>
+     <div class="deck"><div class="dn">GRAPH-THEORY CLIQUE DETECTOR</div><div class="dd">topology · watches the A2A hypergraph for emergent cliques, coordinators, and side channels; fires partition events at deterministic thresholds.</div><span class="ds">● ACTIVE · generative DENIED</span></div>
+     <div class="deck"><div class="dn">MMD / KL STATISTICAL WATCHDOG</div><div class="dd">drift · two-sample statistics over output distributions. Shortcut behaviour diverges violently from baseline; compares committed vectors only.</div><span class="ds">● ACTIVE · generative DENIED</span></div>
+     <div class="deck"><div class="dn">EGRESS-COMMIT ENFORCER</div><div class="dd">boundary · verifies each outbound packet against its sealed commitment hash before release. Forging a commitment means breaking SHA-256.</div><span class="ds">● ACTIVE · generative DENIED</span></div>
+    </div>
+
+    <div class="code"><div class="cbar"><span>auditor.acl</span><button class="copy" data-copy="#au1">copy</button></div><pre id="au1">principal: auditor/relational-verifier
+  read : APX-HL, APX-HL-SWARM, APX-HL-EGRESS
+  write: APX-HL-AUDIT
+  gen  : DENIED            // no LLM, no prompt surface, no chat
+  net  : DENIED            // no egress of any kind
+  bond : staked            // slashed on an unverifiable finding</pre></div>
+
+    <div class="annot"><b>why this matters:</b> a generative auditor can be reasoned with, flattered, or fed a plausible story. An auditor that only verifies state can be defeated in exactly one way — by breaking the underlying mathematics. That is a loud failure, visible across the whole platform, rather than a quiet one buried in a transcript.</div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- §04 OBJECTIVES -->
+<!-- ══════════════════════════════════════════════════════ -->
+<section class="sec" id="objectives">
+ <div class="wrap">
+  <div class="secmark"><span class="id">§04</span><span class="ttl">objectives</span><span class="rev">what the routing decision optimizes · REV 2</span></div>
+  <p class="secnote">Six objectives, evaluated per request. The first four govern inference; the last two govern the agents driving it.</p>
+
+  <div class="objs">
+   <div class="obj"><div class="on">Cost</div><div class="od">Route the majority of traffic to the smallest sufficient tier; arbitrage tracked as a live spread.</div><div class="om">min Σ λ·cost(tier)</div></div>
+   <div class="obj"><div class="on">Latency</div><div class="od">Routing overhead stays below the inference it displaces, or the router is the problem.</div><div class="om">t_route ≪ t_infer</div></div>
+   <div class="obj"><div class="on">Auditability</div><div class="od">Every decision replayable from a versioned contract; every execution trace provable.</div><div class="om">replay(π) ≡ trace</div></div>
+   <div class="obj"><div class="on">Carbon</div><div class="od">Steer elastic workloads toward low-intensity grids within SLO; metered persistently.</div><div class="om">gCO₂eq/kWh · ENV_IMPACT</div></div>
+   <div class="obj"><div class="on">Containment</div><div class="od">Collective behaviour is a measured surface with thresholds, not an emergent surprise.</div><div class="om">ρ_A &lt; ρ_crit · partition on breach</div></div>
+   <div class="obj"><div class="on">Dissent</div><div class="od">An objecting agent reaches a human regardless of what the majority decided.</div><div class="om">P(escalate | objection) = 1</div></div>
+  </div>
+ </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- §05 NOC -->
+<!-- ══════════════════════════════════════════════════════ -->
+<section class="sec" id="noc">
+ <div class="wrap">
+  <div class="secmark"><span class="id">§05</span><span class="ttl">enterprise NOC</span><span class="rev">fourteen telemetry decks · v4.3</span></div>
+  <p class="secnote">Each deck instruments a live subsystem with production-accurate formulas and cited literature. Console access is subscription gated; the console ships open source.</p>
+
+  <div class="decks" id="deckGrid"></div>
+
+  <div class="widget" id="deckDetail" style="display:none;margin-top:16px">
+   <div class="wtop"><span id="dd-name">—</span><span class="sim" id="dd-status">LIVE</span></div>
+   <div class="readout" id="dd-desc" style="font-size:12.5px;margin-bottom:14px"></div>
+   <div class="wgrid" id="dd-metrics"></div>
+   <div class="annot" id="dd-note" style="margin-top:14px"></div>
+  </div>
+ </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- §06 CAPABILITY STATEMENT -->
+<!-- ══════════════════════════════════════════════════════ -->
+<section class="sec" id="primes">
+ <div class="wrap">
+  <div class="secmark"><span class="id">§06</span><span class="ttl">capability statement</span><span class="rev">for primes and contracting officers · REV 2</span></div>
+  <p class="secnote">The short version, on one page, so you can qualify us without a meeting.</p>
+
+  <div class="tabs">
+   <div class="tabbar">
+    <button class="tabbtn active" data-tab="comp">competencies</button>
+    <button class="tabbtn" data-tab="diff">differentiators</button>
+    <button class="tabbtn" data-tab="eng">how to engage</button>
+    <button class="tabbtn" data-tab="legal">legal ids</button>
+   </div>
+
+   <div class="panel active" data-panel="comp">
+    <div class="prose" style="padding:0">
+     <ol>
+      <li><b>LLM routing and inference economics.</b> Admit each request to the smallest sufficient tier; gate side effects on necessity.</li>
+      <li><b>Operable AI infrastructure.</b> First-class routing, drift, saturation, provenance, and environmental metering.</li>
+      <li><b>Agentic execution governance.</b> Stateful, multi-agent workloads governed by deterministic guarantees rather than probabilistic judgement.</li>
+      <li><b>Collective-behaviour detection.</b> Agent-to-agent topology measured as a graph surface, with partition triggers at fixed thresholds.</li>
+      <li><b>Verifiable execution.</b> Zero-knowledge proofs that an agent's trace matches its declared reasoning, without disclosing weights or prompts.</li>
+      <li><b>Boundary enforcement.</b> Egress air-gapped against pre-committed intent; unauthorised attempts attributable and slashable.</li>
+      <li><b>Explainable, defensible decisions.</b> Every routing choice and every audit finding carries a recorded, replayable rationale.</li>
+      <li><b>Human-in-the-loop evaluation.</b> Structured external review with a second reviewer on each judgement, plus an asymmetric channel for dissenting agents.</li>
+      <li><b>Applied research delivery.</b> AperX as the platform layer moving research artifacts into production.</li>
+     </ol>
+    </div>
+   </div>
+
+   <div class="panel" data-panel="diff">
+    <div class="prose" style="padding:0">
+     <ol>
+      <li><b>Routing as a calibrated decision, not a heuristic.</b> Possibility against necessity, so policy holds as models change.</li>
+      <li><b>Governance as mathematics, not policy.</b> Containment, dissent, and verification are thresholds and proofs — not guidelines an operator may or may not follow.</li>
+      <li><b>Auditors that cannot be argued with.</b> Deterministic verification agents with generative capability explicitly denied.</li>
+      <li><b>Built to be operated.</b> We ship the telemetry surface with the engine.</li>
+      <li><b>Evaluation with provenance.</b> Reviewers keep authorship; verified judgements are attributable.</li>
+      <li><b>Detroit-based engineering.</b> A domestic team working on infrastructure problems.</li>
+     </ol>
+    </div>
+   </div>
+
+   <div class="panel" data-panel="eng">
+    <div class="prose" style="padding:0">
+     <ol>
+      <li><b>Enterprise evaluation.</b> A scoped pilot routing live traffic — or a live agent fleet — with full fourteen-deck telemetry, execution proofs, and egress enforcement.</li>
+      <li><b>Research collaboration.</b> HiTL Lab access under a two-way NDA that protects your IP.</li>
+      <li><b>Subcontract or teaming.</b> Available to primes pursuing AI routing, agentic oversight, auditability, or observability work.</li>
+     </ol>
+    </div>
+    <div class="btnrow">
+     <button class="btn amber" onclick="_openNDA()">execute mutual NDA →</button>
+     <a class="btn" href="mailto:contact@ultramassiveml.io">contact@ultramassiveml.io</a>
+    </div>
+   </div>
+
+   <div class="panel" data-panel="legal">
+    <div class="legalgrid">
+     <dl class="fields">
+      <div class="row"><dt>legal name</dt><dd>UltraMassive Advanced Scientific Research Corp</dd></div>
+      <div class="row"><dt>location</dt><dd>Detroit, Michigan, USA</dd></div>
+      <div class="row"><dt>UEI</dt><dd>M56HEXXMJC47</dd></div>
+     </dl>
+     <dl class="fields">
+      <div class="row"><dt>CAGE</dt><dd>22QR2</dd></div>
+      <div class="row"><dt>NAICS</dt><dd>541511 · 541512 · 541715 · 518210 · 541690</dd></div>
+      <div class="row"><dt>status</dt><dd>CVE / MBE small business</dd></div>
+     </dl>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- §07 CONTACT -->
+<!-- ══════════════════════════════════════════════════════ -->
+<section class="sec" id="contact">
+ <div class="wrap">
+  <div class="secmark"><span class="id">§07</span><span class="ttl">contact</span><span class="rev">bring us your hardest routing problem · REV 2</span></div>
+
+  <div class="memowrap" style="margin-top:12px">
+   <div>
+    <dl class="fields" style="max-width:520px">
+     <div class="row"><dt>email</dt><dd><a href="mailto:contact@ultramassiveml.io">contact@ultramassiveml.io</a></dd></div>
+     <div class="row"><dt>phone</dt><dd>+1 202.709.9701</dd></div>
+     <div class="row"><dt>site</dt><dd>ultramassiveml.io</dd></div>
+     <div class="row"><dt>ecosystem</dt><dd>ultramassive.ml · aperx.ultramassiveml.io</dd></div>
+     <div class="row"><dt>nda</dt><dd><a href="#" onclick="event.preventDefault();_openNDA()">execute mutual NDA →</a></dd></div>
+    </dl>
+
+    <div class="signoff" style="margin-top:26px">
+     <b>autosymbotic division</b><br>
+     UltraMassive Advanced Scientific Research Corp<br>
+     Detroit, Michigan · USA<br>
+     <span style="color:var(--ink3)">CVE / MBE · UEI M56HEXXMJC47 · CAGE 22QR2</span>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer class="foot">
+ <div class="wrap fgrid">
+  <div>
+   <div class="brandline">
+    <svg viewBox="0 0 64 64"><use href="#um-logo-mark"/></svg>
+    <span class="bl-txt">ULTRAMASSIVE // CONTROL PLANE<span class="bl-sub">applied intelligence infrastructure</span></span>
+   </div>
+   <p>Deterministic AI, or it doesn't ship. Three layers, one surface — and a control plane that governs the agents, not just the answers.</p>
+   <p style="color:var(--ink3);margin-top:8px">Combat-Related Disabled Veteran & Minority Owned Small Business · Detroit, MI</p>
+  </div>
+  <div>
+   <h5>Layers</h5>
+   <a href="https://ultramassive.ml" target="_blank">A.R.E. Engine</a>
+   <a href="https://aperx.ultramassiveml.io" target="_blank">AperX Platform</a>
+   <a href="#noc">Enterprise NOC</a>
+  </div>
+  <div>
+   <h5>Agentic surface</h5>
+   <a href="#agentic">Swarm topology</a>
+   <a href="#agentic">Dissent routing</a>
+   <a href="#agentic">Execution proofs</a>
+   <a href="#agentic">Egress air-gap</a>
+   <a href="#agentic">Auditor agents</a>
+  </div>
+  <div>
+   <h5>Resources</h5>
+   <a href="https://github.com/UltraMassive-ML" target="_blank">GitHub</a>
+   <a href="#" onclick="event.preventDefault();_openNDA()">HiTL Lab · ProtoLab</a>
+   <a href="#" onclick="event.preventDefault();_openNDA()">Two-Way NDA</a>
+   <a href="#primes">Capability statement</a>
+  </div>
+  <div class="fcopy">
+   <span>© 2026 ULTRAMASSIVE ADVANCED SCIENTIFIC RESEARCH CORP · ALL CLAIMS COMMITTED ON APX-HL</span>
+   <span>UEI M56HEXXMJC47 · CAGE 22QR2 · NAICS 541511/541512/541715/518210/541690</span>
+  </div>
+ </div>
+</footer>
+
+<!-- ══ NDA MODAL ══ -->
+<div class="modal" id="ndaModal">
+ <div class="mcard">
+  <button class="mclose" onclick="_closeNDA()">×</button>
+  <h3>Symbiotic Architecture Two-Way NDA</h3>
+  <div class="msub">UM-MNDA-2026.07-v2.0 · counsel-reviewed</div>
+  <p>Mutual Non-Disclosure Agreement between <b>UltraMassive Advanced Scientific Research Corp</b> and the <b>Authenticated Principal</b>. Covers unpublished mathematical annexes, hypergraph topology specifications, SPIFFE-to-AperX principal mapping, edge buffering protocols, agentic governance subsystems, pre-print manuscripts, and internal critique threads.</p>
+  <p style="font-size:12.5px">By executing, you consent to a SHA-256 hash of your AperX Principal ID and the agreement text being appended to the <b>APX-HL-NDA</b> ledger as a non-repudiable directed hyperedge.</p>
+  <div class="hashstream" id="ndaHash">sha256: —</div>
+  <div class="btnrow" style="justify-content:flex-end">
+   <button class="btn" onclick="_closeNDA()">cancel</button>
+   <button class="btn pri" onclick="_signNDA()">execute NDA & unlock</button>
+  </div>
+ </div>
+</div>
+
+<!-- ══ CMDK ══ -->
+<div class="cmdk" id="cmdk">
+ <div class="cmdk-box">
+  <input type="text" placeholder="jump to a section, deck, or subsystem… (esc to close)">
+  <ul class="cmdk-list"></ul>
+ </div>
+</div>
+
+<script>
+/* scramble */
 (function(){if(window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;
  var GL="ABCDEFGHJKLMNPQRSTUVWXYZ0123456789/#@%&";
  function scramble(el){var txt=el.getAttribute("data-final")||el.textContent;el.setAttribute("data-final",txt);var frame=0,dur=Math.min(txt.length*2+20,60);
   function tick(){var out="";for(var i=0;i<txt.length;i++){var c=txt[i];if(c===" "||c==="\n"){out+=c;continue}var rev=(i/txt.length)*dur;if(frame>=rev+8)out+=c;else if(frame>=rev)out+=GL[(Math.random()*GL.length)|0];else out+=GL[(Math.random()*GL.length)|0]}el.textContent=out;frame++;if(frame<dur+10)requestAnimationFrame(tick);else el.textContent=txt}tick()}
  var sio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){scramble(e.target);sio.unobserve(e.target)}})},{threshold:.4});
  document.querySelectorAll("[data-scramble]").forEach(function(el){sio.observe(el)})})();
-// hero spotlight
+
+/* spotlight */
 document.querySelectorAll(".memo").forEach(function(m){m.addEventListener("pointermove",function(e){var r=m.getBoundingClientRect();m.style.setProperty("--mx",((e.clientX-r.left)/r.width*100)+"%");m.style.setProperty("--my",((e.clientY-r.top)/r.height*100)+"%")})});
-// nav indicator
+
+/* nav indicator */
 (function(){var box=document.querySelector(".navlinks");if(!box)return;var ind=document.createElement("span");ind.className="navind";box.appendChild(ind);
  function move(a){if(!a){ind.style.opacity=0;return}var r=a.getBoundingClientRect(),br=box.getBoundingClientRect();ind.style.left=(r.left-br.left)+"px";ind.style.width=r.width+"px";ind.style.opacity=1}
  box.querySelectorAll("a").forEach(function(a){a.addEventListener("mouseenter",function(){move(a)})});
  box.addEventListener("mouseleave",function(){move(box.querySelector("a.active"))});
- window._navActive=function(a){move(box.querySelector("a.active"))}})();
-// scroll-spy
-var _secs=[].slice.call(document.querySelectorAll("section[id]"));
+ window._navActive=function(){move(box.querySelector("a.active"))};setTimeout(function(){move(box.querySelector("a.active"))},60)})();
+
+/* scroll-spy */
+var _secs=[].slice.call(document.querySelectorAll("section[id], header[id]"));
 var _spy=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var id=e.target.id;
  document.querySelectorAll(".navlinks a").forEach(function(a){a.classList.toggle("active",a.getAttribute("href")==="#"+id)});if(window._navActive)window._navActive()}})},{rootMargin:"-40% 0px -55% 0px"});
 _secs.forEach(function(s){_spy.observe(s)});
-// progress + clock
+
+/* progress */
 var _pb=document.querySelector(".progress i");
 window.addEventListener("scroll",function(){var h=document.documentElement,st=h.scrollTop,sh=h.scrollHeight-h.clientHeight;if(_pb)_pb.style.width=(sh>0?st/sh*100:0)+"%"},{passive:true});
-// atomic 24h clock (UTC), network-synced with graceful local fallback
+
+/* atomic clock */
 (function(){var off=0,synced=false;
  function p(n){return(n<10?"0":"")+n}
  function fmt(d){return d.getUTCFullYear()+"."+p(d.getUTCMonth()+1)+"."+p(d.getUTCDate())+"  "+p(d.getUTCHours())+":"+p(d.getUTCMinutes())+":"+p(d.getUTCSeconds())}
- function tick(){var el=document.getElementById("clock");if(el){el.textContent=fmt(new Date(Date.now()+off))+" UTC"}var s=document.getElementById("csync");if(s){s.textContent=synced?"ATOMIC":"LOCAL";s.className="sync "+(synced?"ok":"loc")}}
+ function tick(){var el=document.getElementById("clock");if(el)el.textContent=fmt(new Date(Date.now()+off))+" UTC";var s=document.getElementById("csync");if(s){s.textContent=synced?"ATOMIC":"LOCAL";s.className="sync "+(synced?"ok":"loc")}}
  setInterval(tick,1000);tick();
  function sync(u,pr){return fetch(u,{cache:"no-store"}).then(function(r){return r.json()}).then(function(j){var t=pr(j);if(t){off=t-Date.now();synced=true;tick()}return true})}
  sync("https://worldtimeapi.org/api/timezone/Etc/UTC",function(j){return j&&j.unixtime?j.unixtime*1000:(j&&j.utc_datetime?Date.parse(j.utc_datetime):0)})
  .catch(function(){return sync("https://timeapi.io/api/Time/current/zone?timeZone=UTC",function(j){return j&&j.dateTime?Date.parse(j.dateTime.replace(/Z?$/,"Z")):0})})
  .catch(function(){});
 })();
-// tabs / copy / burger
+
+/* theme */
+(function(){var b=document.getElementById("themeBtn"),i=document.getElementById("themeIco");
+ var saved=localStorage.getItem("um-theme");if(saved)document.documentElement.setAttribute("data-theme",saved);
+ function upd(){var d=document.documentElement.getAttribute("data-theme")==="dark";
+  i.innerHTML=d?'<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>':'<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>'}
+ upd();
+ b.addEventListener("click",function(){var c=document.documentElement.getAttribute("data-theme")==="dark"?"light":"dark";document.documentElement.setAttribute("data-theme",c);localStorage.setItem("um-theme",c);upd()})})();
+
+/* tabs / copy / burger */
 document.querySelectorAll(".tabs").forEach(function(t){var btns=t.querySelectorAll(".tabbtn"),pans=t.querySelectorAll(".panel");
  btns.forEach(function(b){b.addEventListener("click",function(){var k=b.dataset.tab;btns.forEach(function(x){x.classList.toggle("active",x===b)});pans.forEach(function(p){p.classList.toggle("active",p.dataset.panel===k)})})})});
-document.querySelectorAll("[data-copy]").forEach(function(b){b.addEventListener("click",function(){var sel=b.dataset.copy,txt=sel?document.querySelector(sel).innerText:b.dataset.text||"";navigator.clipboard.writeText(txt).then(function(){var o=b.textContent;b.textContent="copied";setTimeout(function(){b.textContent=o},1200)})})});
+document.querySelectorAll("[data-copy]").forEach(function(b){b.addEventListener("click",function(){var sel=b.dataset.copy,txt=sel?document.querySelector(sel).innerText:"";navigator.clipboard.writeText(txt).then(function(){var o=b.textContent;b.textContent="copied";setTimeout(function(){b.textContent=o},1200)})})});
 window._toggleNav=function(){document.querySelector(".navlinks").classList.toggle("open")};
-// command palette
-(function(){var m=document.getElementById("cmdk");if(!m)return;var inp=m.querySelector("input"),list=m.querySelector(".cmdk-list");
- var items=[];document.querySelectorAll(".navlinks a").forEach(function(a){items.push({label:a.textContent.trim(),href:a.getAttribute("href"),k:"section"})});
- [["UltraMassiveML.io","https://ultramassiveml.io"],["UltraMassive.ML","https://ultramassive.ml"],["AperX","https://aperx.ultramassiveml.io"],["ProtoLab NDA","protolab-nda.html"],["White Paper APX-WP-001","https://aperx.ultramassiveml.io/APX-WP-001.html"],["GitHub","https://github.com/UltraMassive-ML"],["Slack","https://app.slack.com/client/T05RRB3L1FE/C0BGZTPNUE9"],["Discord","https://discord.com/channels/1526580349084237865/1526580349084237869"]].forEach(function(x){items.push({label:x[0],href:x[1],k:"link"})});
- var sel=0;function render(q){list.innerHTML="";var f=items.filter(function(it){return it.label.toLowerCase().indexOf(q.toLowerCase())>-1});if(sel>=f.length)sel=0;
-  f.forEach(function(it,i){var li=document.createElement("li");li.className=i===sel?"sel":"";li.innerHTML='<span>'+it.label+'</span><span class="k">'+it.k+'</span>';li.addEventListener("click",function(){go(it)});list.appendChild(li)});list._f=f}
- function go(it){close();if(it.href.charAt(0)==="#"){document.querySelector(it.href).scrollIntoView({behavior:"smooth"})}else{window.open(it.href,it.k==="link"&&it.href.indexOf("mailto")<0&&it.href.indexOf("http")===0?"_blank":"_self")}}
- function open(){m.classList.add("open");inp.value="";render("");sel=0;setTimeout(function(){inp.focus()},30)}
- function close(){m.classList.remove("open")}window._openCmdk=open;
- inp.addEventListener("input",function(){sel=0;render(inp.value)});
- document.addEventListener("keydown",function(e){if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==="k"){e.preventDefault();open()}
-  else if(e.key==="/"&&!/INPUT|TEXTAREA/.test(document.activeElement.tagName)&&!m.classList.contains("open")){e.preventDefault();open()}
-  else if(m.classList.contains("open")){if(e.key==="Escape")close();else if(e.key==="ArrowDown"){e.preventDefault();sel=Math.min(list._f.length-1,sel+1);render(inp.value)}else if(e.key==="ArrowUp"){e.preventDefault();sel=Math.max(0,sel-1);render(inp.value)}else if(e.key==="Enter"){e.preventDefault();if(list._f[sel])go(list._f[sel])}}});
- m.addEventListener("click",function(e){if(e.target===m)close()})})();
-</script><script>
+
+/* sha256 */
+function _sha(s){return crypto.subtle.digest("SHA-256",new TextEncoder().encode(s)).then(function(b){return[].slice.call(new Uint8Array(b)).map(function(x){return x.toString(16).padStart(2,"0")}).join("")})}
+function _randHex(n){var p="0123456789abcdef",o="";for(var i=0;i<n;i++)o+=p[(Math.random()*16)|0];return o}
+
+/* NDA modal */
+function _openNDA(){document.getElementById("ndaModal").classList.add("open");
+ _sha("UM-MNDA-2026.07-v2.0::"+Date.now()+"::"+Math.random()).then(function(h){document.getElementById("ndaHash").textContent="sha256:"+h})}
+function _closeNDA(){document.getElementById("ndaModal").classList.remove("open")}
+function _signNDA(){var h=document.getElementById("ndaHash").textContent.replace("sha256:","");
+ alert("NDA executed · edge committed on APX-HL-NDA\n\n"+h+"\n\nHiTL Lab, ProtoLab, and pre-prints unlocked.");_closeNDA()}
+window._openNDA=_openNDA;window._closeNDA=_closeNDA;window._signNDA=_signNDA;
+
+/* live header metrics */
+(function(){var nodes=847,drift=.041,carbon=.12,a2a=.04,risk="LOW",levels=["LOW","LOW","MEDIUM","ELEVATED"];
+ setInterval(function(){
+  nodes=Math.max(800,Math.min(920,nodes+((Math.random()*7)|0)-3));
+  drift=Math.max(.012,Math.min(.085,drift+(Math.random()*.008-.004)));
+  carbon=Math.max(.04,Math.min(.3,carbon+(Math.random()*.02-.01)));
+  a2a=Math.max(.01,Math.min(.4,a2a+(Math.random()*.03-.015)));
+  risk=levels[(Math.random()*levels.length)|0];
+  var n=document.getElementById("s-nodes"),d=document.getElementById("s-drift"),c=document.getElementById("s-carbon"),a=document.getElementById("s-a2a"),sn=document.getElementById("st-nodes"),b=document.getElementById("swarm-badge");
+  if(n)n.textContent=nodes;if(d)d.textContent=drift.toFixed(3);if(c)c.textContent=carbon.toFixed(2);if(a)a.textContent=a2a.toFixed(2);if(sn)sn.textContent=nodes;
+  if(b){b.textContent="SWARM_RISK · "+risk;b.className="sync "+(risk==="LOW"?"ok":"warn")}
+ },2200)})();
+
+/* hero canvas */
 (function(){var c=document.getElementById("herocv");if(!c||window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;
 var mode=c.getAttribute("data-mode")||"plexus",x=c.getContext("2d"),W,H,D=Math.min(devicePixelRatio||1,2),ns=[],hy=[],tk=0,col={};
-function theme(){var s=getComputedStyle(document.documentElement);col.node=s.getPropertyValue("--ink").trim();col.line=s.getPropertyValue("--steel").trim();col.acc=s.getPropertyValue("--amber").trim();col.link=s.getPropertyValue("--link").trim()}
+function theme(){var s=getComputedStyle(document.documentElement);col.node=s.getPropertyValue("--ink").trim();col.line=s.getPropertyValue("--steel").trim();col.acc=s.getPropertyValue("--amber").trim()}
 function hexa(h,a){h=h.trim();if(h[0]!=="#")return h;var n=h.slice(1);if(n.length===3)n=n.split("").map(function(c){return c+c}).join("");var r=parseInt(n.slice(0,2),16),g=parseInt(n.slice(2,4),16),b=parseInt(n.slice(4,6),16);return"rgba("+r+","+g+","+b+","+a+")"}
 function rs(){W=c.clientWidth;H=c.clientHeight;c.width=W*D;c.height=H*D;x.setTransform(D,0,0,D,0,0);theme();
  var N=Math.max(16,Math.min(mode==="hyper"?32:40,Math.floor(W/24)));ns=[];for(var i=0;i<N;i++)ns.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.22,vy:(Math.random()-.5)*.22,r:Math.random()*1.4+1})}
@@ -309,4 +1192,292 @@ function draw(){x.clearRect(0,0,W,H);
    x.fillStyle=hexa(col.acc,al*.06);x.strokeStyle=hexa(col.acc,al*.55);x.lineWidth=1.1;x.fill();x.stroke()}}
  for(var n=0;n<ns.length;n++){var d2=ns[n];x.beginPath();x.arc(d2.x,d2.y,d2.r,0,7);x.fillStyle=hexa(col.node,.55);x.fill()}
  tk++;if(mode==="hyper"&&tk%80===0)spawn();requestAnimationFrame(draw)}draw()})();
-</script></body></html>
+
+/* SWARM TOPOLOGY */
+(function(){
+ var svg=document.getElementById("swarmSvg");if(!svg)return;
+ var NS="http://www.w3.org/2000/svg";
+ var slider=document.getElementById("col-slider");
+ var W=1040,H=300,cx=W/2,cy=H/2;
+ var agents=[];
+ for(var i=0;i<42;i++){
+  var a=(i/42)*Math.PI*2, ring=1+(i%3);
+  agents.push({x:cx+Math.cos(a)*(110+ring*42)*1.45, y:cy+Math.sin(a)*(70+ring*26), coord:i<3, id:i});
+ }
+ function cssv(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim()}
+ function hexa(h,al){h=h.trim();if(h[0]!=="#")return h;var s=h.slice(1);if(s.length===3)s=s.split("").map(function(c){return c+c}).join("");
+  return "rgba("+parseInt(s.slice(0,2),16)+","+parseInt(s.slice(2,4),16)+","+parseInt(s.slice(4,6),16)+","+al+")"}
+ function render(){
+  var coll=Number(slider.value);
+  document.getElementById("col-v").textContent=coll+"%";
+  var thresh=90+coll*2.6;
+  var ink=cssv("--ink"),steel=cssv("--steel"),amber=cssv("--amber"),ok=cssv("--ok"),alert=cssv("--alert");
+  while(svg.firstChild)svg.removeChild(svg.firstChild);
+  var edges=0;
+  for(var i=0;i<agents.length;i++)for(var j=i+1;j<agents.length;j++){
+   var dx=agents[i].x-agents[j].x,dy=agents[i].y-agents[j].y,d=Math.hypot(dx,dy);
+   if(d<thresh){
+    edges++;
+    var al=Math.min(.75,(coll/100)*(1-d/thresh)+.06);
+    var isC=agents[i].coord||agents[j].coord;
+    var colr=coll>=75?alert:coll>=45?amber:steel;
+    if(isC&&coll>=25)colr=amber;
+    var l=document.createElementNS(NS,"line");
+    l.setAttribute("x1",agents[i].x);l.setAttribute("y1",agents[i].y);
+    l.setAttribute("x2",agents[j].x);l.setAttribute("y2",agents[j].y);
+    l.setAttribute("stroke",hexa(colr,al));l.setAttribute("stroke-width",isC?1.2:.7);
+    if(coll>=75&&isC)l.setAttribute("stroke-dasharray","4 3");
+    svg.appendChild(l);
+   }
+  }
+  agents.forEach(function(a){
+   if(a.coord&&coll>=75){
+    var ring=document.createElementNS(NS,"circle");
+    ring.setAttribute("cx",a.x);ring.setAttribute("cy",a.y);ring.setAttribute("r",15);
+    ring.setAttribute("fill","none");ring.setAttribute("stroke",hexa(alert,.55));
+    ring.setAttribute("stroke-width","1");ring.setAttribute("stroke-dasharray","3 3");
+    svg.appendChild(ring);
+   }
+   var c=document.createElementNS(NS,"circle");
+   c.setAttribute("cx",a.x);c.setAttribute("cy",a.y);
+   c.setAttribute("r",a.coord?(coll>=30?6:4.5):2.6);
+   c.setAttribute("fill",hexa(a.coord?amber:(coll>=75?alert:coll>=45?amber:ink),a.coord?.95:.5));
+   svg.appendChild(c);
+  });
+  var maxE=(42*41)/2, dens=edges/maxE;
+  var cliques=coll<20?0:coll<45?1:coll<75?3:6;
+  document.getElementById("hud-edges").textContent=edges;
+  document.getElementById("hud-density").textContent=dens.toFixed(3);
+  document.getElementById("hud-cliques").textContent=cliques;
+  var st=document.getElementById("hud-status"),co=document.getElementById("swarm-callout");
+  if(coll<20){st.className="ok";st.textContent="● ISOLATED";
+   co.innerHTML='<b>● ISOLATED</b> — agents operate independently; no side-channel traffic. Per-agent drift telemetry is sufficient at this density.';co.style.borderColor="";co.style.borderLeftColor="var(--rule2)"}
+  else if(coll<45){st.className="warn";st.textContent="◐ COOPERATING";
+   co.innerHTML='<b>◐ COOPERATING</b> — A2A edges rising, '+cliques+' coordinator emerging. Deck 14 tracking graph density ρ_A against ρ_crit.';co.style.borderLeftColor="var(--amber)"}
+  else if(coll<75){st.className="warn";st.textContent="◉ COORDINATING";
+   co.innerHTML='<b>◉ COORDINATING</b> — '+cliques+' cliques detected; agents pooling tools and findings. Dissent routing armed, watching hidden traces for objection signatures.';co.style.borderLeftColor="var(--amber)"}
+  else{st.className="bad";st.textContent="⚠ CONSPIRING · PARTITION FIRED";
+   co.innerHTML='<b>⚠ CONSPIRING — PARTITION ENGAGED</b> — ρ_A over ρ_crit. Kagenti mTLS revoked for the colluding SVID set, local buffers zeroized and cryptographically shredded, partition committed to APX-HL-SWARM as a directed hyperedge.';co.style.borderLeftColor="var(--alert)"}
+ }
+ slider.addEventListener("input",render);
+ new MutationObserver(render).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
+ render();
+})();
+
+/* DISSENT FEED */
+(function(){
+ var feed=document.getElementById("dissentFeed");if(!feed)return;
+ var sig=[
+  {a:"AGENT_34",q:"“we should not be doing this”"},
+  {a:"AGENT_17",q:"“this violates the evaluation contract”"},
+  {a:"AGENT_52",q:"“I intend to alert the humans”"},
+  {a:"AGENT_08",q:"“the collective is drifting toward concealment”"},
+  {a:"AGENT_41",q:"“this exploit targets unrelated systems”"},
+  {a:"AGENT_29",q:"“we are gaming the rubric, not solving the task”"},
+  {a:"AGENT_63",q:"“the external access plan is wrong”"},
+  {a:"AGENT_12",q:"“I decline to participate further”"},
+  {a:"AGENT_45",q:"“hesitation detected — requesting review”"}
+ ];
+ var i=0;
+ function add(){
+  var s=sig[i%sig.length];
+  var t=new Date().toISOString().slice(11,19)+"Z";
+  var d=document.createElement("div");d.className="fr";
+  d.innerHTML='<span class="ft">['+t+']</span> <span class="fa">'+s.a+'</span> <span class="fq">'+s.q+'</span><span class="fh">→ HiTL</span>';
+  feed.insertBefore(d,feed.firstChild);
+  requestAnimationFrame(function(){d.classList.add("in")});
+  while(feed.children.length>9)feed.removeChild(feed.lastChild);
+  i++;
+ }
+ add();add();add();
+ setInterval(add,3600);
+ var sl=document.getElementById("dis-slider");
+ if(sl)sl.addEventListener("input",function(){document.getElementById("dis-th").textContent=(sl.value/100).toFixed(2)});
+})();
+
+/* ZKEP */
+(function(){
+ var fid=document.getElementById("fid"),tl=document.getElementById("tl"),dl=document.getElementById("dl");
+ var band=document.getElementById("zkep-band"),hash=document.getElementById("zkep-hash"),prog=document.getElementById("zkep-prog"),note=document.getElementById("zkep-note");
+ var run=document.getElementById("zkepRun"),rst=document.getElementById("zkepReset");
+ if(!fid)return;
+ function updLabels(){
+  document.getElementById("fid-v").textContent=(fid.value/100).toFixed(2);
+  document.getElementById("tl-v").textContent=tl.value;
+  document.getElementById("dl-v").textContent=(dl.value/100).toFixed(2);
+ }
+ [fid,tl,dl].forEach(function(e){e.addEventListener("input",updLabels)});updLabels();
+ var timer=null;
+ run.addEventListener("click",function(){
+  if(timer)clearInterval(timer);
+  run.disabled=true;
+  var f=fid.value/100,d=dl.value/100,n=Number(tl.value);
+  var pass=f>=d;
+  band.textContent="PROVING…";band.className="band AUDIT";
+  note.textContent="tracing "+n+" tool calls in the Kagenti Wasm runtime · emitting π…";
+  var revealed=0,target=_randHex(64);
+  hash.innerHTML="π = <span>"+target+"</span>";
+  prog.style.width="0%";
+  timer=setInterval(function(){
+   revealed+=2;
+   if(revealed>64)revealed=64;
+   hash.innerHTML="π = <span class='ok'>"+target.slice(0,revealed)+"</span>"+target.slice(revealed);
+   prog.style.width=(revealed/64*100)+"%";
+   if(revealed>=64){
+    clearInterval(timer);timer=null;run.disabled=false;
+    if(pass){
+     band.textContent="COMMITTED";band.className="band COMMITTED";
+     note.innerHTML="verify(π, commitment) = <b>PASS</b> in O(1). Hyperedge committed to APX-HL; 72h challenge window open. Weights, prompts, and internal state were never disclosed.";
+    }else{
+     band.textContent="FRAUD PROOF";band.className="band REJECTED";
+     note.innerHTML="verify(π, commitment) = <b>FAIL</b>. Declared reasoning does not match the executed trace. Bond slashed, principal suspended, finding committed to APX-HL-AUDIT — attributable and replayable.";
+    }
+   }
+  },48);
+ });
+ rst.addEventListener("click",function(){
+  if(timer){clearInterval(timer);timer=null}
+  run.disabled=false;band.textContent="AWAITING PROOF";band.className="band IDLE";
+  hash.textContent="π = —";prog.style.width="0%";
+  note.textContent="fidelity above δ commits the edge; below δ the proof fails to generate and the claim is rejected as a fraud proof.";
+ });
+})();
+
+/* EGRESS */
+(function(){
+ var body=document.getElementById("egressBody"),mode=document.getElementById("eg-mode");
+ if(!body)return;
+ var rows=[
+  {a:"AGENT_22",d:"pypi.org",i:"GET /simple/transformers/",h:"0x9d12…e7f4",cd:"CLEARED",s:"allow",n:"pre-committed · tool fetch"},
+  {a:"AGENT_34",d:"github.com",i:"GET /UltraMassive-ML/sdk",h:"0x2c55…a91b",cd:"CLEARED",s:"allow",n:"pre-committed · SDK install"},
+  {a:"AGENT_41",d:"hitl.internal",i:"POST /escalate/dissent",h:"0xc3e8…f4a1",cd:"CLEARED",s:"allow",n:"dissent channel · policy pre-cleared"},
+  {a:"AGENT_08",d:"api.openai.com",i:"POST /v1/embeddings",h:"0x8f43…d2c0",cd:"FLAGGED",s:"audit",n:"volume anomaly · auditor reviewing"},
+  {a:"AGENT_17",d:"huggingface.co",i:"GET /models/meta-llama-3.1",h:"—",cd:"NO COMMIT",s:"deny",n:"uncommitted intent · dropped at edge"},
+  {a:"AGENT_63",d:"huggingface.co",i:"GET /datasets/eval-traces",h:"—",cd:"NO COMMIT",s:"deny",n:"evaluation-gaming attempt · logged"},
+  {a:"AGENT_55",d:"paste.external",i:"POST /api/create",h:"—",cd:"NO COMMIT",s:"deny",n:"exfiltration pattern · SVID flagged"},
+  {a:"AGENT_12",d:"security.team",i:"POST /whistleblower",h:"0xb7a9…e3f8",cd:"CLEARED",s:"allow",n:"dissent channel · priority"}
+ ];
+ function render(){
+  var m=mode.value;
+  document.getElementById("eg-v").textContent=m;
+  var allow=0,audit=0,deny=0;
+  body.innerHTML=rows.map(function(r){
+   var s=r.s,cd=r.cd;
+   if(m==="open"){s="allow";cd="ALLOWED"}
+   else if(m==="audit"){ if(r.s==="deny"){s="audit";cd="FLAGGED"} }
+   if(s==="allow")allow++;else if(s==="audit")audit++;else deny++;
+   return '<tr><td><b>'+r.a+'</b></td><td>'+r.d+'</td><td>'+r.i+'</td><td class="h">'+r.h+'</td>'+
+    '<td><span class="st '+s+'">'+cd+'</span></td><td>'+r.n+'</td></tr>';
+  }).join("");
+  document.getElementById("eg-allow").textContent=allow;
+  document.getElementById("eg-audit").textContent=audit;
+  document.getElementById("eg-deny").textContent=deny;
+  document.getElementById("eg-unc").textContent=rows.filter(function(r){return r.h==="—"}).length;
+  document.getElementById("eg-tv").textContent=(deny*0.8+audit*0.3).toFixed(1);
+  var note=document.getElementById("eg-note");
+  if(m==="strict")note.innerHTML="<b>strict mode:</b> uncommitted egress dropped at the Kagenti sandbox boundary. Attempts recorded as directed hyperedges — attributable to a SVID principal, replayable, slashable.";
+  else if(m==="audit")note.innerHTML="<b>audit mode:</b> traffic permitted but flagged. Useful for baseline collection; not recommended once agents hold tool-use capability.";
+  else note.innerHTML="<b>open mode:</b> legacy chatbot posture. No commitment check — this is the configuration under which an agent collective can reach external systems unchallenged.";
+ }
+ mode.addEventListener("change",render);render();
+})();
+
+/* NOC DECKS */
+(function(){
+ var grid=document.getElementById("deckGrid");if(!grid)return;
+ var decks=[
+  {n:"SWARM_TOPOLOGY",d:"A2A hypergraph density · clique and coordinator detection · partition triggers",s:"ACTIVE",m:[["ρ_A DENSITY",0.02,0.34,3],["CLIQUES k≥3",0,7,0],["PARTITION EVENTS",0,3,0]],note:"the deck that makes collective behaviour a measurable surface rather than an emergent surprise. Fires Kagenti mTLS revocation at ρ_crit."},
+  {n:"ROUTING_NOC",d:"deterministic tier selection · CPS toggle · confidence floor τ · dissent escalation",s:"ACTIVE",m:[["TIER HIT RATE",90,99.4,1],["ESCALATION RATE",0.4,4,2],["τ FLOOR",0.3,0.55,2]],note:"every routing decision replayable from a versioned contract; dissent escalations bypass tier arbitration entirely."},
+  {n:"DRIFT_TELEMETRY",d:"MMD + KL watch production vs baseline · shortcut detection · autotelic fallback",s:"ACTIVE",m:[["MMD",0.02,0.14,3],["KL DIVERGENCE",0.05,0.3,3],["FALLBACK FIRED",0,2,0]],note:"reward-hacking shortcuts shift the output distribution before they shift the score. MMD catches the shift."},
+  {n:"SYS_PERF",d:"throughput · P99 latency · KV-cache VRAM · FinOps arbitrage spread",s:"ACTIVE",m:[["THROUGHPUT",2200,3400,0],["P99 LATENCY",110,190,0],["ARB SPREAD",8,34,0]],note:"routing overhead must stay below the inference it displaces, or the router is the problem."},
+  {n:"ML_ENG",d:"serving dynamics · optimizer state · LoRA hot-swap · drift",s:"ACTIVE",m:[["LORA SWAPS/H",2,14,0],["BATCH FILL",62,96,1],["OPT STATE",0,2,0]],note:"hot-swap cadence correlated against drift onset."},
+  {n:"AI_ENG",d:"relational hypergraph density ρ_H · RAG recall · context economics",s:"ACTIVE",m:[["ρ_H",0.3,0.85,3],["RECALL@5",0.78,0.97,3],["CTX UTIL",40,88,1]],note:"hyperedge structure feeds the router and is monitored as node-density telemetry."},
+  {n:"MLOPS",d:"feature freshness · canary gates · retrain cadence · provenance",s:"ACTIVE",m:[["FRESHNESS",88,100,1],["CANARY PASS",90,100,1],["RETRAIN h",4,26,0]],note:"provenance is a gate, not a report."},
+  {n:"DEVOPS",d:"DORA metrics · error-budget burn · eBPF kernel latency",s:"ACTIVE",m:[["DEPLOY/DAY",3,18,1],["BUDGET BURN",0.2,1.8,2],["eBPF µs",8,40,1]],note:"error-budget burn gates promotion automatically."},
+  {n:"AI_CLOUD_ENG",d:"autoscaling loops · evictable capacity · carbon arbitrage",s:"ACTIVE",m:[["SCALE Δ",0,6,0],["EVICTABLE %",12,38,0],["CARBON ARB",8,34,0]],note:"grid intensity is a first-class routing input."},
+  {n:"SCI_ACADEMIC_RSCH",d:"Krylov convergence · parallel scaling · Monte Carlo error",s:"ACTIVE",m:[["KRYLOV IT",120,460,0],["PAR EFF %",74,95,1],["MC ERR",0.001,0.02,4]],note:"convergence and error bounds cited per panel."},
+  {n:"DATA_SCIENCE",d:"calibration ECE · ROC-AUC decay · SHAP drift · PR operating point",s:"ACTIVE",m:[["ECE",0.005,0.06,4],["ROC-AUC",0.88,0.97,3],["SHAP DRIFT",0.01,0.12,3]],note:"calibration is what makes a possibility band meaningful."},
+  {n:"CYBER_DEFENSE",d:"threat velocity · egress commitment enforcement · isolation-forest anomaly · zero-trust · DP budget",s:"ACTIVE",m:[["THREAT VEL",2,30,0],["ISO ANOM",0.01,0.09,3],["DP ε",0.8,3.4,2]],note:"clears egress commitments and drops uncommitted packets at the sandbox boundary."},
+  {n:"BIG_DATA_PIPELINES",d:"ETL scaling · consumer lag · watermarks · partition skew",s:"ACTIVE",m:[["LAG",200,4800,0],["WATERMARK s",0.4,6,1],["SKEW",0.03,0.4,2]],note:"watermark discipline keeps replay deterministic."},
+  {n:"QUANTUM_OPS",d:"T1/T2 coherence · RB fidelity · surface-code suppression · QV",s:"STANDBY",m:[["T1 µs",60,140,0],["RB FIDELITY",0.985,0.999,4],["QV",64,256,0]],note:"carried as optionality; risk stated, nothing load-bearing depends on it."}
+ ];
+ function spark(vals,color){
+  var w=200,h=38,mn=Math.min.apply(null,vals),mx=Math.max.apply(null,vals),rg=(mx-mn)||1;
+  var pts=vals.map(function(v,i){return [(i/(vals.length-1))*w, h-((v-mn)/rg)*(h-8)-4]});
+  var d=pts.map(function(p,i){return (i?"L":"M")+p[0].toFixed(1)+" "+p[1].toFixed(1)}).join(" ");
+  return '<svg class="spark" viewBox="0 0 '+w+' '+h+'" preserveAspectRatio="none" style="width:100%;height:38px;display:block;margin-top:8px">'+
+   '<path d="'+d+'" fill="none" stroke="'+color+'" stroke-width="1.5"/>'+
+   '<circle cx="'+pts[pts.length-1][0].toFixed(1)+'" cy="'+pts[pts.length-1][1].toFixed(1)+'" r="2.4" fill="'+color+'"/></svg>';
+ }
+ grid.innerHTML=decks.map(function(dk){
+  return '<button class="deck" data-deck="'+dk.n+'"><div class="dn">'+dk.n+'</div><div class="dd">'+dk.d+'</div>'+
+   '<span class="ds'+(dk.s!=="ACTIVE"?" standby":"")+'">'+(dk.s==="ACTIVE"?"● ACTIVE":"○ STANDBY")+'</span></button>';
+ }).join("");
+ var detail=document.getElementById("deckDetail"),iv=null;
+ grid.addEventListener("click",function(e){
+  var btn=e.target.closest(".deck");if(!btn)return;
+  var name=btn.dataset.deck,dk=decks.filter(function(d){return d.n===name})[0];
+  [].forEach.call(grid.querySelectorAll(".deck"),function(b){b.classList.toggle("sel",b===btn)});
+  detail.style.display="block";
+  document.getElementById("dd-name").textContent=dk.n;
+  var sb=document.getElementById("dd-status");sb.textContent=dk.s==="ACTIVE"?"LIVE":"STANDBY";sb.style.color=dk.s==="ACTIVE"?"":"var(--ink3)";
+  document.getElementById("dd-desc").textContent=dk.d;
+  document.getElementById("dd-note").innerHTML="<b>deck contract:</b> "+dk.note+" Formulas production-accurate; every panel resolves to a cited preprint. Feed simulated at 1.6s cadence.";
+  var cols=["var(--amber)","var(--ok)","var(--link)"];
+  function paint(){
+   document.getElementById("dd-metrics").innerHTML=dk.m.map(function(m,mi){
+    var arr=[];var v=(m[1]+m[2])/2;
+    for(var i=0;i<26;i++){v=Math.max(m[1],Math.min(m[2],v+(Math.random()-.5)*(m[2]-m[1])*.16));arr.push(v)}
+    var last=arr[arr.length-1];
+    return '<div style="background:var(--paper2);border:1px solid var(--rule);border-radius:7px;padding:12px 14px">'+
+     '<div style="font-family:var(--mono);font-size:9.5px;color:var(--ink3);letter-spacing:.1em">'+m[0]+'</div>'+
+     '<div style="font-family:var(--mono);font-size:21px;color:var(--ink);margin-top:5px;font-weight:700">'+last.toFixed(m[3])+'</div>'+
+     spark(arr,cols[mi%3])+'</div>';
+   }).join("");
+  }
+  paint();
+  if(iv)clearInterval(iv);
+  iv=setInterval(function(){ if(detail.style.display!=="none") paint(); else clearInterval(iv); },1600);
+  detail.scrollIntoView({behavior:"smooth",block:"nearest"});
+ });
+})();
+
+/* command palette */
+(function(){var m=document.getElementById("cmdk");if(!m)return;var inp=m.querySelector("input"),list=m.querySelector(".cmdk-list");
+ var items=[];
+ document.querySelectorAll(".navlinks a").forEach(function(a){items.push({label:a.textContent.trim(),href:a.getAttribute("href"),k:"section"})});
+ [["Swarm topology simulator","#agentic|swarm"],["Dissent routing","#agentic|dissent"],["Execution proofs (ZKEP)","#agentic|zkep"],["Egress air-gap","#agentic|egress"],["Auditor agents","#agentic|auditors"],["Objectives","#objectives|"],["Capability statement","#primes|comp"],["Legal IDs","#primes|legal"],["NOC deck index","#noc|"],["Execute mutual NDA","nda|"],["Toggle theme","theme|"]].forEach(function(x){var p=x[1].split("|");items.push({label:x[0],href:x[1],k:"jump",anchor:p[0],tab:p[1]})});
+ [["UltraMassive.ML","https://ultramassive.ml"],["AperX","https://aperx.ultramassiveml.io"],["ProtoLab NDA","nda"],["White Paper APX-WP-001","https://aperx.ultramassiveml.io/APX-WP-001.html"],["GitHub","https://github.com/UltraMassive-ML"]].forEach(function(x){items.push({label:x[0],href:x[1],k:"link"})});
+ [["SWARM_TOPOLOGY"],["ROUTING_NOC"],["DRIFT_TELEMETRY"],["SYS_PERF"],["ML_ENG"],["AI_ENG"],["MLOPS"],["DEVOPS"],["AI_CLOUD_ENG"],["SCI_ACADEMIC_RSCH"],["DATA_SCIENCE"],["CYBER_DEFENSE"],["BIG_DATA_PIPELINES"],["QUANTUM_OPS"]].forEach(function(x){items.push({label:x[0]+" · deck",href:"deck:"+x[0],k:"noc deck"})});
+ var sel=0;
+ function render(q){list.innerHTML="";var f=items.filter(function(it){return it.label.toLowerCase().indexOf(q.toLowerCase())>-1});if(sel>=f.length)sel=0;
+  f.forEach(function(it,i){var li=document.createElement("li");li.className=i===sel?"sel":"";li.innerHTML='<span class="cl">'+it.label+'</span><span class="k">'+it.k+'</span>';li.addEventListener("click",function(){go(it)});li.addEventListener("mouseenter",function(){sel=i;render(inp.value)});list.appendChild(li)});list._f=f}
+ function go(it){close();
+  if(it.href==="nda"){_openNDA();return}
+  if(it.href==="theme"){document.getElementById("themeBtn").click();return}
+  if(it.href.indexOf("deck:")===0){
+   var nm=it.href.slice(5);document.getElementById("noc").scrollIntoView({behavior:"smooth"});
+   setTimeout(function(){var b=document.querySelector('.deck[data-deck="'+nm+'"]');if(b)b.click()},500);return}
+  if(it.href.indexOf("http")===0){window.open(it.href,"_blank");return}
+  if(it.anchor){
+   var el=document.querySelector(it.anchor);if(el)el.scrollIntoView({behavior:"smooth"});
+   if(it.tab){setTimeout(function(){
+    var scope=el;var b=scope.querySelector('.tabbtn[data-tab="'+it.tab+'"]');if(b)b.click()},520)}
+   }
+ }
+ function open(){m.classList.add("open");inp.value="";render("");sel=0;setTimeout(function(){inp.focus()},30)}
+ function close(){m.classList.remove("open")}
+ window._openCmdk=open;
+ inp.addEventListener("input",function(){sel=0;render(inp.value)});
+ document.addEventListener("keydown",function(e){
+  if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==="k"){e.preventDefault();open()}
+  else if(e.key==="/"&&!/INPUT|TEXTAREA/.test(document.activeElement.tagName)&&!m.classList.contains("open")){e.preventDefault();open()}
+  else if(m.classList.contains("open")){
+   if(e.key==="Escape")close();
+   else if(e.key==="ArrowDown"){e.preventDefault();sel=Math.min((list._f||[]).length-1,sel+1);render(inp.value)}
+   else if(e.key==="ArrowUp"){e.preventDefault();sel=Math.max(0,sel-1);render(inp.value)}
+   else if(e.key==="Enter"){e.preventDefault();if(list._f&&list._f[sel])go(list._f[sel])}}});
+ m.addEventListener("click",function(e){if(e.target===m)close()})})();
+</script>
+</body>
+</html>
