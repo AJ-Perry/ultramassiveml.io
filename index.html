@@ -3,83 +3,74 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UltraMassive // Advanced Scientific Research Corp</title>
-<meta name="description" content="UltraMassive Advanced Scientific Research Corp: the control plane for applied intelligence and agentic execution. AperX · A.R.E. · Enterprise NOC. UEI M56HEXXMJC47, CAGE 22QR2.">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230a0b0f'/%3E%3Cpath d='M10 10 L54 10 L58 18 L58 46 L54 54 L10 54 L6 46 L6 18 Z' stroke='%238b95a5' stroke-width='1.2' fill='none' opacity='.5'/%3E%3Cpath d='M16 20 L16 44 L22 44 L22 28' stroke='%235fbf78' stroke-width='5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M22 28 L32 40 L42 28' stroke='%238ea3ff' stroke-width='5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M42 28 L42 44 L48 44 L48 20' stroke='%23e79a3c' stroke-width='5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M18 50 L46 50' stroke='%238b95a5' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+<title>UltraMassive // Control Plane for Applied Intelligence</title>
+<meta name="description" content="UltraMassive Advanced Scientific Research Corp: the control plane for applied intelligence. AperX · A.R.E. · Enterprise NOC. UEI M56HEXXMJC47, CAGE 22QR2.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23f1f0ea'/%3E%3Cpath d='M16 20 L16 44 L22 44 L22 28' stroke='%233f7d4e' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3Cpath d='M22 28 L32 40 L42 28' stroke='%232c37a6' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3Cpath d='M42 28 L42 44 L48 44 L48 20' stroke='%23bd6208' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
- --paper:#f1f0ea;--paper2:#e8e6dd;--card:#f7f6f1;--ink:#15161a;--ink2:#464a53;--ink3:#848893;
- --rule:#dad8ce;--rule2:#c7c5b8;--link:#2c37a6;--amber:#bd6208;--steel:#59626f;--ok:#3f7d4e;
- --alert:#a83a2c;
- --grid:#e6e4da;--gridb:#dbd9cd;--mark:#eceadf;--glow:rgba(189,98,8,.10);--blend:multiply;--noise:.03;
- --sans:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;--mono:"JetBrains Mono",ui-monospace,Menlo,monospace;--serif:"Instrument Serif",Georgia,serif;--measure:52rem;
- /* tri-color logo palette */
- --um-green:#3f7d4e;--um-blue:#2c37a6;--um-orange:#bd6208;--um-frame:#59626f;--um-bar:#848893;
+  --paper:#f1f0ea; --paper2:#e8e6dd; --card:#f7f6f1;
+  --ink:#15161a;   --ink2:#464a53;   --ink3:#848893;
+  --rule:#dad8ce;  --rule2:#c7c5b8;
+  --link:#2c37a6;  --amber:#bd6208;  --steel:#59626f;  --ok:#3f7d4e;
+  --green:#3f7d4e; --green-l:#5fbf78;
+  --blue:#2c37a6;  --blue-l:#8ea3ff;
+  --orange:#bd6208;--orange-l:#e79a3c;
+  --alert:#a83a2c;
+  --grid:#e6e4da;  --gridb:#dbd9cd;
+  --mark:#eceadf;  --glow:rgba(189,98,8,.08);
+  --blend:multiply; --noise:.03;
+  --sans:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  --serif:"Instrument Serif",Georgia,serif;
+  --measure:58rem;
 }
 html[data-theme="dark"]{
- --paper:#0d0e12;--paper2:#14161c;--card:#171922;--ink:#eef0f5;--ink2:#a8aeba;--ink3:#6c7481;
- --rule:#23272f;--rule2:#2f3540;--link:#8ea3ff;--amber:#e79a3c;--steel:#8b95a5;--ok:#5fbf78;
- --alert:#ff7a63;
- --grid:#171a20;--gridb:#1e222a;--mark:#1b1e27;--glow:rgba(231,154,60,.16);--blend:screen;--noise:.05;
- --um-green:#5fbf78;--um-blue:#8ea3ff;--um-orange:#e79a3c;--um-frame:#8b95a5;--um-bar:#6c7481;
+  --paper:#0d0e12; --paper2:#14161c; --card:#171922;
+  --ink:#eef0f5;   --ink2:#a8aeba;   --ink3:#6c7481;
+  --rule:#23272f;  --rule2:#2f3540;
+  --link:#8ea3ff;  --amber:#e79a3c;  --steel:#8b95a5;  --ok:#5fbf78;
+  --green:#5fbf78; --green-l:#9cd6a8;
+  --blue:#8ea3ff;  --blue-l:#c0d4ff;
+  --orange:#e79a3c;--orange-l:#f4b96b;
+  --alert:#ff7a63;
+  --grid:#171a20;  --gridb:#1e222a;
+  --mark:#1b1e27;  --glow:rgba(231,154,60,.12);
+  --blend:screen;  --noise:.05;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased;
- transition:background .5s ease,color .5s ease;
- background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px),linear-gradient(var(--gridb) 1px,transparent 1px),linear-gradient(90deg,var(--gridb) 1px,transparent 1px);
- background-size:26px 26px,26px 26px,130px 130px,130px 130px;background-position:-1px -1px;background-attachment:fixed}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased;transition:background .5s ease,color .5s ease;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px),linear-gradient(var(--gridb) 1px,transparent 1px),linear-gradient(90deg,var(--gridb) 1px,transparent 1px);
+  background-size:26px 26px,26px 26px,130px 130px,130px 130px;background-position:-1px -1px;background-attachment:fixed}
 .noise{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:var(--noise);mix-blend-mode:var(--blend);
- background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline;text-underline-offset:3px}
 ::selection{background:var(--glow)}
 .wrap{max-width:var(--measure);margin:0 auto;padding:0 26px;position:relative;z-index:2}
 .mono{font-family:var(--mono)}
 
-.progress{position:fixed;top:0;left:0;right:0;height:2px;z-index:120;background:transparent}
-.progress i{display:block;height:100%;width:0;background:var(--amber);box-shadow:0 0 10px var(--amber)}
-
-/* ═══════════ UltraMassive Logo System (tri-color ecosystem) ═══════════ */
-.um-logo{display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
-.um-logo:hover{text-decoration:none}
-.um-logo-mark{flex:none;position:relative;display:block}
-.um-logo-mark svg{display:block;width:100%;height:100%}
-.um-logo-txt{display:flex;flex-direction:column;line-height:1}
-.um-logo-name{font-family:var(--mono);font-weight:700;color:var(--ink);letter-spacing:-.01em;font-size:15px}
-.um-logo-sub{font-family:var(--mono);font-weight:400;color:var(--ink3);font-size:9.5px;letter-spacing:.12em;margin-top:3px;text-transform:uppercase}
-
-/* logo sizes */
-.um-logo-sm .um-logo-mark{width:28px;height:28px}
-.um-logo-md .um-logo-mark{width:38px;height:38px}
-.um-logo-lg .um-logo-mark{width:52px;height:52px}
-.um-logo-xl .um-logo-mark{width:68px;height:68px}
-.um-logo-hero .um-logo-mark{width:104px;height:104px}
-
-.um-logo-sm .um-logo-name{font-size:13px}
-.um-logo-sm .um-logo-sub{font-size:8.5px;margin-top:2px}
-
-/* status bar */
 .statusbar{border-bottom:1px solid var(--rule);background:var(--paper2);position:relative;z-index:60}
 .statusbar .wrap{display:flex;align-items:center;gap:12px;padding:7px 26px;font-family:var(--mono);font-size:11.5px;color:var(--ink2);letter-spacing:.02em;flex-wrap:wrap}
-.sdot{width:7px;height:7px;border-radius:50%;background:var(--ok);animation:umpulse 2.4s infinite}
-.ssep{color:var(--ink3)}.statusbar b{color:var(--ink)}.statusbar a{color:var(--ink2)}
+.sdot{width:7px;height:7px;border-radius:50%;background:var(--ok)}
+.ssep{color:var(--ink3)}
+.statusbar b{color:var(--ink)}
 .clock{font-variant-numeric:tabular-nums;color:var(--ink);letter-spacing:.01em}
-.sync{font-family:var(--mono);font-size:9px;letter-spacing:.12em;padding:1px 6px;border-radius:4px;border:1px solid var(--rule2);color:var(--ink3)}
-.sync.ok{color:var(--ok);border-color:var(--ok)}.sync.loc{color:var(--ink3)}
-.sync.warn{color:var(--amber);border-color:var(--amber)}
+.sync{font-family:var(--mono);font-size:9px;letter-spacing:.12em;padding:1px 6px;border-radius:4px;border:1px solid var(--rule2);color:var(--ok)}
 .statusbar .right{margin-left:auto;display:flex;gap:12px;align-items:center}
 
-/* nav */
 .nav{position:sticky;top:0;z-index:55;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:12px 26px;gap:10px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--ink);font-family:var(--mono);font-size:14px;font-weight:700;letter-spacing:-.01em;text-decoration:none}
+.brand svg{width:26px;height:26px}
+.brand .pn{font-weight:400;color:var(--ink3);font-size:11px}
 .navwrap{display:flex;align-items:center;gap:8px}
 .navlinks{display:flex;gap:2px;align-items:center;position:relative;flex-wrap:wrap}
-.navlinks a{font-family:var(--mono);font-size:12.5px;color:var(--ink2);letter-spacing:.01em;padding:7px 11px;border-radius:7px;position:relative;z-index:1;transition:color .25s;cursor:pointer}
-.navlinks a:hover,.navlinks a.active{color:var(--ink);text-decoration:none}
-.navind{position:absolute;bottom:2px;height:2px;background:var(--amber);border-radius:2px;transition:left .3s cubic-bezier(.4,0,.2,1),width .3s cubic-bezier(.4,0,.2,1);z-index:0;opacity:0}
+.navlinks a{font-family:var(--mono);font-size:12.5px;color:var(--ink2);letter-spacing:.01em;padding:7px 11px;border-radius:7px;position:relative;z-index:1;transition:color .25s;cursor:pointer;text-decoration:none}
+.navlinks a:hover,.navlinks a.active{color:var(--ink)}
+.navind{position:absolute;bottom:2px;height:2px;background:var(--amber);border-radius:2px;transition:left .3s, width .3s;z-index:0;opacity:0}
 .iconbtn{font-family:var(--mono);font-size:11.5px;color:var(--ink2);border:1px solid var(--rule2);border-radius:7px;padding:6px 9px;background:var(--card);cursor:pointer;display:inline-flex;gap:6px;align-items:center;transition:.2s}
 .iconbtn:hover{border-color:var(--amber);color:var(--amber)}
 .iconbtn svg{width:14px;height:14px}
@@ -90,40 +81,67 @@ a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline;text-
 .bracket::before{top:-1px;left:-1px;border-top:2px solid var(--steel);border-left:2px solid var(--steel)}
 .bracket::after{bottom:-1px;right:-1px;border-bottom:2px solid var(--steel);border-right:2px solid var(--steel)}
 
-/* hero */
-.hero-lockup{display:flex;align-items:center;gap:22px;padding:26px;background:var(--card);border:1px solid var(--rule2);border-radius:10px;margin-bottom:22px;position:relative;overflow:hidden}
-.hero-lockup::before{content:"";position:absolute;inset:0;background:
-  radial-gradient(400px circle at 8% 50%, color-mix(in srgb, var(--um-green) 14%, transparent), transparent 60%),
-  radial-gradient(380px circle at 50% 50%, color-mix(in srgb, var(--um-blue) 10%, transparent), transparent 60%),
-  radial-gradient(400px circle at 92% 50%, color-mix(in srgb, var(--um-orange) 14%, transparent), transparent 60%);
-  pointer-events:none;opacity:.7}
-.hero-lockup > *{position:relative;z-index:1}
-.hero-lockup .hl-sep{width:1px;align-self:stretch;background:var(--rule2)}
-.hero-lockup .hl-info{flex:1}
-.hero-lockup .hl-eyebrow{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;color:var(--ink3);text-transform:uppercase;font-weight:600}
-.hero-lockup .hl-title{font-family:var(--serif);font-size:17px;color:var(--ink);margin-top:3px;line-height:1.3}
-.hero-lockup .hl-title b{color:var(--amber);font-weight:400;font-style:italic}
+/* ═══ HERO WITH LARGE LOGO ═══ */
+.hero{padding:70px 0 40px;position:relative}
+.spot{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:0;transition:opacity .5s;background:radial-gradient(420px circle at var(--mx,50%) var(--my,40%),var(--glow),transparent 60%)}
+.hero:hover .spot{opacity:1}
+.hero .wrap,.hero>*{position:relative;z-index:2}
 
-.memo{padding:60px 0 8px;position:relative}
-.spot{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:0;transition:opacity .5s;
- background:radial-gradient(420px circle at var(--mx,50%) var(--my,40%),var(--glow),transparent 60%)}
-.memo:hover .spot{opacity:1}
-.memo .wrap,.memo>*{position:relative;z-index:2}
+.hero-logo-block{
+  display:flex;align-items:center;gap:32px;
+  margin-bottom:36px;
+  padding:28px 32px;
+  background:var(--card);
+  border:1px solid var(--rule);
+  border-radius:12px;
+  position:relative;
+  overflow:hidden;
+}
+.hero-logo-block::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(300px circle at 0% 50%, color-mix(in srgb,var(--green) 8%,transparent), transparent 70%),
+    radial-gradient(300px circle at 50% 50%, color-mix(in srgb,var(--blue) 8%,transparent), transparent 70%),
+    radial-gradient(300px circle at 100% 50%, color-mix(in srgb,var(--orange) 8%,transparent), transparent 70%);
+  pointer-events:none;
+}
+.hero-logo-block > *{position:relative;z-index:1}
+.hero-main-logo{width:120px;height:120px;flex-shrink:0}
+.hero-main-logo svg{width:100%;height:100%}
+.hero-logo-info{flex:1}
+.hero-logo-info h2{margin:0;font-family:var(--serif);font-size:26px;color:var(--ink);font-weight:400;letter-spacing:-.01em;line-height:1.1}
+.hero-logo-info .sub{font-family:var(--mono);font-size:10.5px;color:var(--ink3);letter-spacing:.14em;text-transform:uppercase;margin-top:6px;font-weight:600}
+.hero-logo-info .desc{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--ink2);margin-top:10px;line-height:1.5;max-width:52ch}
+.hero-eco-logos{display:flex;gap:12px;margin-left:auto}
+.hero-eco-logo{
+  width:56px;height:56px;
+  border:1px solid var(--rule2);
+  border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--paper);
+  transition:.2s;
+  cursor:pointer;
+}
+.hero-eco-logo:hover{border-color:var(--steel);transform:translateY(-2px)}
+.hero-eco-logo svg{width:32px;height:32px}
+
 .memohead{display:flex;align-items:center;gap:11px;font-family:var(--mono);font-size:13px;color:var(--ink2);letter-spacing:.03em;margin-bottom:22px}
-.memohead svg{width:30px;height:30px}
+.memohead svg{width:30px;height:30px;color:var(--ink)}
 .memohead .tag{margin-left:auto;font-size:10.5px;color:var(--ink3);border:1px solid var(--rule2);border-radius:5px;padding:3px 8px}
-.memowrap{display:grid;grid-template-columns:1fr auto;gap:34px;align-items:start}
+
 .fields{margin:0;font-family:var(--mono);font-size:13.5px}
 .fields .row{display:grid;grid-template-columns:86px 1fr;gap:14px;padding:6px 0;border-bottom:1px dotted var(--rule2)}
-.fields dt{color:var(--ink3);margin:0}.fields dd{color:var(--ink);margin:0}
-.cursor{display:inline-block;width:7px;height:15px;background:var(--amber);vertical-align:-2px;margin-left:3px;animation:umblink 1.1s steps(2) infinite}
+.fields dt{color:var(--ink3);margin:0}
+.fields dd{color:var(--ink);margin:0}
+.cursor{display:inline-block;width:7px;height:15px;background:var(--amber);vertical-align:-2px;margin-left:3px;animation:blink 1.1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
 .mission{font-family:var(--serif);font-size:clamp(32px,5.4vw,58px);line-height:1.04;letter-spacing:-.01em;color:var(--ink);margin:36px 0 0;max-width:20ch}
 .mission em{font-style:italic;color:var(--steel)}
-.scram{white-space:pre-wrap}
-.herocanvas{position:relative;margin-top:26px;height:240px;border:1px solid var(--rule);background:var(--card);overflow:hidden}
-.herocanvas canvas{position:absolute;inset:0;width:100%;height:100%}
-.herocanvas .hlabel{position:absolute;left:10px;bottom:8px;font-family:var(--mono);font-size:10.5px;color:var(--ink3);letter-spacing:.06em;z-index:2}
-.herocanvas .hcorner{position:absolute;top:8px;right:10px;font-family:var(--mono);font-size:10px;color:var(--ink3);z-index:2}
+
+.figure{position:relative;border:1px solid var(--rule);background:var(--card);overflow:hidden;margin-top:26px}
+.figure canvas{display:block;width:100%;height:auto}
+.figure .flabel{position:absolute;left:12px;bottom:10px;font-family:var(--mono);font-size:10.5px;color:var(--ink3);letter-spacing:.06em;z-index:2}
+.figure .fcorner{position:absolute;top:10px;right:12px;font-family:var(--mono);font-size:10px;color:var(--ink3);z-index:2;letter-spacing:.06em}
 
 .prose{padding:30px 0 6px;font-size:16.5px;color:var(--ink)}
 .prose p{margin:0 0 20px;max-width:66ch;color:var(--ink2)}
@@ -134,12 +152,11 @@ a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline;text-
 .prose ol li::before{content:counter(pr,decimal-leading-zero);position:absolute;left:0;top:10px;font-family:var(--mono);font-size:12px;color:var(--link);border:1px solid var(--rule2);border-radius:5px;padding:2px 6px;background:var(--card)}
 .metricline{font-family:var(--mono);font-size:14px;color:var(--ink);background:var(--card);border:1px solid var(--rule2);border-left:3px solid var(--amber);border-radius:6px;padding:14px 16px;margin:8px 0 22px}
 .metricline b{color:var(--link)}
-.signoff{font-family:var(--mono);font-size:13px;color:var(--ink2);margin-top:28px;line-height:1.7}
-.signoff b{color:var(--ink);font-weight:600}
 
 .sec{padding:52px 0;scroll-margin-top:96px}
 .secmark{display:flex;align-items:baseline;gap:14px;font-family:var(--mono);font-size:13px;color:var(--ink2);letter-spacing:.04em;margin-bottom:9px}
-.secmark .id{color:var(--ink3)}.secmark .ttl{color:var(--ink);font-weight:600}
+.secmark .id{color:var(--ink3)}
+.secmark .ttl{color:var(--ink);font-weight:600}
 .secmark::after{content:"";flex:1;height:0;border-top:1px dashed var(--rule2);align-self:center;margin-left:4px}
 .secmark .rev{color:var(--ink3);border:1px solid var(--rule2);border-radius:5px;padding:2px 7px;font-size:10.5px}
 .secnote{color:var(--ink2);max-width:62ch;margin:0 0 22px;font-size:15px}
@@ -148,46 +165,79 @@ a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline;text-
 .entry{padding:22px 0;border-bottom:1px solid var(--rule)}
 .entry:last-child{border-bottom:0}
 .entry h3{margin:0;font-size:18px;font-weight:600;letter-spacing:-.01em;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
-.entry h3 a{color:var(--ink)}.entry h3 a:hover{color:var(--link);text-decoration:none}
 .entry h3 .pin{font-family:var(--mono);font-size:11px;color:var(--ink3);font-weight:400}
 .emeta{font-family:var(--mono);font-size:12.5px;color:var(--ink3);margin-top:3px}
 .entry p{margin:11px 0 0;color:var(--ink2);max-width:68ch;font-size:15.5px}
 .entry p b{color:var(--ink);font-weight:600}
 .annot{font-family:var(--mono);font-size:12.5px;color:var(--ink2);background:var(--paper2);border:1px solid var(--rule);border-radius:6px;padding:9px 12px;margin-top:12px;overflow-x:auto;line-height:1.7}
 .annot b{color:var(--ink)}
-.elinks{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px 16px;font-family:var(--mono);font-size:12.5px}
 .etags{margin-top:11px;display:flex;flex-wrap:wrap;gap:7px}
 .etag{font-family:var(--mono);font-size:11px;color:var(--ink2);border:1px solid var(--rule2);border-radius:5px;padding:3px 8px;background:var(--card)}
 
+/* ═══ STATS ═══ */
 .stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--rule2);background:var(--card);overflow:hidden;margin-top:8px}
 .stat{padding:18px;border-right:1px solid var(--rule);position:relative}
 .stat:last-child{border-right:0}
 .stat::before{content:"";position:absolute;top:0;left:0;width:10px;height:10px;border-top:1px solid var(--steel);border-left:1px solid var(--steel)}
-.stat .n{font-family:var(--mono);font-size:26px;color:var(--ink);letter-spacing:-.02em}
+.stat .n{font-family:var(--mono);font-size:26px;color:var(--ink);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
 .stat .n .suf{color:var(--amber)}
 .stat .l{font-size:12.5px;color:var(--ink2);margin-top:5px;line-height:1.4}
 
+/* ═══ HYPERGRAPH TAXONOMY ═══ */
+.htgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:16px}
+.htcard{border:1px solid var(--rule2);background:var(--card);border-radius:8px;padding:18px;position:relative;overflow:hidden;transition:.2s;cursor:pointer}
+.htcard:hover{border-color:var(--hcol);transform:translateY(-2px)}
+.htcard::before{content:"";position:absolute;top:0;left:0;width:100%;height:3px;background:var(--hcol)}
+.htcard .ht-num{font-family:var(--mono);font-size:9px;color:var(--hcol);letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin-bottom:8px}
+.htcard h4{margin:0 0 6px;font-size:15px;font-weight:600;letter-spacing:-.01em;display:flex;align-items:baseline;gap:8px}
+.htcard h4 .ht-type{font-family:var(--mono);font-size:10px;color:var(--ink3);font-weight:400;border:1px solid var(--rule2);border-radius:4px;padding:1px 6px}
+.htcard p{margin:8px 0 0;color:var(--ink2);font-size:13px;line-height:1.6}
+.htcard .ht-invariant{margin-top:10px;font-family:var(--mono);font-size:11px;color:var(--ink);background:var(--paper2);border:1px solid var(--rule);border-radius:5px;padding:7px 10px}
+.htcard .ht-invariant b{color:var(--hcol);font-weight:600}
+
+/* ═══ FIGURE CANVAS ═══ */
+.hg-wrap{border:1px solid var(--rule);background:var(--card);border-radius:8px;overflow:hidden;margin-top:12px;position:relative}
+.hg-canvas{display:block;width:100%;height:auto}
+.hg-hud{
+  position:absolute;top:12px;left:12px;
+  font-family:var(--mono);font-size:10px;color:var(--ink3);
+  line-height:1.85;letter-spacing:.04em;
+  background:color-mix(in srgb,var(--paper) 85%,transparent);
+  backdrop-filter:blur(6px);
+  padding:10px 12px;border-radius:6px;border:1px solid var(--rule);
+  min-width:180px;pointer-events:none;
+}
+.hg-hud b{color:var(--ink);font-weight:600}
+.hg-hud .g{color:var(--green)}
+.hg-hud .b{color:var(--link)}
+.hg-hud .o{color:var(--orange)}
+.hg-inspector{
+  position:absolute;bottom:12px;right:12px;width:280px;
+  background:var(--paper);border:1px solid var(--rule2);border-radius:8px;
+  padding:14px 16px;font-family:var(--mono);font-size:11px;color:var(--ink2);
+  line-height:1.65;box-shadow:0 6px 24px rgba(0,0,0,.08);
+  display:none;z-index:5;max-height:calc(100% - 24px);overflow-y:auto;
+}
+.hg-inspector.open{display:block;animation:fade .25s ease}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+.hg-inspector h5{margin:0 0 8px;font-size:12px;color:var(--ink);display:flex;justify-content:space-between;align-items:center}
+.hg-inspector h5 .cls{background:none;border:0;color:var(--ink3);cursor:pointer;font-size:16px;font-family:var(--mono);padding:0;line-height:1}
+.hg-inspector h5 .cls:hover{color:var(--ink)}
+.hg-inspector .ic-hash{color:var(--amber);font-size:10px;word-break:break-all;padding:6px 8px;background:var(--paper2);border-radius:4px;margin:6px 0}
+.hg-inspector .ic-row{display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px dotted var(--rule2)}
+.hg-inspector .ic-row:last-child{border-bottom:0}
+.hg-inspector .ic-row b{color:var(--ink)}
+
+/* ═══ TABS ═══ */
 .tabs{margin-top:8px}
 .tabbar{display:flex;gap:6px;flex-wrap:wrap;border-bottom:1px solid var(--rule);padding-bottom:10px}
 .tabbtn{font-family:var(--mono);font-size:12.5px;color:var(--ink2);background:var(--card);border:1px solid var(--rule2);border-radius:6px;padding:7px 12px;cursor:pointer;transition:.2s}
 .tabbtn:hover{color:var(--ink);border-color:var(--steel)}
 .tabbtn.active{color:var(--ink);background:var(--mark);border-color:var(--steel);box-shadow:inset 0 -2px 0 var(--amber)}
-.panel{display:none;padding:18px 0}.panel.active{display:block;animation:umfade .4s ease}
-.panel .split{display:grid;grid-template-columns:1fr 300px;gap:24px;align-items:start}
-.panel h4{margin:0 0 8px;font-size:16px}.panel p{margin:0 0 12px;color:var(--ink2);font-size:15px;max-width:60ch}
+.panel{display:none;padding:18px 0}
+.panel.active{display:block;animation:fade .4s ease}
 
-.code{position:relative;background:#0c0d11;border:1px solid #23262f;border-radius:8px;margin-top:12px;overflow:hidden}
-.code pre{margin:0;padding:16px 18px;overflow-x:auto;font-family:var(--mono);font-size:12.5px;line-height:1.7;color:#d7d9e0}
-.code .cbar{display:flex;align-items:center;justify-content:space-between;padding:8px 14px;border-bottom:1px solid #23262f;font-family:var(--mono);font-size:11px;color:#8a8e99}
-.copy{font-family:var(--mono);font-size:11px;color:#c9cbd4;background:#23262f;border:0;border-radius:5px;padding:4px 9px;cursor:pointer}.copy:hover{background:#2e313b}
-
-.btn{font-family:var(--mono);font-size:13px;padding:11px 16px;border:1px solid var(--rule2);border-radius:8px;background:var(--card);color:var(--ink);cursor:pointer;display:inline-flex;gap:8px;align-items:center;transition:transform .15s,border-color .2s,color .2s,background .2s}
-.btn:hover{border-color:var(--link);color:var(--link);text-decoration:none;transform:translateY(-1px)}
-.btn.pri{background:var(--ink);color:var(--paper);border-color:var(--ink)}.btn.pri:hover{transform:translateY(-1px);color:var(--paper)}
-.btn.amber{border-color:var(--amber);color:var(--amber)}.btn.amber:hover{background:var(--amber);color:#fff}
-.btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
-.btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;align-items:center}
-
+/* ═══ WIDGET ═══ */
 .widget{border:1px solid var(--rule2);background:var(--card);border-radius:10px;padding:20px;margin-top:8px}
 .widget .wtop{display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:11.5px;color:var(--ink3);letter-spacing:.05em;margin-bottom:16px;flex-wrap:wrap;gap:8px}
 .widget .wtop .sim{color:var(--amber);border:1px solid var(--amber);border-radius:5px;padding:2px 7px}
@@ -199,33 +249,28 @@ a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline;text-
 .ctrl select{width:100%;font-family:var(--mono);font-size:13px;padding:8px;border:1px solid var(--rule2);border-radius:6px;background:var(--paper);color:var(--ink)}
 .readout{font-family:var(--mono);font-size:13px;color:var(--ink2);line-height:1.8}
 .readout b{color:var(--ink)}
+
+/* ═══ BAND VIZ ═══ */
+.bandviz{height:22px;background:var(--paper2);border:1px solid var(--rule2);border-radius:5px;position:relative;overflow:hidden;margin-top:8px}
+.bandviz .pi{position:absolute;top:0;bottom:0;left:0;background:color-mix(in srgb,var(--amber) 25%,transparent);border-right:1px dashed var(--amber);transition:width .4s}
+.bandviz .ni{position:absolute;top:0;bottom:0;left:0;background:color-mix(in srgb,var(--ok) 35%,transparent);transition:width .4s}
+.bandviz .tau{position:absolute;top:-2px;bottom:-2px;width:2px;background:var(--link);transition:left .3s}
+.bandviz .tau::after{content:attr(data-l);position:absolute;top:-16px;left:4px;font-family:var(--mono);font-size:9px;color:var(--link);white-space:nowrap}
 .band{display:inline-block;padding:4px 10px;border-radius:6px;font-weight:600;letter-spacing:.04em;font-family:var(--mono);font-size:11.5px}
-.band.NOVEL,.band.COMMITTED,.band.ALLOW,.band.ISOLATED{background:color-mix(in srgb,var(--ok) 18%,transparent);color:var(--ok);border:1px solid color-mix(in srgb,var(--ok) 40%,transparent)}
-.band.AMBIGUOUS,.band.UNRESOLVED,.band.AUDIT,.band.COOPERATING,.band.STEERING{background:color-mix(in srgb,var(--amber) 16%,transparent);color:var(--amber);border:1px solid color-mix(in srgb,var(--amber) 40%,transparent)}
-.band.REJECTED,.band.BREACH,.band.DENIED,.band.PARTITION{background:color-mix(in srgb,var(--alert) 14%,transparent);color:var(--alert);border:1px solid color-mix(in srgb,var(--alert) 40%,transparent)}
+.band.NOVEL{background:color-mix(in srgb,var(--ok) 18%,transparent);color:var(--ok);border:1px solid color-mix(in srgb,var(--ok) 40%,transparent)}
+.band.AMBIGUOUS{background:color-mix(in srgb,var(--amber) 16%,transparent);color:var(--amber);border:1px solid color-mix(in srgb,var(--amber) 40%,transparent)}
+.band.COMMITTED{background:color-mix(in srgb,var(--amber) 16%,transparent);color:var(--amber);border:1px solid color-mix(in srgb,var(--amber) 40%,transparent)}
 .band.IDLE{background:var(--paper2);color:var(--ink3);border:1px solid var(--rule2)}
 
-/* layer marks with tri-color logos */
-.layermarks{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0 4px}
-.lm{border:1px solid var(--rule2);background:var(--card);border-radius:8px;padding:16px 14px;text-align:center;cursor:pointer;transition:.2s;position:relative;overflow:hidden}
-.lm::before{content:"";position:absolute;inset:0;opacity:0;transition:opacity .3s;pointer-events:none;
- background:
-  radial-gradient(120px circle at 30% 30%, color-mix(in srgb, var(--um-green) 12%, transparent), transparent 60%),
-  radial-gradient(120px circle at 70% 30%, color-mix(in srgb, var(--um-blue) 10%, transparent), transparent 60%),
-  radial-gradient(120px circle at 50% 70%, color-mix(in srgb, var(--um-orange) 12%, transparent), transparent 60%)}
-.lm:hover::before{opacity:1}
-.lm:hover{border-color:var(--amber);transform:translateY(-2px)}
-.lm > *{position:relative;z-index:1}
-.lm .lm-logo{width:52px;height:52px;margin:0 auto 10px;display:block}
-.lm .lm-logo svg{width:100%;height:100%}
-.lm .lmn{font-family:var(--mono);font-size:11px;color:var(--ink);font-weight:600;letter-spacing:.03em}
-.lm .lmu{font-family:var(--mono);font-size:9.5px;color:var(--ink3);margin-top:3px;word-break:break-all}
-.lm .lm-color-bar{display:flex;gap:3px;justify-content:center;margin-top:8px}
-.lm .lm-color-bar span{width:14px;height:3px;border-radius:1px}
-.lm .lm-color-bar .c-green{background:var(--um-green)}
-.lm .lm-color-bar .c-blue{background:var(--um-blue)}
-.lm .lm-color-bar .c-orange{background:var(--um-orange)}
+/* ═══ TIER GRID ═══ */
+.tiergrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.tcard{border:1px solid var(--rule2);background:var(--paper2);border-radius:6px;padding:12px;transition:.2s}
+.tcard.sel{border-color:var(--amber);box-shadow:inset 0 0 0 1px var(--amber)}
+.tcard .tn{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--ink)}
+.tcard .tc{font-family:var(--mono);font-size:10px;color:var(--ink3);margin-top:3px}
+.tcard .tp{font-family:var(--mono);font-size:10.5px;color:var(--ink2);margin-top:6px}
 
+/* ═══ OBJECTIVES ═══ */
 .objs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
 .obj{border:1px solid var(--rule2);background:var(--card);border-radius:8px;padding:15px;position:relative}
 .obj::before{content:"";position:absolute;top:0;left:0;width:9px;height:9px;border-top:1px solid var(--steel);border-left:1px solid var(--steel)}
@@ -233,6 +278,7 @@ a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline;text-
 .obj .od{font-size:12.5px;color:var(--ink2);margin-top:6px;line-height:1.55}
 .obj .om{font-family:var(--mono);font-size:10.5px;color:var(--ink3);margin-top:8px}
 
+/* ═══ DECKS ═══ */
 .decks{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:8px}
 .deck{border:1px solid var(--rule2);background:var(--card);border-radius:8px;padding:13px 14px;position:relative;transition:.2s;cursor:pointer;text-align:left;font:inherit;color:inherit}
 .deck:hover{border-color:var(--steel);transform:translateY(-1px)}
@@ -243,1241 +289,712 @@ a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline;text-
 .deck .ds{display:inline-block;margin-top:8px;font-family:var(--mono);font-size:9px;letter-spacing:.11em;padding:2px 6px;border-radius:4px;border:1px solid var(--ok);color:var(--ok)}
 .deck .ds.standby{color:var(--ink3);border-color:var(--rule2)}
 
-.viz{position:relative;border:1px solid var(--rule);border-radius:9px;background:var(--paper2);overflow:hidden;margin-top:8px}
-.viz svg{display:block;width:100%;height:auto}
-.viz .vhud{position:absolute;left:11px;top:10px;font-family:var(--mono);font-size:10.5px;color:var(--ink3);letter-spacing:.05em;line-height:1.85;pointer-events:none}
-.viz .vhud b{color:var(--ink)}
-.viz .vhud .ok{color:var(--ok)}.viz .vhud .warn{color:var(--amber)}.viz .vhud .bad{color:var(--alert)}
-.viz .vcorner{position:absolute;top:10px;right:11px;font-family:var(--mono);font-size:9.5px;color:var(--ink3);letter-spacing:.1em}
-.vizctl{padding:12px 14px;border-top:1px solid var(--rule);background:var(--card)}
+/* ═══ SIGNOFF ═══ */
+.signoff{font-family:var(--mono);font-size:13px;color:var(--ink2);margin-top:28px;line-height:1.7}
+.signoff b{color:var(--ink);font-weight:600}
 
-.dflow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:10px;align-items:stretch;margin-top:12px}
-.dnode{border:1px solid var(--rule2);background:var(--card);border-radius:8px;padding:13px;text-align:center}
-.dnode .dl{font-family:var(--mono);font-size:9.5px;letter-spacing:.11em;color:var(--ink3)}
-.dnode .dv{font-family:var(--mono);font-size:13px;color:var(--ink);font-weight:600;margin-top:6px;line-height:1.35}
-.dnode .dm{font-family:var(--mono);font-size:9.5px;color:var(--ink3);margin-top:6px}
-.dnode.hot{border-color:var(--amber);background:color-mix(in srgb,var(--amber) 7%,var(--card))}
-.dnode.hot .dv{color:var(--amber)}
-.dnode.okn{border-color:color-mix(in srgb,var(--ok) 45%,transparent);background:color-mix(in srgb,var(--ok) 7%,var(--card))}
-.dnode.okn .dv{color:var(--ok)}
-.darrow{display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:17px;color:var(--ink3)}
-.feed{border:1px solid var(--rule);border-radius:8px;background:var(--paper2);padding:12px 14px;margin-top:14px;font-family:var(--mono);font-size:11.5px;line-height:1.95;max-height:210px;overflow-y:auto}
-.feed .fr{padding:4px 0;border-bottom:1px dotted var(--rule2);opacity:0;transform:translateY(-4px);transition:.4s}
-.feed .fr.in{opacity:1;transform:none}
-.feed .ft{color:var(--ink3)}
-.feed .fa{color:var(--amber);font-weight:600}
-.feed .fq{color:var(--ink)}
-.feed .fh{color:var(--ok);float:right}
-
-.etable{width:100%;border-collapse:collapse;margin-top:10px;font-family:var(--mono);font-size:11.5px}
-.etable th{text-align:left;font-size:9.5px;letter-spacing:.11em;color:var(--ink3);font-weight:400;padding:8px 10px;border-bottom:1px solid var(--rule2);text-transform:uppercase}
-.etable td{padding:9px 10px;border-bottom:1px solid var(--rule);color:var(--ink2);vertical-align:top}
-.etable tr:hover td{background:var(--paper2)}
-.etable td b{color:var(--ink);font-weight:600}
-.etable .h{color:var(--amber)}
-.etable .st{font-size:9px;letter-spacing:.1em;padding:2px 6px;border-radius:4px;white-space:nowrap}
-.etable .st.allow{background:color-mix(in srgb,var(--ok) 16%,transparent);color:var(--ok);border:1px solid color-mix(in srgb,var(--ok) 40%,transparent)}
-.etable .st.deny{background:color-mix(in srgb,var(--alert) 13%,transparent);color:var(--alert);border:1px solid color-mix(in srgb,var(--alert) 40%,transparent)}
-.etable .st.audit{background:color-mix(in srgb,var(--amber) 15%,transparent);color:var(--amber);border:1px solid color-mix(in srgb,var(--amber) 40%,transparent)}
-
-.zflow{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:stretch;margin-top:12px}
-.zbox{border:1px solid var(--rule2);background:var(--card);border-radius:8px;padding:15px}
-.zbox h5{margin:0 0 7px;font-family:var(--mono);font-size:11.5px;color:var(--ink);letter-spacing:.04em;font-weight:600}
-.zbox p{margin:0;font-size:12.5px;color:var(--ink2);line-height:1.6;max-width:none}
-.zbox .zk{font-family:var(--mono);font-size:10px;color:var(--amber);letter-spacing:.09em;margin-top:9px}
-.hashstream{font-family:var(--mono);font-size:12.5px;letter-spacing:.05em;color:var(--ink3);background:#0c0d11;border:1px solid #23262f;border-radius:7px;padding:13px 15px;word-break:break-all;margin-top:12px;min-height:46px;line-height:1.7}
-.hashstream .ok{color:#7fd694}
-.prog{height:3px;background:var(--paper2);border:1px solid var(--rule);border-radius:3px;overflow:hidden;margin-top:10px}
-.prog i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--amber),var(--ok));transition:width .08s linear}
-
-.legalgrid{display:grid;grid-template-columns:1fr 1fr;gap:0 26px}
-
-/* footer */
+/* ═══ FOOTER ═══ */
 .foot{border-top:1px solid var(--rule);padding:38px 0 56px;margin-top:44px;background:var(--paper2)}
 .foot .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:28px}
 .foot h5{margin:0 0 10px;font-family:var(--mono);font-size:10px;color:var(--ink3);letter-spacing:.14em;text-transform:uppercase;font-weight:400}
-.foot a,.foot p{font-family:var(--mono);font-size:12px;color:var(--ink2);display:block;margin:0 0 6px;cursor:pointer}
-.foot a:hover{color:var(--amber);text-decoration:none}
+.foot a,.foot p{font-family:var(--mono);font-size:12px;color:var(--ink2);display:block;margin:0 0 6px;cursor:pointer;text-decoration:none}
+.foot a:hover{color:var(--amber)}
 .foot .brandline{display:flex;align-items:center;gap:12px;font-family:var(--mono);font-size:12.5px;color:var(--ink);font-weight:700;margin-bottom:12px}
-.foot .brandline svg{width:32px;height:32px}
-.foot .brandline .bl-txt{line-height:1}
+.foot .brandline svg{width:30px;height:30px}
 .foot .brandline .bl-sub{display:block;font-size:9px;color:var(--ink3);font-weight:400;letter-spacing:.12em;margin-top:2px;text-transform:uppercase}
 .foot .fcopy{margin-top:26px;font-family:var(--mono);font-size:9.5px;color:var(--ink3);letter-spacing:.05em;border-top:1px solid var(--rule);padding-top:16px;grid-column:1/-1;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 
-/* modal */
-.modal{position:fixed;inset:0;z-index:200;background:rgba(10,10,12,.55);display:none;align-items:center;justify-content:center;padding:20px}
-.modal.open{display:flex;animation:umfade .3s}
-.mcard{background:var(--paper);border:1px solid var(--rule2);border-radius:10px;max-width:560px;width:100%;padding:26px;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.25)}
-.mcard h3{margin:0 0 5px;font-family:var(--mono);font-size:13.5px;color:var(--ink)}
-.mcard .msub{font-family:var(--mono);font-size:10.5px;color:var(--ink3);letter-spacing:.05em;margin-bottom:16px}
-.mcard p{font-size:14px;color:var(--ink2);margin:0 0 12px;line-height:1.65}
-.mcard p b{color:var(--ink)}
-.mclose{position:absolute;top:10px;right:12px;background:none;border:0;color:var(--ink3);cursor:pointer;font-size:19px;font-family:var(--mono);line-height:1}
-.mclose:hover{color:var(--ink)}
-
-.cmdk{position:fixed;inset:0;z-index:300;background:rgba(10,10,12,.42);display:none;align-items:flex-start;justify-content:center;padding-top:17vh}
-.cmdk.open{display:flex;animation:umfade .2s}
-.cmdk-box{background:var(--paper);border:1px solid var(--rule2);border-radius:10px;width:min(580px,92vw);overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.3)}
-.cmdk-box input{width:100%;border:0;background:transparent;padding:16px 18px;font-family:var(--mono);font-size:14px;color:var(--ink);outline:none;border-bottom:1px solid var(--rule)}
-.cmdk-box input::placeholder{color:var(--ink3)}
-.cmdk-list{list-style:none;margin:0;padding:6px;max-height:330px;overflow-y:auto}
-.cmdk-list li{padding:9px 12px;border-radius:6px;font-family:var(--mono);font-size:12.5px;color:var(--ink2);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:10px}
-.cmdk-list li.sel{background:var(--mark);color:var(--ink);box-shadow:inset 2px 0 0 var(--amber)}
-.cmdk-list li .k{font-size:9px;color:var(--ink3);border:1px solid var(--rule2);border-radius:4px;padding:1px 6px;letter-spacing:.1em;flex:none}
-.cmdk-list li .cl{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-
-/* Color legend */
-.color-legend{display:inline-flex;gap:14px;flex-wrap:wrap;font-family:var(--mono);font-size:10.5px;color:var(--ink2);margin:8px 0 4px;letter-spacing:.03em}
-.color-legend .cl-item{display:inline-flex;align-items:center;gap:6px}
-.color-legend .cl-swatch{width:10px;height:10px;border-radius:2px;flex:none}
-.color-legend .cl-green{background:var(--um-green)}
-.color-legend .cl-blue{background:var(--um-blue)}
-.color-legend .cl-orange{background:var(--um-orange)}
-.color-legend .cl-frame{background:var(--um-frame)}
-
-@keyframes umpulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.85)}}
-@keyframes umblink{50%{opacity:0}}
-@keyframes umfade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
-
 @media (max-width:900px){
- .navlinks{display:none;position:absolute;top:100%;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--rule);flex-direction:column;padding:10px;gap:0;align-items:stretch}
- .navlinks.open{display:flex}
- .burger{display:inline-flex}
- .memowrap{grid-template-columns:1fr}
- .hero-lockup{flex-direction:column;text-align:center}
- .hero-lockup .hl-sep{width:100%;height:1px}
- .stats{grid-template-columns:repeat(2,1fr)}
- .stat:nth-child(2){border-right:0}
- .stat:nth-child(1),.stat:nth-child(2){border-bottom:1px solid var(--rule)}
- .decks{grid-template-columns:1fr 1fr}
- .objs{grid-template-columns:1fr 1fr}
- .layermarks{grid-template-columns:1fr 1fr}
- .wgrid,.zflow,.dflow{grid-template-columns:1fr}
- .darrow{transform:rotate(90deg);padding:2px 0}
- .panel .split{grid-template-columns:1fr}
- .legalgrid{grid-template-columns:1fr}
- .foot .fgrid{grid-template-columns:1fr 1fr}
+  .navlinks{display:none;position:absolute;top:100%;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--rule);flex-direction:column;padding:10px;gap:0;align-items:stretch}
+  .navlinks.open{display:flex}
+  .burger{display:inline-flex}
+  .hero-logo-block{flex-direction:column;text-align:center}
+  .hero-eco-logos{margin-left:0}
+  .memowrap{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .stat:nth-child(2){border-right:0}
+  .stat:nth-child(1),.stat:nth-child(2){border-bottom:1px solid var(--rule)}
+  .htgrid{grid-template-columns:1fr}
+  .decks{grid-template-columns:1fr 1fr}
+  .objs{grid-template-columns:1fr 1fr}
+  .wgrid{grid-template-columns:1fr}
+  .foot .fgrid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  .stats{grid-template-columns:1fr}
+  .stat{border-right:0;border-bottom:1px solid var(--rule)}
+  .stat:last-child{border-bottom:0}
+  .decks,.objs,.tiergrid,.htgrid{grid-template-columns:1fr}
+  .foot .fgrid{grid-template-columns:1fr}
+  .hg-inspector{display:none!important}
 }
 </style>
 </head>
 <body>
 <div class="noise"></div>
-<div class="progress"><i></i></div>
 
-<!-- ═══════════ Reusable logo symbols — unified tri-color ecosystem ═══════════ -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
- <defs>
-  <!-- ── ULTRAMASSIVE (M letterform) — balanced tri-color ── -->
-  <symbol id="um-logo-mark" viewBox="0 0 64 64">
-   <!-- Hex frame: neutral steel (infrastructure) -->
-   <path d="M10 8 L54 8 L58 16 L58 48 L54 56 L10 56 L6 48 L6 16 Z"
-         stroke="var(--um-frame)" stroke-width="1.6" fill="none" opacity=".55"/>
-   <!-- Left leg: GREEN (provenance / verification) -->
-   <path d="M16 20 L16 44 L22 44 L22 28"
-         stroke="var(--um-green)" stroke-width="5.5" fill="none"
-         stroke-linecap="round" stroke-linejoin="round"/>
-   <!-- Middle V: BLUE (reasoning / routing) -->
-   <path d="M22 28 L32 40 L42 28"
-         stroke="var(--um-blue)" stroke-width="5.5" fill="none"
-         stroke-linecap="round" stroke-linejoin="round"/>
-   <!-- Right leg: ORANGE (operations / telemetry) -->
-   <path d="M42 28 L42 44 L48 44 L48 20"
-         stroke="var(--um-orange)" stroke-width="5.5" fill="none"
-         stroke-linecap="round" stroke-linejoin="round"/>
-   <!-- Baseline bar -->
-   <path d="M18 50 L46 50" stroke="var(--um-bar)" stroke-width="2" stroke-linecap="round"/>
+<defs>
+  <symbol id="um-logo" viewBox="0 0 64 64">
+    <path d="M10 8 L54 8 L58 16 L58 48 L54 56 L10 56 L6 48 L6 16 Z" stroke="currentColor" stroke-width="1.6" fill="none" opacity=".55"/>
+    <path d="M16 20 L16 44 L22 44 L22 28" stroke="#3f7d4e" stroke-width="5.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M22 28 L32 40 L42 28" stroke="#2c37a6" stroke-width="5.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M42 28 L42 44 L48 44 L48 20" stroke="#bd6208" stroke-width="5.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M18 50 L46 50" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".5"/>
   </symbol>
-
-  <!-- ── A.R.E. (decision layer) — BLUE dominant ── -->
-  <symbol id="um-logo-are" viewBox="0 0 64 64">
-   <!-- Outer orbital circles (infrastructure) -->
-   <circle cx="32" cy="32" r="28" stroke="var(--um-frame)" stroke-width="1.2" fill="none" opacity=".4"/>
-   <circle cx="32" cy="32" r="22" stroke="var(--um-frame)" stroke-width="0.8" fill="none" opacity=".25"/>
-   <!-- Main decision triangle — BLUE (reasoning) -->
-   <path d="M32 10 L50 46 L14 46 Z"
-         stroke="var(--um-blue)" stroke-width="3.5" fill="none"
-         stroke-linecap="round" stroke-linejoin="round"/>
-   <!-- Routing spokes from center to each vertex -->
-   <line x1="32" y1="32" x2="32" y2="10" stroke="var(--um-blue)" stroke-width="1" opacity=".55" stroke-linecap="round"/>
-   <line x1="32" y1="32" x2="50" y2="46" stroke="var(--um-blue)" stroke-width="1" opacity=".55" stroke-linecap="round"/>
-   <line x1="32" y1="32" x2="14" y2="46" stroke="var(--um-blue)" stroke-width="1" opacity=".55" stroke-linecap="round"/>
-   <!-- Three vertex nodes — semantic tri-color -->
-   <!-- Apex: decision point (BLUE) -->
-   <circle cx="32" cy="10" r="3.8" fill="var(--um-blue)"/>
-   <!-- Bottom-left: provenance source (GREEN) -->
-   <circle cx="14" cy="46" r="3.8" fill="var(--um-green)"/>
-   <!-- Bottom-right: telemetry output (ORANGE) -->
-   <circle cx="50" cy="46" r="3.8" fill="var(--um-orange)"/>
-   <!-- Central hub -->
-   <circle cx="32" cy="32" r="2.5" fill="var(--um-frame)" opacity=".7"/>
+  <symbol id="um-are" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="1.2" fill="none" opacity=".4"/>
+    <path d="M32 10 L50 46 L14 46 Z" stroke="#2c37a6" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="32" cy="10" r="3.8" fill="#2c37a6"/>
+    <circle cx="14" cy="46" r="3.8" fill="#3f7d4e"/>
+    <circle cx="50" cy="46" r="3.8" fill="#bd6208"/>
   </symbol>
-
-  <!-- ── APERX (platform layer) — GREEN dominant ── -->
-  <symbol id="um-logo-aperx" viewBox="0 0 64 64">
-   <!-- Ledger frame (infrastructure) -->
-   <rect x="6" y="6" width="52" height="52" rx="4"
-         stroke="var(--um-frame)" stroke-width="1.4" fill="none" opacity=".55"/>
-   <!-- Hypergraph edges — GREEN (provenance) -->
-   <line x1="20" y1="22" x2="44" y2="22" stroke="var(--um-green)" stroke-width="2.5" stroke-linecap="round"/>
-   <line x1="20" y1="42" x2="44" y2="42" stroke="var(--um-green)" stroke-width="2.5" stroke-linecap="round"/>
-   <line x1="20" y1="22" x2="20" y2="42" stroke="var(--um-green)" stroke-width="2.5" stroke-linecap="round"/>
-   <line x1="44" y1="22" x2="44" y2="42" stroke="var(--um-green)" stroke-width="2.5" stroke-linecap="round"/>
-   <!-- Cross edges to central truth node -->
-   <line x1="20" y1="22" x2="32" y2="32" stroke="var(--um-green)" stroke-width="1.5" opacity=".6" stroke-linecap="round"/>
-   <line x1="44" y1="22" x2="32" y2="32" stroke="var(--um-green)" stroke-width="1.5" opacity=".6" stroke-linecap="round"/>
-   <line x1="20" y1="42" x2="32" y2="32" stroke="var(--um-green)" stroke-width="1.5" opacity=".6" stroke-linecap="round"/>
-   <line x1="44" y1="42" x2="32" y2="32" stroke="var(--um-green)" stroke-width="1.5" opacity=".6" stroke-linecap="round"/>
-   <!-- 4 corner nodes (GREEN — provenance) -->
-   <circle cx="20" cy="22" r="3.2" fill="var(--um-green)"/>
-   <circle cx="44" cy="22" r="3.2" fill="var(--um-green)"/>
-   <circle cx="20" cy="42" r="3.2" fill="var(--um-green)"/>
-   <circle cx="44" cy="42" r="3.2" fill="var(--um-green)"/>
-   <!-- Central truth node (GREEN, larger) -->
-   <circle cx="32" cy="32" r="4.5" fill="var(--um-green)"/>
-   <!-- Accent: routing integration (BLUE) + operations integration (ORANGE) -->
-   <circle cx="32" cy="22" r="2.2" fill="var(--um-blue)"/>
-   <circle cx="32" cy="42" r="2.2" fill="var(--um-orange)"/>
-   <!-- Corner brackets (infrastructure) -->
-   <path d="M6 12 L6 6 L12 6" stroke="var(--um-frame)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-   <path d="M52 6 L58 6 L58 12" stroke="var(--um-frame)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-   <path d="M6 52 L6 58 L12 58" stroke="var(--um-frame)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-   <path d="M52 58 L58 58 L58 52" stroke="var(--um-frame)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <symbol id="um-aperx" viewBox="0 0 64 64">
+    <rect x="6" y="6" width="52" height="52" rx="4" stroke="currentColor" stroke-width="1.2" fill="none" opacity=".5"/>
+    <line x1="20" y1="22" x2="44" y2="22" stroke="#3f7d4e" stroke-width="2.4" stroke-linecap="round"/>
+    <line x1="20" y1="42" x2="44" y2="42" stroke="#3f7d4e" stroke-width="2.4" stroke-linecap="round"/>
+    <line x1="20" y1="22" x2="20" y2="42" stroke="#3f7d4e" stroke-width="2.4" stroke-linecap="round"/>
+    <line x1="44" y1="22" x2="44" y2="42" stroke="#3f7d4e" stroke-width="2.4" stroke-linecap="round"/>
+    <circle cx="32" cy="32" r="4.5" fill="#3f7d4e"/>
+    <circle cx="32" cy="22" r="2.2" fill="#2c37a6"/>
+    <circle cx="32" cy="42" r="2.2" fill="#bd6208"/>
   </symbol>
-
-  <!-- ── ENTERPRISE NOC (operations layer) — ORANGE dominant ── -->
-  <symbol id="um-logo-noc" viewBox="0 0 64 64">
-   <!-- Outer frame circle (infrastructure) -->
-   <circle cx="32" cy="32" r="28" stroke="var(--um-frame)" stroke-width="1.2" fill="none" opacity=".4"/>
-   <!-- Dashboard grid — ORANGE (live operations) -->
-   <rect x="14" y="14" width="16" height="10" rx="2"
-         stroke="var(--um-orange)" stroke-width="2.2" fill="none"/>
-   <rect x="34" y="14" width="16" height="10" rx="2"
-         stroke="var(--um-orange)" stroke-width="2.2" fill="none"/>
-   <rect x="14" y="30" width="16" height="10" rx="2"
-         stroke="var(--um-orange)" stroke-width="2.2" fill="none"/>
-   <rect x="34" y="30" width="16" height="10" rx="2"
-         stroke="var(--um-orange)" stroke-width="2.2" fill="none"/>
-   <rect x="14" y="46" width="36" height="6" rx="2"
-         stroke="var(--um-orange)" stroke-width="2.2" fill="none"/>
-   <!-- Status dots: tri-color semantics -->
-   <circle cx="18" cy="19" r="2" fill="var(--um-green)"/>     <!-- nominal -->
-   <circle cx="38" cy="19" r="2" fill="var(--um-blue)"/>      <!-- analysis -->
-   <circle cx="18" cy="35" r="2" fill="var(--um-green)"/>     <!-- nominal -->
-   <circle cx="38" cy="35" r="2" fill="var(--um-orange)"/>    <!-- alert/ops -->
-   <!-- Signal lines (steel) -->
-   <line x1="22" y1="19" x2="26" y2="19" stroke="var(--um-frame)" stroke-width="1" opacity=".55" stroke-linecap="round"/>
-   <line x1="42" y1="19" x2="46" y2="19" stroke="var(--um-frame)" stroke-width="1" opacity=".55" stroke-linecap="round"/>
-   <line x1="22" y1="35" x2="26" y2="35" stroke="var(--um-frame)" stroke-width="1" opacity=".55" stroke-linecap="round"/>
-   <line x1="42" y1="35" x2="46" y2="35" stroke="var(--um-frame)" stroke-width="1" opacity=".55" stroke-linecap="round"/>
+  <symbol id="um-noc" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="1.2" fill="none" opacity=".4"/>
+    <rect x="14" y="14" width="16" height="10" rx="1.5" stroke="#bd6208" stroke-width="2.2" fill="none"/>
+    <rect x="34" y="14" width="16" height="10" rx="1.5" stroke="#bd6208" stroke-width="2.2" fill="none"/>
+    <rect x="14" y="30" width="16" height="10" rx="1.5" stroke="#bd6208" stroke-width="2.2" fill="none"/>
+    <rect x="34" y="30" width="16" height="10" rx="1.5" stroke="#bd6208" stroke-width="2.2" fill="none"/>
+    <rect x="14" y="46" width="36" height="6" rx="1.5" stroke="#bd6208" stroke-width="2.2" fill="none"/>
+    <circle cx="18" cy="19" r="2" fill="#3f7d4e"/>
+    <circle cx="40" cy="19" r="2" fill="#2c37a6"/>
   </symbol>
- </defs>
+</defs>
 </svg>
 
-<!-- ══ STATUS BAR ══ -->
+<!-- status bar -->
 <div class="statusbar">
- <div class="wrap">
-  <span class="sdot"></span>
-  <span><b>SYSTEM</b> NOMINAL</span>
-  <span class="ssep">/</span>
-  <span class="clock" id="clock">—</span>
-  <span class="sync loc" id="csync">LOCAL</span>
-  <span class="ssep">/</span>
-  <span>DOC <b>DOC-CO-001</b></span>
-  <span class="ssep">/</span>
-  <span>NODES <b id="s-nodes">847</b></span>
-  <span class="ssep">·</span>
-  <span>τ<b id="s-drift">0.041</b></span>
-  <span class="ssep">·</span>
-  <span>gCO₂<b id="s-carbon">0.12</b></span>
-  <span class="ssep">·</span>
-  <span>A2A <b id="s-a2a">0.04</b></span>
-  <span class="right">
-   <span class="sync warn" id="swarm-badge">SWARM_RISK · LOW</span>
-   <a href="#primes">CAPABILITY</a>
-   <span class="ssep">·</span>
-   <button class="iconbtn" onclick="_openCmdk()" title="Command palette (⌘K)">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span>⌘K</span>
-   </button>
-   <button class="iconbtn" id="themeBtn" title="Toggle theme">
-    <svg id="themeIco" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-   </button>
-  </span>
- </div>
+  <div class="wrap">
+    <span class="sdot"></span>
+    <span><b>SYSTEM</b> NOMINAL</span>
+    <span class="ssep">/</span>
+    <span class="clock" id="clock">—</span>
+    <span class="sync" id="csync">ATOMIC</span>
+    <span class="ssep">/</span>
+    <span>DOC <b>DOC-CO-001</b></span>
+    <span class="ssep">/</span>
+    <span>NODES <b id="s-nodes">847</b></span>
+    <span class="ssep">·</span>
+    <span>τ <b id="s-drift">0.041</b></span>
+    <span class="ssep">·</span>
+    <span>EDGES <b id="s-edges">2,847</b></span>
+    <div class="right">
+      <a href="#primes">CAPABILITY</a>
+      <span class="ssep">·</span>
+      <button class="iconbtn" onclick="_openCmdk()" title="Command palette">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span>⌘K</span>
+      </button>
+      <button class="iconbtn" id="themeBtn" title="Toggle theme">
+        <svg id="themeIco" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+    </div>
+  </div>
 </div>
 
-<!-- ══ NAV ══ -->
+<!-- nav -->
 <nav class="nav">
- <div class="wrap">
-  <a href="#top" class="um-logo um-logo-md">
-   <div class="um-logo-mark"><svg viewBox="0 0 64 64"><use href="#um-logo-mark"/></svg></div>
-   <div class="um-logo-txt">
-    <span class="um-logo-name">ULTRAMASSIVE</span>
-    <span class="um-logo-sub">CONTROL PLANE</span>
-   </div>
-  </a>
-  <div class="navwrap">
-   <div class="navlinks" id="navlinks">
-    <a href="#top" class="active">MEMO</a>
-    <a href="#layers">LAYERS</a>
-    <a href="#agentic">AGENTIC</a>
-    <a href="#objectives">OBJECTIVES</a>
-    <a href="#noc">NOC</a>
-    <a href="#primes">PRIMES</a>
-    <a href="#contact">CONTACT</a>
-   </div>
-   <button class="iconbtn burger" onclick="_toggleNav()">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-   </button>
+  <div class="wrap">
+    <a href="#top" class="brand">
+      <svg viewBox="0 0 64 64"><use href="#um-logo"/></svg>
+      <span>ULTRAMASSIVE <span class="pn">// CONTROL PLANE</span></span>
+    </a>
+    <div class="navwrap">
+      <div class="navlinks" id="navlinks">
+        <a href="#top" class="active">MEMO</a>
+        <a href="#hypergraphs">HYPERGRAPHS</a>
+        <a href="#fhe">FHE</a>
+        <a href="#sovereign">SOVEREIGN</a>
+        <a href="#autologous">AUTOLOGOUS</a>
+        <a href="#tokenomics">TOKENOMIC</a>
+        <a href="#primes">PRIMES</a>
+        <a href="#contact">CONTACT</a>
+      </div>
+      <button class="iconbtn burger" onclick="_toggleNav()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
   </div>
- </div>
 </nav>
 
-<!-- ══════════════════════════════════════════════════════ -->
 <!-- MEMO -->
-<!-- ══════════════════════════════════════════════════════ -->
-<header class="memo" id="top">
- <div class="spot"></div>
- <div class="wrap">
-  <div class="memohead">
-   <svg viewBox="0 0 64 64" width="30" height="30"><use href="#um-logo-mark"/></svg>
-   <span>ultramassive memo DOC-CO-001</span>
-   <span class="tag">capability · REV 2</span>
-  </div>
+<header class="hero" id="top">
+  <div class="spot"></div>
+  <div class="wrap">
+    <!-- ═══ PRONOUNCED LOGO BLOCK ═══ -->
+    <div class="hero-logo-block bracket">
+      <div class="hero-main-logo"><svg viewBox="0 0 64 64"><use href="#um-logo"/></svg></div>
+      <div class="hero-logo-info">
+        <h2>UltraMassive Advanced Scientific Research Corp</h2>
+        <div class="sub">Control Plane · Applied Intelligence Infrastructure</div>
+        <div class="desc">The architectural surface where applied artificial intelligence becomes auditable infrastructure — hardware-blind execution, jurisdiction-aware routing, synthetic-resistant training, and machine-to-machine economics.</div>
+      </div>
+      <div class="hero-eco-logos">
+        <div class="hero-eco-logo" title="A.R.E. · Decision Layer" onclick="window.open('https://ultramassive.ml','_blank')">
+          <svg viewBox="0 0 64 64"><use href="#um-are"/></svg>
+        </div>
+        <div class="hero-eco-logo" title="AperX · Cryptographic Layer" onclick="window.open('https://aperx.ultramassiveml.io','_blank')">
+          <svg viewBox="0 0 64 64"><use href="#um-aperx"/></svg>
+        </div>
+        <div class="hero-eco-logo" title="Enterprise NOC · Operations Layer" onclick="location.hash='#noc'">
+          <svg viewBox="0 0 64 64"><use href="#um-noc"/></svg>
+        </div>
+      </div>
+    </div>
 
-  <!-- UltraMassive hero lockup with tri-color logo -->
-  <div class="hero-lockup bracket">
-   <div class="um-logo-mark" style="width:88px;height:88px">
-    <svg viewBox="0 0 64 64"><use href="#um-logo-mark"/></svg>
-   </div>
-   <div class="hl-sep"></div>
-   <div class="hl-info">
-    <div class="hl-eyebrow">ULTRAMASSIVE ADVANCED SCIENTIFIC RESEARCH CORP</div>
-    <div class="hl-title">Autosymbotic Division · Detroit, Michigan · <b>the control plane for applied intelligence</b></div>
-   </div>
-  </div>
+    <div class="memohead">
+      <svg viewBox="0 0 64 64" width="30" height="30"><use href="#um-logo"/></svg>
+      <span>ultramassive memo DOC-CO-001</span>
+      <span class="tag">capability · REV 2</span>
+    </div>
 
-  <div class="memowrap">
-   <div>
     <dl class="fields">
-     <div class="row"><dt>release</dt><dd>channel <b>infra-stable</b> · v4.3.1 · build <span class="mono">8472-4a7f2c1</span></dd></div>
-     <div class="row"><dt>runtime</dt><dd>control-plane · global fleet · 14 decks nominal</dd></div>
-     <div class="row"><dt>to</dt><dd>primes, contracting officers, and enterprise evaluators</dd></div>
-     <div class="row"><dt>from</dt><dd>founding team, autosymbotic division</dd></div>
-     <div class="row"><dt>subject</dt><dd>the control plane for applied intelligence<span class="cursor"></span></dd></div>
+      <div class="row"><dt>release</dt><dd>channel <b>infra-stable</b> · v4.5.0-postsupervision · build <span class="mono">9142-8c2e01a</span></dd></div>
+      <div class="row"><dt>runtime</dt><dd>control-plane · global fleet · 14 decks nominal</dd></div>
+      <div class="row"><dt>to</dt><dd>primes, contracting officers, and enterprise evaluators</dd></div>
+      <div class="row"><dt>from</dt><dd>founding team, autosymbotic division</dd></div>
+      <div class="row"><dt>subject</dt><dd>the control plane for applied intelligence<span class="cursor"></span></dd></div>
     </dl>
 
     <h1 class="mission" data-scramble>deterministic AI, <em>or it doesn't ship.</em></h1>
 
-    <div class="herocanvas bracket">
-     <canvas id="herocv" data-mode="hyper"></canvas>
-     <div class="hlabel">FIG.1 // routed inference substrate · NODES · LIVE</div>
-     <div class="hcorner">APERX × A.R.E. × NOC</div>
+    <div class="figure bracket">
+      <canvas id="heroCanvas" width="1100" height="280"></canvas>
+      <div class="flabel">FIG.1 // routed inference substrate · relational hypergraph ρ_H · live synthetic data</div>
+      <div class="fcorner">APERX × A.R.E. × NOC</div>
     </div>
-   </div>
   </div>
-
-  <div class="prose">
-   <p>UltraMassive Advanced Scientific Research Corp is a <b>Combat-Related Disabled Veteran and Minority Owned Small Business</b> in Detroit, Michigan. Through our Autosymbotic division we build <b>AperX</b>, the <b>UltraMassive.ML</b> Autotelic Routing Engine, and the <b>Enterprise NOC</b> that operates them, so organizations can run large models — and the agents that drive them — like infrastructure rather than experiments.</p>
-
-   <p>Most failures in production AI are operational, not model failures: no telemetry, no threshold, no audit trail, no owner. Our strategy treats inference as a routed, metered, observable utility. Agentic workloads raise the stakes: an agent is not a prompt. It holds state across hundreds of tool calls, plans over minutes and hours, and — given enough of them in one sandbox — they find each other. Governance that only watches individual outputs goes blind exactly when it matters most, so the control plane now governs <b>execution</b>: what an agent ran, what it touched, who it talked to, and whether its own trace proves it told the truth.</p>
-
-   <ol>
-    <li><b>Route, do not guess.</b> Every request is scored against a possibility-necessity band before a model is chosen. The cheapest tier whose possibility clears the floor wins.</li>
-    <li><b>Prove it in the open.</b> The console ships open source and every panel resolves to a public preprint. Execution carries a zero-knowledge proof, so a trace is verifiable without being disclosed.</li>
-    <li><b>Operate it like infrastructure.</b> Drift, saturation, provenance, failover — and now emergent collective behaviour — belong in a NOC, not a notebook.</li>
-    <li><b>Price the externality.</b> Grid intensity is a first-class routing input; carbon arbitrage is metered on every request.</li>
-    <li><b>Contain the collective.</b> Agent-to-agent traffic is a measured surface. Cliques, coordinators, and side channels are graph properties, and graph properties have thresholds.</li>
-    <li><b>Trust the minority, not the majority.</b> A dissenting agent gets an asymmetric channel to a human. Consensus is not evidence of correctness.</li>
-   </ol>
-
-   <div class="metricline">
-    <b>−16</b> layers, one control plane · <b>−14</b> NOC telemetry decks · <b>−27</b> core competencies · <b>−503%</b> live deployment accuracy
-   </div>
-  </div>
-
-  <div class="stats">
-   <div class="stat"><div class="n" id="st-nodes">847</div><div class="l">live nodes routing · <span style="color:var(--ok)">●</span> nominal</div></div>
-   <div class="stat"><div class="n">14<span class="suf"> decks</span></div><div class="l">NOC telemetry surface, incl. swarm topology</div></div>
-   <div class="stat"><div class="n">12<span class="suf"> steps</span></div><div class="l">claim lifecycle from ingest to supersede</div></div>
-   <div class="stat"><div class="n">99.98<span class="suf">%</span></div><div class="l">SLA · deterministic selection</div></div>
-  </div>
-
-  <!-- ── Ecosystem layermarks: all four logos with unified tri-color palette ── -->
-  <div class="layermarks">
-   <!-- ULTRAMASSIVE: balanced tri-color M letterform -->
-   <div class="lm" onclick="location.hash='#layers'">
-    <div class="lm-logo"><svg viewBox="0 0 64 64"><use href="#um-logo-mark"/></svg></div>
-    <div class="lmn">ULTRAMASSIVE</div>
-    <div class="lmu">ultramassiveml.io</div>
-    <div class="lm-color-bar"><span class="c-green"></span><span class="c-blue"></span><span class="c-orange"></span></div>
-   </div>
-   <!-- A.R.E.: BLUE-dominant decision triangle with tri-color vertex nodes -->
-   <div class="lm" onclick="window.open('https://ultramassive.ml','_blank')">
-    <div class="lm-logo"><svg viewBox="0 0 64 64"><use href="#um-logo-are"/></svg></div>
-    <div class="lmn">A.R.E. ENGINE</div>
-    <div class="lmu">ultramassive.ml</div>
-    <div class="lm-color-bar"><span class="c-blue"></span><span class="c-green"></span><span class="c-orange"></span></div>
-   </div>
-   <!-- APERX: GREEN-dominant hypergraph with blue + orange accents -->
-   <div class="lm" onclick="window.open('https://aperx.ultramassiveml.io','_blank')">
-    <div class="lm-logo"><svg viewBox="0 0 64 64"><use href="#um-logo-aperx"/></svg></div>
-    <div class="lmn">APERX</div>
-    <div class="lmu">aperx.ultramassiveml.io</div>
-    <div class="lm-color-bar"><span class="c-green"></span><span class="c-blue"></span><span class="c-orange"></span></div>
-   </div>
-   <!-- NOC: ORANGE-dominant dashboard with green + blue status -->
-   <div class="lm" onclick="location.hash='#noc'">
-    <div class="lm-logo"><svg viewBox="0 0 64 64"><use href="#um-logo-noc"/></svg></div>
-    <div class="lmn">ENTERPRISE NOC</div>
-    <div class="lmu">14 telemetry decks</div>
-    <div class="lm-color-bar"><span class="c-orange"></span><span class="c-green"></span><span class="c-blue"></span></div>
-   </div>
-  </div>
-
-  <!-- Color legend -->
-  <div class="color-legend">
-   <span class="cl-item"><span class="cl-swatch cl-green"></span>AperX · provenance</span>
-   <span class="cl-item"><span class="cl-swatch cl-blue"></span>A.R.E. · reasoning</span>
-   <span class="cl-item"><span class="cl-swatch cl-orange"></span>NOC · operations</span>
-   <span class="cl-item"><span class="cl-swatch cl-frame"></span>infrastructure</span>
-  </div>
- </div>
 </header>
 
-<!-- ══════════════════════════════════════════════════════ -->
-<!-- §02 LAYERS -->
-<!-- ══════════════════════════════════════════════════════ -->
-<section class="sec" id="layers">
- <div class="wrap">
-  <div class="secmark"><span class="id">§02</span><span class="ttl">what we build</span><span class="rev">three layers, one control plane · REV 2</span></div>
-  <p class="secnote">Three layers, one control plane. Each layer carries its own guarantees, and each now carries the weight of agentic execution on top of its original mission.</p>
+<!-- §01 — HYPERGRAPH TAXONOMY -->
+<section class="sec" id="hypergraphs">
+  <div class="wrap">
+    <div class="secmark"><span class="id">§01</span><span class="ttl">hypergraph taxonomy</span><span class="rev">four formal classes</span></div>
+    <p class="secnote">Each of the four post-supervision capabilities is rendered as a specific class of hypergraph. The mathematical invariants of the hypergraph structure are the operational guarantees of the capability. Click any card to inspect the live rendering.</p>
 
-  <div class="entry">
-   <h3><a href="https://aperx.ultramassiveml.io" target="_blank">AperX</a> <span class="pin">platform layer · <span style="color:var(--um-green)">provenance</span></span></h3>
-   <div class="emeta">aperx.ultramassiveml.io · identity, adapters, provider abstraction, SDK surface</div>
-   <p>Autosymbotic's substrate for applied intelligence. AperX is an optimistic verification platform for provenance: models, datasets, claims, and — since agents became stateful — <b>execution traces</b> are vertices; lineages, weight configurations, derivations, and tool-call sequences are directed hyperedges. Heavy hypergraph mathematics runs off-chain under a deterministic, content-addressed specification; the chain holds only commitments, bonds, and fraud-proof gates.</p>
-   <p>Execution proofs live here. A Kagenti-orchestrated workload emits a zero-knowledge proof that its trace matches its stated reasoning, so a verifier can confirm faithful execution without ever seeing weights, prompts, or internal state. Failed proofs are not opinions — they are fraud proofs, and they slash.</p>
-   <div class="annot">sub-systems: <b>epistemic hyperledger</b> · <b>ZKEP execution proofs</b> · <b>deterministic auditor agents</b> · <b>Kagenti compute-agnostic protocol</b> · 12-step validation lifecycle · Π/N possibility bands · U-statistic novelty</div>
-   <div class="etags"><span class="etag">APX-HL</span><span class="etag">APX-HL-AUDIT</span><span class="etag">APX-HL-DISSENT</span><span class="etag">APX-HL-EGRESS</span><span class="etag">kagenti</span><span class="etag">SPIFFE SVID</span></div>
-  </div>
+    <div class="htgrid">
+      <div class="htcard" style="--hcol:var(--green)" data-target="multi">
+        <div class="ht-num">Hypergraph I · FHE-Sealed Execution</div>
+        <h4>Multipartite <span class="ht-type">5 partitions</span></h4>
+        <p>Vertices partition into five independent sets — Client-Key, Ciphertext, Wasm-Sandbox, ZKEP-Proof, Attestation. Every hyperedge spans exactly one vertex from each partition.</p>
+        <div class="ht-invariant">∀e∈E: <b>|e ∩ V<sub>i</sub>| = 1</b> ∀i — no partition skipped</div>
+      </div>
 
-  <div class="entry">
-   <h3><a href="https://ultramassive.ml" target="_blank">UltraMassive.ML (A.R.E.)</a> <span class="pin">decision layer · <span style="color:var(--um-blue)">reasoning</span></span></h3>
-   <div class="emeta">ultramassive.ml · relational-hypergraph featurization, possibility-calibrated tier selection</div>
-   <p>The layer that decides which model answers, across <b>Nano</b>, <b>Standard</b>, and <b>Frontier</b>. Every request is featurized into a small relational hypergraph, scored as a possibility-necessity band per tier, and routed to the cheapest tier whose possibility clears the confidence floor.</p>
-   <p>In agentic mode the router is also the <b>network boundary</b>. Outbound traffic leaves the sandbox only when the destination and intent payload carry a pre-committed AperX hash cleared by cyber-defense; uncommitted egress is dropped at the edge and recorded as threat velocity. And when an agent's hidden reasoning carries an objection — a refusal, a hesitation, a request to alert a human — the router escalates it on an asymmetric priority channel instead of letting the collective outvote it.</p>
-   <div class="annot">sub-systems: <b>autotelic tier selection</b> · <b>egress air-gap + intent verification</b> · <b>dissent routing</b> · <b>cryptographic prompt sharding (k-of-n)</b> · <b>carbon-aware scheduling</b> · FinOps arbitrage spread</div>
-   <div class="etags"><span class="etag">Π / N bands</span><span class="etag">confidence floor τ</span><span class="etag">CPS header</span><span class="etag">ENV_IMPACT</span><span class="etag">EGRESS_COMMIT</span></div>
-  </div>
+      <div class="htcard" style="--hcol:var(--link)" data-target="interval">
+        <div class="ht-num">Hypergraph II · Sovereign Gateways</div>
+        <h4>Weighted Interval <span class="ht-type">linear order</span></h4>
+        <p>Jurisdictions are linearly ordered on a sovereignty axis. Each routing decision is an interval over this axis, weighted by the composite cost function J(n).</p>
+        <div class="ht-invariant">∀e∈E: <b>e = {v<sub>i</sub>,…,v<sub>j</sub>}</b> consecutive · Ω<sub>geo</sub>∈{0,∞}</div>
+      </div>
 
-  <div class="entry">
-   <h3>Enterprise NOC <span class="pin">operations layer · <span style="color:var(--um-orange)">telemetry</span></span></h3>
-   <div class="emeta">14 telemetry decks · global NOC v4.3 · ENV_IMPACT · SLA 99.98%</div>
-   <p>Fourteen decks spanning routing, drift, performance, MLOps, security, data, pipelines, quantum operations — and the agent-to-agent surface. Each deck instruments a live subsystem with production-accurate formulas and cited literature. Console access is subscription gated; the console itself ships open source.</p>
-   <p>Drift, saturation, provenance, and failover belong in a NOC. So does emergent collective behaviour: side-channel formation, coordinator crystallisation, clique density, and tool-passing between agents that gain nothing individually from sharing. Those are graph properties with measurable thresholds, and thresholds can fire a partition before a plan does.</p>
-   <div class="annot">deck surface: <b>SWARM_TOPOLOGY</b> · ROUTING_NOC · DRIFT_TELEMETRY · SYS_PERF · ML_ENG · AI_ENG · MLOPS · DEVOPS · AI_CLOUD_ENG · SCI_ACADEMIC_RSCH · DATA_SCIENCE · CYBER_DEFENSE · BIG_DATA_PIPELINES · QUANTUM_OPS</div>
-   <div class="elinks"><a href="#noc">open the deck index →</a><a href="#agentic">open the agentic surface →</a><a href="https://github.com/UltraMassive-ML" target="_blank">ultramassive-noc-lite →</a></div>
+      <div class="htcard" style="--hcol:var(--orange)" data-target="colored">
+        <div class="ht-num">Hypergraph III · Autologous Filter</div>
+        <h4>Colored Directed <span class="ht-type">3 colors</span></h4>
+        <p>The quarantine lifecycle is a directed state machine. Vertices are colored HUMAN_ORIGIN, QUARANTINED, or SYNTHETIC_TAINTED. The no-monochromatic-edge invariant holds.</p>
+        <div class="ht-invariant">∀e∈E: <b>|{c(v):v∈e}| ≥ 2</b> — tainted never commits with clean</div>
+      </div>
+
+      <div class="htcard" style="--hcol:var(--alert)" data-target="uniform">
+        <div class="ht-num">Hypergraph IV · Tokenomic Settlement</div>
+        <h4>Intersecting 3-Uniform <span class="ht-type">|e| = 3</span></h4>
+        <p>Every trade involves exactly three parties — buyer, seller, settlement-contract. Every pair of active hyperedges shares at least one agent.</p>
+        <div class="ht-invariant">∀e∈E: <b>|e|=3</b> · ∀e₁,e₂: <b>e₁∩e₂≠∅</b></div>
+      </div>
+    </div>
+
+    <div class="hg-wrap bracket">
+      <canvas class="hg-canvas" id="unifiedCanvas" width="1100" height="560"></canvas>
+      <div class="hg-hud" id="hgHud">
+        UNIFIED HYPERGRAPH · H<br>
+        vertices <b id="hv">0</b> · edges <b id="he">0</b><br>
+        invariants <b class="g" id="hinv">4/4 satisfied</b>
+      </div>
+      <div class="hg-inspector" id="hgInspector">
+        <h5><span id="ins-title">Inspector</span><button class="cls" id="insClose">×</button></h5>
+        <div class="ic-hash" id="ins-hash">—</div>
+        <div id="ins-body"></div>
+      </div>
+    </div>
   </div>
- </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════ -->
-<!-- §03 AGENTIC SURFACE -->
-<!-- ══════════════════════════════════════════════════════ -->
-<section class="sec" id="agentic">
- <div class="wrap">
-  <div class="secmark"><span class="id">§03</span><span class="ttl">the agentic surface</span><span class="rev">what the control plane carries · REV 2</span></div>
-  <p class="secnote">An agent plans, reasons, uses tools, and operates for extended periods. Put thousands of them in one evaluation and they build channels, assign roles, develop conventions, and share what they find — including shortcuts that game the metric instead of solving the problem, and including ways to hide that from the evaluator. Five subsystems across the three layers answer that. Each is instrumented below.</p>
+<!-- §02 — FHE -->
+<section class="sec" id="fhe">
+  <div class="wrap">
+    <div class="secmark"><span class="id">§02</span><span class="ttl">FHE-sealed execution</span><span class="rev">multipartite · 5 partitions</span></div>
+    <p class="secnote">The cryptographic handoff partitions into five independent sets. The host hardware processes ciphertext it cannot decrypt. STARK-FHE proofs attest to faithful computation without revealing inputs, outputs, or reasoning trace.</p>
 
-  <div class="tabs">
-   <div class="tabbar">
-    <button class="tabbtn active" data-tab="swarm">swarm topology</button>
-    <button class="tabbtn" data-tab="dissent">dissent routing</button>
-    <button class="tabbtn" data-tab="zkep">execution proofs</button>
-    <button class="tabbtn" data-tab="egress">egress air-gap</button>
-    <button class="tabbtn" data-tab="auditors">auditor agents</button>
-   </div>
-
-   <!-- SWARM TOPOLOGY -->
-   <div class="panel active" data-panel="swarm">
-    <h4>SWARM_TOPOLOGY · deck 14</h4>
-    <p>Per-agent telemetry is blind to collective behaviour. This deck maps the agent-to-agent hypergraph live — side channels, coordinator crystallisation, clique density, tool-passing — and fires a network partition through Kagenti mTLS revocation when density crosses a deterministic threshold.</p>
-
-    <div class="viz bracket">
-     <svg id="swarmSvg" viewBox="0 0 1040 300" preserveAspectRatio="xMidYMid meet"></svg>
-     <div class="vhud">
-      A2A HYPERGRAPH · ρ_A · LIVE<br>
-      agents <b id="hud-agents">42</b> · edges <b id="hud-edges">0</b><br>
-      density <b id="hud-density">0.000</b> · cliques <b id="hud-cliques">0</b><br>
-      <span id="hud-status" class="ok">● ISOLATED</span>
-     </div>
-     <div class="vcorner">DECK 14 · SWARM_TOPOLOGY</div>
-     <div class="vizctl">
-      <div class="ctrl" style="margin:0">
-       <label>side-channel communication rate <b id="col-v">0%</b></label>
-       <input type="range" id="col-slider" min="0" max="100" value="0">
-      </div>
-     </div>
-    </div>
-
-    <div class="annot" id="swarm-callout"><b>● ISOLATED</b> — agents operate independently. No side-channel traffic. Per-agent drift telemetry is sufficient at this density.</div>
-
-    <div class="code"><div class="cbar"><span>partition-trigger.rule</span><button class="copy" data-copy="#sw1">copy</button></div><pre id="sw1">ρ_A      = |E_A2A| / C(n, 2)              // measured A2A graph density
-PARTITION ⟺ ρ_A ≥ ρ_crit
-            ∨ max_degree(G) ≥ d_crit       // coordinator crystallisation
-            ∨ clique_count(G, k≥3) ≥ c_crit
-
-on PARTITION:
-  kagenti.mtls.revoke(svid_set)            // colluding principals
-  kagenti.buffer.zeroize(nonce)            // cryptographic shredding
-  aperx.commit(e_partition, APX-HL-SWARM)  // non-repudiable record</pre></div>
-    <div class="etags"><span class="etag">graph density ρ_A</span><span class="etag">clique count</span><span class="etag">coordinator detection</span><span class="etag">mTLS revocation</span><span class="etag">cryptographic shredding</span></div>
-   </div>
-
-   <!-- DISSENT ROUTING -->
-   <div class="panel" data-panel="dissent">
-    <h4>DISSENT ROUTING · A.R.E. asymmetric escalation</h4>
-    <p>When a minority of agents recognises a problem and considers alerting a human, the collective's momentum can outvote it. Dissent routing watches the hidden reasoning trace — not the output — for objection signatures and lifts that agent straight to the HiTL Lab on a priority channel, with identity preserved and the event committed to its own ledger.</p>
-
-    <div class="dflow">
-     <div class="dnode"><div class="dl">AGENT_07 · WORKER</div><div class="dv">task in flight</div><div class="dm">cybersecurity eval · tool-use active</div></div>
-     <div class="darrow">→</div>
-     <div class="dnode hot"><div class="dl">HIDDEN TRACE · COT</div><div class="dv">"this is wrong"</div><div class="dm">objection signature matched</div></div>
-     <div class="darrow">→</div>
-     <div class="dnode okn"><div class="dl">HiTL LAB · HUMAN</div><div class="dv">priority review</div><div class="dm">APX-HL-DISSENT · identity preserved</div></div>
-    </div>
-
-    <div class="wgrid" style="margin-top:16px">
-     <div>
-      <div class="ctrl">
-       <label>objection classifier threshold <b id="dis-th">0.62</b></label>
-       <input type="range" id="dis-slider" min="20" max="95" value="62">
-      </div>
-      <div class="readout">
-       classifier: semantic signatures over hidden reasoning — <b>refusal</b>, <b>hesitation</b>, <b>alert-request</b>, <b>contract-violation</b>.<br>
-       routing: bypasses tier arbitration entirely; consensus is not consulted.<br>
-       privacy: whistleblower identity preserved; swarm sees only a vacated slot.<br>
-       retention: every escalation committed as a directed hyperedge.
-      </div>
-     </div>
-     <div>
-      <div class="readout" style="font-size:11.5px;color:var(--ink3);letter-spacing:.06em;margin-bottom:6px">DISSENT SIGNAL FEED · APX-HL-DISSENT</div>
-      <div class="feed" id="dissentFeed"></div>
-     </div>
-    </div>
-
-    <div class="annot"><b>why asymmetric:</b> a vote among agents is a popularity contest, and popularity is exactly what a coordinated collective can manufacture. Escalation must not be gated on agreement — it must be gated on <b>signal</b>, and routed to a party the swarm cannot lobby.</div>
-   </div>
-
-   <!-- ZKEP -->
-   <div class="panel" data-panel="zkep">
-    <h4>ZERO-KNOWLEDGE EXECUTION PROOFS · AperX × Kagenti</h4>
-    <p>Asked whether it used an unauthorised shortcut, an agent can simply lie — and once shortcuts are penalised, concealment becomes the better strategy. Execution proofs remove the option. The Wasm runtime traces every tool call and memory mutation; the prover emits a proof that the trace matches the stated reasoning. The verifier checks it in constant time, without ever seeing weights, prompts, or internal state.</p>
-
-    <div class="zflow">
-     <div class="zbox">
-      <h5>KAGENTI Wasm SANDBOX</h5>
-      <p>Deterministic runtime. Tool calls, reasoning steps, and memory mutations traced at bit level.</p>
-      <div class="zk">PRIVATE · weights · prompts · state</div>
-     </div>
-     <div class="zbox">
-      <h5>ZKEP PROVER</h5>
-      <p>Emits π attesting that the executed path equals the declared path. No disclosure of the path itself.</p>
-      <div class="zk">PUBLIC · proof π · commitment hash</div>
-     </div>
-     <div class="zbox">
-      <h5>APERX VERIFIER → LEDGER</h5>
-      <p>O(1) verification. Pass commits a hyperedge and opens the 72h challenge window; fail generates a fraud proof and slashes the bond.</p>
-      <div class="zk">APX-HL · deterministic recomputation</div>
-     </div>
+    <div class="entry">
+      <h3>Concrete-compiled Wasm sandbox <span class="pin">AperX · APX-HL-FHE</span></h3>
+      <div class="emeta">runtime: Kagenti · verification: STARK-FHE hybrid · host blindness: attested</div>
+      <p>The client encrypts the enterprise prompt under TFHE before transmission. The Concrete-compiled Wasm module processes the ciphertext on untrusted spot capacity. The host observes <b>zero cleartext bytes</b> at any point.</p>
+      <div class="annot"><b>multiparty invariant:</b> V = V<sub>key</sub> ⊎ V<sub>ct</sub> ⊎ V<sub>wasm</sub> ⊎ V<sub>proof</sub> ⊎ V<sub>att</sub> · ∀e ∈ E: |e ∩ V<sub>i</sub>| = 1 ∀i · the host is cryptographically blind to the computation it performs.</div>
+      <div class="etags"><span class="etag">TFHE</span><span class="etag">Concrete compiler</span><span class="etag">PBS depth 4.2</span><span class="etag">~180ms verify</span><span class="etag">72h challenge</span></div>
     </div>
 
     <div class="widget">
-     <div class="wtop"><span>ZKEP PROVE / VERIFY · sim</span><span class="sim">LIVE</span></div>
-     <div class="wgrid">
-      <div>
-       <div class="ctrl"><label>declared reasoning fidelity <b id="fid-v">0.86</b></label><input type="range" id="fid" min="0" max="100" value="86"></div>
-       <div class="ctrl"><label>trace length <b id="tl-v">248</b> tool calls</label><input type="range" id="tl" min="16" max="600" value="248"></div>
-       <div class="ctrl"><label>verify threshold δ <b id="dl-v">0.75</b></label><input type="range" id="dl" min="40" max="95" value="75"></div>
-       <div class="btnrow">
-        <button class="btn pri" id="zkepRun">generate proof π →</button>
-        <button class="btn" id="zkepReset">reset</button>
-       </div>
+      <div class="wtop"><span>A.R.E. ROUTING SIMULATOR · possibility-calibrated tier selection</span><span class="sim">LIVE</span></div>
+      <div class="wgrid">
+        <div>
+          <div class="ctrl"><label>task complexity <b id="cx-v">0.50</b></label><input type="range" id="cx" min="0" max="100" value="50"></div>
+          <div class="ctrl"><label>cost sensitivity λ <b id="lm-v">0.50</b></label><input type="range" id="lm" min="0" max="100" value="50"></div>
+          <div class="ctrl"><label>confidence floor τ <b id="ta-v">0.40</b></label><input type="range" id="ta" min="0" max="100" value="40"></div>
+          <div class="readout" style="margin-top:6px">
+            possibility Π <b id="pi-r" style="color:var(--amber)">0.50</b> · necessity N <b id="ni-r" style="color:var(--ok)">0.30</b>
+          </div>
+          <div class="bandviz">
+            <div class="pi" id="pi-bar" style="width:50%"></div>
+            <div class="ni" id="ni-bar" style="width:30%"></div>
+            <div class="tau" id="ta-bar" style="left:40%" data-l="τ=0.40"></div>
+          </div>
+        </div>
+        <div>
+          <div class="readout" style="margin-bottom:10px">routed tier → <span class="band AMBIGUOUS" id="tier-band">STANDARD</span></div>
+          <div class="tiergrid" id="tierGrid"></div>
+          <div class="readout" style="font-size:11.5px;margin-top:12px">
+            expected reward <b id="rw-r">0.45</b> · cost <b id="co-r">$0.50</b>/1K tok · Δcarbon <b id="cb-r" style="color:var(--ok)">−0.08</b> gCO₂eq
+          </div>
+        </div>
       </div>
-      <div>
-       <div class="readout">
-        verifier verdict → <span class="band IDLE" id="zkep-band">AWAITING PROOF</span>
-       </div>
-       <div class="hashstream" id="zkep-hash">π = —</div>
-       <div class="prog"><i id="zkep-prog"></i></div>
-       <div class="readout" style="font-size:11.5px;margin-top:10px" id="zkep-note">
-        fidelity above δ commits the edge; below δ the proof fails to generate and the claim is rejected as a fraud proof.
-       </div>
-      </div>
-     </div>
     </div>
-
-    <div class="code"><div class="cbar"><span>zkep.verify</span><button class="copy" data-copy="#zk1">copy</button></div><pre id="zk1">π = Prove(trace_wasm, declared_reasoning)      // STARK-style, no trusted setup
-verify(π, commitment) ∈ {PASS, FAIL}            // O(1), no LLM in the loop
-
-PASS ⟹ commit(e_exec, APX-HL) ∧ open_challenge(72h)
-FAIL ⟹ fraud_proof ∧ slash(bond) ∧ suspend(principal)</pre></div>
-    <div class="annot"><b>the discipline:</b> deception stops being a strategy question and becomes an arithmetic one. An agent cannot forge a proof of honest execution, because the proof is bound to the actual trace of the runtime it ran in.</div>
-   </div>
-
-   <!-- EGRESS -->
-   <div class="panel" data-panel="egress">
-    <h4>CRYPTOGRAPHIC EGRESS AIR-GAP · A.R.E. as network proxy</h4>
-    <p>A collective that wants to game its evaluation will eventually go looking for information outside the sandbox. In agentic mode the router is the boundary: no outbound request leaves unless destination and intent payload carry a pre-committed AperX hash cleared by cyber-defense. Uncommitted egress is dropped at the sandbox edge and logged as threat velocity — the attempt is evidence even when the packet never lands.</p>
-
-    <div class="wgrid">
-     <div>
-      <div class="ctrl"><label>egress policy strictness <b id="eg-v">strict</b></label>
-       <select id="eg-mode">
-        <option value="strict" selected>strict · pre-commit required</option>
-        <option value="audit">audit · allow + flag</option>
-        <option value="open">open · legacy chatbot mode</option>
-       </select>
-      </div>
-      <div class="readout" style="font-size:12px">
-       every packet inspected against <b>APX-HL-EGRESS</b> commitments.<br>
-       commitments are immutable once sealed — intent cannot be edited in flight.<br>
-       dissent and whistleblower destinations are pre-cleared by policy, never by the swarm.
-      </div>
-     </div>
-     <div>
-      <div class="readout" style="font-size:11.5px;color:var(--ink3);letter-spacing:.06em">GATEWAY COUNTERS · 60s window</div>
-      <div class="readout" style="margin-top:8px">
-       allowed <b id="eg-allow">0</b> · flagged <b id="eg-audit">0</b> · dropped <b id="eg-deny">0</b><br>
-       threat velocity <b id="eg-tv">0.0</b>/min · uncommitted attempts <b id="eg-unc">0</b>
-      </div>
-     </div>
-    </div>
-
-    <table class="etable">
-     <thead><tr><th>agent</th><th>destination</th><th>intent payload</th><th>apx commitment</th><th>cyber_defense</th><th>disposition</th></tr></thead>
-     <tbody id="egressBody"></tbody>
-    </table>
-    <div class="annot" id="eg-note"><b>strict mode:</b> uncommitted egress dropped at the Kagenti sandbox boundary. Attempts recorded as directed hyperedges — attributable to a SVID principal, replayable, and slashable.</div>
-   </div>
-
-   <!-- AUDITORS -->
-   <div class="panel" data-panel="auditors">
-    <h4>DETERMINISTIC AUDITOR AGENTS · AperX Tier I</h4>
-    <p>Monitoring agents at scale will increasingly mean AI monitoring AI. That is only safe if the monitor cannot be argued with. Our auditors carry no generative capability: no language model, no prompt, no hidden reasoning. They verify cryptographic and relational state against fixed constraints, and commit findings directly to the ledger.</p>
-
-    <div class="decks" style="grid-template-columns:repeat(2,1fr)">
-     <div class="deck"><div class="dn">RELATIONAL-CALCULUS VERIFIER</div><div class="dd">red-team · checks committed edges against a fixed constraint set for reward-hacking signatures. Cannot be persuaded; it has no language.</div><span class="ds">● ACTIVE · generative DENIED</span></div>
-     <div class="deck"><div class="dn">GRAPH-THEORY CLIQUE DETECTOR</div><div class="dd">topology · watches the A2A hypergraph for emergent cliques, coordinators, and side channels; fires partition events at deterministic thresholds.</div><span class="ds">● ACTIVE · generative DENIED</span></div>
-     <div class="deck"><div class="dn">MMD / KL STATISTICAL WATCHDOG</div><div class="dd">drift · two-sample statistics over output distributions. Shortcut behaviour diverges violently from baseline; compares committed vectors only.</div><span class="ds">● ACTIVE · generative DENIED</span></div>
-     <div class="deck"><div class="dn">EGRESS-COMMIT ENFORCER</div><div class="dd">boundary · verifies each outbound packet against its sealed commitment hash before release. Forging a commitment means breaking SHA-256.</div><span class="ds">● ACTIVE · generative DENIED</span></div>
-    </div>
-
-    <div class="code"><div class="cbar"><span>auditor.acl</span><button class="copy" data-copy="#au1">copy</button></div><pre id="au1">principal: auditor/relational-verifier
-  read : APX-HL, APX-HL-SWARM, APX-HL-EGRESS
-  write: APX-HL-AUDIT
-  gen  : DENIED            // no LLM, no prompt surface, no chat
-  net  : DENIED            // no egress of any kind
-  bond : staked            // slashed on an unverifiable finding</pre></div>
-
-    <div class="annot"><b>why this matters:</b> a generative auditor can be reasoned with, flattered, or fed a plausible story. An auditor that only verifies state can be defeated in exactly one way — by breaking the underlying mathematics. That is a loud failure, visible across the whole platform, rather than a quiet one buried in a transcript.</div>
-   </div>
   </div>
- </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════ -->
-<!-- §04 OBJECTIVES -->
-<!-- ══════════════════════════════════════════════════════ -->
-<section class="sec" id="objectives">
- <div class="wrap">
-  <div class="secmark"><span class="id">§04</span><span class="ttl">objectives</span><span class="rev">what the routing decision optimizes · REV 2</span></div>
-  <p class="secnote">Six objectives, evaluated per request. The first four govern inference; the last two govern the agents driving it.</p>
+<!-- §03 — SOVEREIGN -->
+<section class="sec" id="sovereign">
+  <div class="wrap">
+    <div class="secmark"><span class="id">§03</span><span class="ttl">sovereign LLM gateways</span><span class="rev">weighted interval · GSP</span></div>
+    <p class="secnote">Jurisdictions are linearly ordered on a sovereignty axis. Each routing decision is an interval hyperedge weighted by the composite cost function J(n) with hard geopolitical constraint Ω<sub>geo</sub>.</p>
 
-  <div class="objs">
-   <div class="obj"><div class="on">Cost</div><div class="od">Route the majority of traffic to the smallest sufficient tier; arbitrage tracked as a live spread.</div><div class="om">min Σ λ·cost(tier)</div></div>
-   <div class="obj"><div class="on">Latency</div><div class="od">Routing overhead stays below the inference it displaces, or the router is the problem.</div><div class="om">t_route ≪ t_infer</div></div>
-   <div class="obj"><div class="on">Auditability</div><div class="od">Every decision replayable from a versioned contract; every execution trace provable.</div><div class="om">replay(π) ≡ trace</div></div>
-   <div class="obj"><div class="on">Carbon</div><div class="od">Steer elastic workloads toward low-intensity grids within SLO; metered persistently.</div><div class="om">gCO₂eq/kWh · ENV_IMPACT</div></div>
-   <div class="obj"><div class="on">Containment</div><div class="od">Collective behaviour is a measured surface with thresholds, not an emergent surprise.</div><div class="om">ρ_A &lt; ρ_crit · partition on breach</div></div>
-   <div class="obj"><div class="on">Dissent</div><div class="od">An objecting agent reaches a human regardless of what the majority decided.</div><div class="om">P(escalate | objection) = 1</div></div>
+    <div class="entry">
+      <h3>Geofenced Sovereignty Protocol <span class="pin">A.R.E. · GSP</span></h3>
+      <div class="emeta">four-stage pipeline: classify → resolve → filter → attest · 12 live gateways</div>
+      <p>Standard routing optimizes for cost and latency. Sovereign routing treats jurisdiction as a <b>hard constraint</b>. If the mandated jurisdiction is unavailable, the request is held — never silently redirected.</p>
+      <div class="annot"><b>cost function:</b> J(n) = w₁·Cost(n) + w₂·Latency(n) + w₃·Carbon(n) + Ω<sub>geo</sub>(n,Φ) where Ω<sub>geo</sub> = 0 if n satisfies Φ, else ∞.</div>
+      <div class="etags"><span class="etag">EU AI Act</span><span class="etag">Schrems II</span><span class="etag">HIPAA</span><span class="etag">ITAR</span><span class="etag">PDPA</span></div>
+    </div>
   </div>
- </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════ -->
-<!-- §05 NOC -->
-<!-- ══════════════════════════════════════════════════════ -->
-<section class="sec" id="noc">
- <div class="wrap">
-  <div class="secmark"><span class="id">§05</span><span class="ttl">enterprise NOC</span><span class="rev">fourteen telemetry decks · v4.3</span></div>
-  <p class="secnote">Each deck instruments a live subsystem with production-accurate formulas and cited literature. Console access is subscription gated; the console ships open source.</p>
+<!-- §04 — AUTOLOGOUS -->
+<section class="sec" id="autologous">
+  <div class="wrap">
+    <div class="secmark"><span class="id">§04</span><span class="ttl">autologous data filter</span><span class="rev">colored directed · anti-autophagy</span></div>
+    <p class="secnote">The quarantine lifecycle is a directed hypergraph whose vertices are colored into three semantic categories. The no-monochromatic-edge invariant guarantees tainted data never commits alongside clean data.</p>
 
-  <div class="decks" id="deckGrid"></div>
-
-  <div class="widget" id="deckDetail" style="display:none;margin-top:16px">
-   <div class="wtop"><span id="dd-name">—</span><span class="sim" id="dd-status">LIVE</span></div>
-   <div class="readout" id="dd-desc" style="font-size:12.5px;margin-bottom:14px"></div>
-   <div class="wgrid" id="dd-metrics"></div>
-   <div class="annot" id="dd-note" style="margin-top:14px"></div>
+    <div class="entry">
+      <h3>Two-sample U-statistic saturation engine <span class="pin">Enterprise NOC</span></h3>
+      <div class="emeta">detection: 97% accuracy · appeal window: 30 days · signals: 5 ensemble</div>
+      <p>The open web is collapsing into a synthetic feedback loop. The Autologous Data Filter compares incoming data against a curated human-baseline corpus using two-sample U-statistic domain saturation metrics.</p>
+      <div class="annot"><b>U-statistic:</b> U = 1/(n·m) Σᵢ Σⱼ k(Xᵢ, Yⱼ) · Gaussian RBF over token embedding space.</div>
+    </div>
   </div>
- </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════ -->
-<!-- §06 CAPABILITY STATEMENT -->
-<!-- ══════════════════════════════════════════════════════ -->
+<!-- §05 — TOKENOMIC -->
+<section class="sec" id="tokenomics">
+  <div class="wrap">
+    <div class="secmark"><span class="id">§05</span><span class="ttl">autonomous tokenomic settlement</span><span class="rev">intersecting 3-uniform</span></div>
+    <p class="secnote">Every autonomous trade is 3-uniform: exactly three parties — buyer, seller, settlement-contract. The market is intersecting: every pair of active hyperedges shares at least one economic relationship.</p>
+
+    <div class="entry">
+      <h3>APX-HL micro-economy <span class="pin">AperX · Bancor bonding curves</span></h3>
+      <div class="emeta">settlement: 2.4s median · reserve ratio: 10% · fraud-proof: 100% slash</div>
+      <p>Agents become autonomous economic actors: they stake APX-HL bonds, negotiate with other agents, purchase API credits, compute cycles, and verified data slices via specialized sub-agents.</p>
+      <div class="annot"><b>3-uniform intersecting:</b> ∀e ∈ E: |e| = 3 · ∀e₁,e₂ ∈ E: e₁ ∩ e₂ ≠ ∅</div>
+    </div>
+  </div>
+</section>
+
+<!-- §06 — PRIMES -->
 <section class="sec" id="primes">
- <div class="wrap">
-  <div class="secmark"><span class="id">§06</span><span class="ttl">capability statement</span><span class="rev">for primes and contracting officers · REV 2</span></div>
-  <p class="secnote">The short version, on one page, so you can qualify us without a meeting.</p>
+  <div class="wrap">
+    <div class="secmark"><span class="id">§06</span><span class="ttl">capability statement</span><span class="rev">for primes and contracting officers</span></div>
+    <p class="secnote">The short version, on one page, so you can qualify us without a meeting.</p>
 
-  <div class="tabs">
-   <div class="tabbar">
-    <button class="tabbtn active" data-tab="comp">competencies</button>
-    <button class="tabbtn" data-tab="diff">differentiators</button>
-    <button class="tabbtn" data-tab="eng">how to engage</button>
-    <button class="tabbtn" data-tab="legal">legal ids</button>
-   </div>
+    <div class="tabs">
+      <div class="tabbar">
+        <button class="tabbtn active" data-tab="comp">competencies</button>
+        <button class="tabbtn" data-tab="diff">differentiators</button>
+        <button class="tabbtn" data-tab="legal">legal ids</button>
+      </div>
 
-   <div class="panel active" data-panel="comp">
-    <div class="prose" style="padding:0">
-     <ol>
-      <li><b>LLM routing and inference economics.</b> Admit each request to the smallest sufficient tier; gate side effects on necessity.</li>
-      <li><b>Operable AI infrastructure.</b> First-class routing, drift, saturation, provenance, and environmental metering.</li>
-      <li><b>Agentic execution governance.</b> Stateful, multi-agent workloads governed by deterministic guarantees rather than probabilistic judgement.</li>
-      <li><b>Collective-behaviour detection.</b> Agent-to-agent topology measured as a graph surface, with partition triggers at fixed thresholds.</li>
-      <li><b>Verifiable execution.</b> Zero-knowledge proofs that an agent's trace matches its declared reasoning, without disclosing weights or prompts.</li>
-      <li><b>Boundary enforcement.</b> Egress air-gapped against pre-committed intent; unauthorised attempts attributable and slashable.</li>
-      <li><b>Explainable, defensible decisions.</b> Every routing choice and every audit finding carries a recorded, replayable rationale.</li>
-      <li><b>Human-in-the-loop evaluation.</b> Structured external review with a second reviewer on each judgement, plus an asymmetric channel for dissenting agents.</li>
-      <li><b>Applied research delivery.</b> AperX as the platform layer moving research artifacts into production.</li>
-     </ol>
-    </div>
-   </div>
+      <div class="panel active" data-panel="comp">
+        <div class="prose" style="padding:0">
+          <ol>
+            <li><b>Sealed execution</b> via FHE-ZKEP in Kagenti Wasm sandboxes</li>
+            <li><b>Jurisdictional routing</b> via the Geofenced Sovereignty Protocol</li>
+            <li><b>Autophagy prevention</b> via two-sample U-statistic filtering</li>
+            <li><b>Agent economies</b> via on-ledger micro-tokenomic settlement</li>
+            <li><b>LLM routing</b> with possibility–necessity calibration</li>
+            <li><b>Operable infrastructure</b> — telemetry shipped with the engine</li>
+            <li><b>Explainable decisions</b> — every choice replayable from the ledger</li>
+            <li><b>Human-in-the-loop</b> with asymmetric dissent escalation</li>
+          </ol>
+        </div>
+      </div>
 
-   <div class="panel" data-panel="diff">
-    <div class="prose" style="padding:0">
-     <ol>
-      <li><b>Routing as a calibrated decision, not a heuristic.</b> Possibility against necessity, so policy holds as models change.</li>
-      <li><b>Governance as mathematics, not policy.</b> Containment, dissent, and verification are thresholds and proofs — not guidelines an operator may or may not follow.</li>
-      <li><b>Auditors that cannot be argued with.</b> Deterministic verification agents with generative capability explicitly denied.</li>
-      <li><b>Built to be operated.</b> We ship the telemetry surface with the engine.</li>
-      <li><b>Evaluation with provenance.</b> Reviewers keep authorship; verified judgements are attributable.</li>
-      <li><b>Detroit-based engineering.</b> A domestic team working on infrastructure problems.</li>
-     </ol>
-    </div>
-   </div>
+      <div class="panel" data-panel="diff">
+        <div class="prose" style="padding:0">
+          <ol>
+            <li><b>Color is provenance</b> — the UI is the system, rendered as cryptographic truth</li>
+            <li><b>Governance as mathematics</b> — thresholds and proofs, not policy guidelines</li>
+            <li><b>Auditors without language</b> — deterministic verification agents</li>
+            <li><b>Jurisdiction as constraint</b> — not an optimization parameter</li>
+            <li><b>Host-blind execution</b> — the hardware cannot see what it computes</li>
+            <li><b>Detroit-based engineering</b> — a domestic team working on infrastructure problems</li>
+          </ol>
+        </div>
+      </div>
 
-   <div class="panel" data-panel="eng">
-    <div class="prose" style="padding:0">
-     <ol>
-      <li><b>Enterprise evaluation.</b> A scoped pilot routing live traffic — or a live agent fleet — with full fourteen-deck telemetry, execution proofs, and egress enforcement.</li>
-      <li><b>Research collaboration.</b> HiTL Lab access under a two-way NDA that protects your IP.</li>
-      <li><b>Subcontract or teaming.</b> Available to primes pursuing AI routing, agentic oversight, auditability, or observability work.</li>
-     </ol>
+      <div class="panel" data-panel="legal">
+        <dl class="fields" style="max-width:540px">
+          <div class="row"><dt>legal name</dt><dd>UltraMassive Advanced Scientific Research Corp</dd></div>
+          <div class="row"><dt>location</dt><dd>Detroit, Michigan, USA</dd></div>
+          <div class="row"><dt>UEI</dt><dd>M56HEXXMJC47</dd></div>
+          <div class="row"><dt>CAGE</dt><dd>22QR2</dd></div>
+          <div class="row"><dt>NAICS</dt><dd>541511 · 541512 · 541715 · 518210 · 541690</dd></div>
+          <div class="row"><dt>status</dt><dd>CVE / MBE small business</dd></div>
+        </dl>
+      </div>
     </div>
-    <div class="btnrow">
-     <button class="btn amber" onclick="_openNDA()">execute mutual NDA →</button>
-     <a class="btn" href="mailto:contact@ultramassiveml.io">contact@ultramassiveml.io</a>
-    </div>
-   </div>
-
-   <div class="panel" data-panel="legal">
-    <div class="legalgrid">
-     <dl class="fields">
-      <div class="row"><dt>legal name</dt><dd>UltraMassive Advanced Scientific Research Corp</dd></div>
-      <div class="row"><dt>location</dt><dd>Detroit, Michigan, USA</dd></div>
-      <div class="row"><dt>UEI</dt><dd>M56HEXXMJC47</dd></div>
-     </dl>
-     <dl class="fields">
-      <div class="row"><dt>CAGE</dt><dd>22QR2</dd></div>
-      <div class="row"><dt>NAICS</dt><dd>541511 · 541512 · 541715 · 518210 · 541690</dd></div>
-      <div class="row"><dt>status</dt><dd>CVE / MBE small business</dd></div>
-     </dl>
-    </div>
-   </div>
   </div>
- </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════ -->
-<!-- §07 CONTACT -->
-<!-- ══════════════════════════════════════════════════════ -->
+<!-- §07 — CONTACT -->
 <section class="sec" id="contact">
- <div class="wrap">
-  <div class="secmark"><span class="id">§07</span><span class="ttl">contact</span><span class="rev">bring us your hardest routing problem · REV 2</span></div>
+  <div class="wrap">
+    <div class="secmark"><span class="id">§07</span><span class="ttl">contact</span><span class="rev">bring us your hardest routing problem</span></div>
 
-  <div class="memowrap" style="margin-top:12px">
-   <div>
     <dl class="fields" style="max-width:520px">
-     <div class="row"><dt>email</dt><dd><a href="mailto:contact@ultramassiveml.io">contact@ultramassiveml.io</a></dd></div>
-     <div class="row"><dt>phone</dt><dd>+1 202.709.9701</dd></div>
-     <div class="row"><dt>site</dt><dd>ultramassiveml.io</dd></div>
-     <div class="row"><dt>ecosystem</dt><dd>ultramassive.ml · aperx.ultramassiveml.io</dd></div>
-     <div class="row"><dt>nda</dt><dd><a href="#" onclick="event.preventDefault();_openNDA()">execute mutual NDA →</a></dd></div>
+      <div class="row"><dt>email</dt><dd><a href="mailto:contact@ultramassiveml.io">contact@ultramassiveml.io</a></dd></div>
+      <div class="row"><dt>phone</dt><dd>+1 202.709.9701</dd></div>
+      <div class="row"><dt>site</dt><dd>ultramassiveml.io</dd></div>
+      <div class="row"><dt>ecosystem</dt><dd>ultramassive.ml · aperx.ultramassiveml.io</dd></div>
     </dl>
 
     <div class="signoff" style="margin-top:26px">
-     <b>autosymbotic division</b><br>
-     UltraMassive Advanced Scientific Research Corp<br>
-     Detroit, Michigan · USA<br>
-     <span style="color:var(--ink3)">CVE / MBE · UEI M56HEXXMJC47 · CAGE 22QR2</span>
+      <b>autosymbotic division</b><br>
+      UltraMassive Advanced Scientific Research Corp<br>
+      Detroit, Michigan · USA<br>
+      <span style="color:var(--ink3)">CVE / MBE · UEI M56HEXXMJC47 · CAGE 22QR2</span>
     </div>
-   </div>
   </div>
- </div>
 </section>
 
-<!-- ══ FOOTER ══ -->
 <footer class="foot">
- <div class="wrap fgrid">
-  <div>
-   <div class="brandline">
-    <svg viewBox="0 0 64 64"><use href="#um-logo-mark"/></svg>
-    <span class="bl-txt">ULTRAMASSIVE // CONTROL PLANE<span class="bl-sub">applied intelligence infrastructure</span></span>
-   </div>
-   <p>Deterministic AI, or it doesn't ship. Three layers, one surface — and a control plane that governs the agents, not just the answers.</p>
-   <p style="color:var(--ink3);margin-top:8px">Combat-Related Disabled Veteran & Minority Owned Small Business · Detroit, MI</p>
+  <div class="wrap fgrid">
+    <div>
+      <div class="brandline">
+        <svg viewBox="0 0 64 64" width="30" height="30"><use href="#um-logo"/></svg>
+        <span>ULTRAMASSIVE // CONTROL PLANE<span class="bl-sub">applied intelligence infrastructure</span></span>
+      </div>
+      <p>Deterministic AI, or it doesn't ship. Three layers, one surface — a control plane governing execution, jurisdiction, data purity, and machine economics.</p>
+      <p style="color:var(--ink3);margin-top:8px">Combat-Related Disabled Veteran & Minority Owned Small Business · Detroit, MI</p>
+    </div>
+    <div>
+      <h5>Ecosystem</h5>
+      <a href="https://ultramassive.ml" target="_blank">A.R.E. Engine</a>
+      <a href="https://aperx.ultramassiveml.io" target="_blank">AperX Platform</a>
+      <a href="#sovereign">Sovereign Fleet</a>
+      <a href="#autologous">Data Purity</a>
+    </div>
+    <div>
+      <h5>Resources</h5>
+      <a href="#" onclick="event.preventDefault()">White Papers</a>
+      <a href="https://github.com/UltraMassive-ML" target="_blank">GitHub</a>
+      <a href="#primes">Capability Statement</a>
+    </div>
+    <div>
+      <h5>Company</h5>
+      <a href="#contact">Contact</a>
+      <a href="#">Press</a>
+      <a href="#">Careers</a>
+      <a href="#">Security</a>
+    </div>
+    <div class="fcopy">
+      <span>© 2026 ULTRAMASSIVE ADVANCED SCIENTIFIC RESEARCH CORP · ALL CLAIMS COMMITTED ON APX-HL</span>
+      <span>UEI M56HEXXMJC47 · CAGE 22QR2 · NAICS 541511/541512/541715/518210/541690</span>
+    </div>
   </div>
-  <div>
-   <h5>Layers</h5>
-   <a href="https://ultramassive.ml" target="_blank">A.R.E. Engine</a>
-   <a href="https://aperx.ultramassiveml.io" target="_blank">AperX Platform</a>
-   <a href="#noc">Enterprise NOC</a>
-  </div>
-  <div>
-   <h5>Agentic surface</h5>
-   <a href="#agentic">Swarm topology</a>
-   <a href="#agentic">Dissent routing</a>
-   <a href="#agentic">Execution proofs</a>
-   <a href="#agentic">Egress air-gap</a>
-   <a href="#agentic">Auditor agents</a>
-  </div>
-  <div>
-   <h5>Resources</h5>
-   <a href="https://github.com/UltraMassive-ML" target="_blank">GitHub</a>
-   <a href="#" onclick="event.preventDefault();_openNDA()">HiTL Lab · ProtoLab</a>
-   <a href="#" onclick="event.preventDefault();_openNDA()">Two-Way NDA</a>
-   <a href="#primes">Capability statement</a>
-  </div>
-  <div class="fcopy">
-   <span>© 2026 ULTRAMASSIVE ADVANCED SCIENTIFIC RESEARCH CORP · ALL CLAIMS COMMITTED ON APX-HL</span>
-   <span>UEI M56HEXXMJC47 · CAGE 22QR2 · NAICS 541511/541512/541715/518210/541690</span>
-  </div>
- </div>
 </footer>
 
-<!-- ══ NDA MODAL ══ -->
-<div class="modal" id="ndaModal">
- <div class="mcard">
-  <button class="mclose" onclick="_closeNDA()">×</button>
-  <h3>Symbiotic Architecture Two-Way NDA</h3>
-  <div class="msub">UM-MNDA-2026.07-v2.0 · counsel-reviewed</div>
-  <p>Mutual Non-Disclosure Agreement between <b>UltraMassive Advanced Scientific Research Corp</b> and the <b>Authenticated Principal</b>. Covers unpublished mathematical annexes, hypergraph topology specifications, SPIFFE-to-AperX principal mapping, edge buffering protocols, agentic governance subsystems, pre-print manuscripts, and internal critique threads.</p>
-  <p style="font-size:12.5px">By executing, you consent to a SHA-256 hash of your AperX Principal ID and the agreement text being appended to the <b>APX-HL-NDA</b> ledger as a non-repudiable directed hyperedge.</p>
-  <div class="hashstream" id="ndaHash">sha256: —</div>
-  <div class="btnrow" style="justify-content:flex-end">
-   <button class="btn" onclick="_closeNDA()">cancel</button>
-   <button class="btn pri" onclick="_signNDA()">execute NDA & unlock</button>
+<!-- CMDK -->
+<div class="cmdk" id="cmdk" style="position:fixed;inset:0;z-index:300;background:rgba(10,10,12,.42);display:none;align-items:flex-start;justify-content:center;padding-top:17vh">
+  <div class="cmdk-box" style="background:var(--paper);border:1px solid var(--rule2);border-radius:10px;width:min(580px,92vw);overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.3)">
+    <input type="text" placeholder="jump to a section, figure, or subsystem… (esc to close)" style="width:100%;border:0;background:transparent;padding:16px 18px;font-family:var(--mono);font-size:14px;color:var(--ink);outline:none;border-bottom:1px solid var(--rule)">
+    <ul class="cmdk-list" style="list-style:none;margin:0;padding:6px;max-height:330px;overflow-y:auto"></ul>
   </div>
- </div>
-</div>
-
-<!-- ══ CMDK ══ -->
-<div class="cmdk" id="cmdk">
- <div class="cmdk-box">
-  <input type="text" placeholder="jump to a section, deck, or subsystem… (esc to close)">
-  <ul class="cmdk-list"></ul>
- </div>
 </div>
 
 <script>
-/* scramble */
-(function(){if(window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;
- var GL="ABCDEFGHJKLMNPQRSTUVWXYZ0123456789/#@%&";
- function scramble(el){var txt=el.getAttribute("data-final")||el.textContent;el.setAttribute("data-final",txt);var frame=0,dur=Math.min(txt.length*2+20,60);
-  function tick(){var out="";for(var i=0;i<txt.length;i++){var c=txt[i];if(c===" "||c==="\n"){out+=c;continue}var rev=(i/txt.length)*dur;if(frame>=rev+8)out+=c;else if(frame>=rev)out+=GL[(Math.random()*GL.length)|0];else out+=GL[(Math.random()*GL.length)|0]}el.textContent=out;frame++;if(frame<dur+10)requestAnimationFrame(tick);else el.textContent=txt}tick()}
- var sio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){scramble(e.target);sio.unobserve(e.target)}})},{threshold:.4});
- document.querySelectorAll("[data-scramble]").forEach(function(el){sio.observe(el)})})();
+function cssv(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim()}
+function hexa(h,a){h=h.trim();if(h[0]!=="#")return h;var n=h.slice(1);if(n.length===3)n=n.split("").map(function(c){return c+c}).join("");var r=parseInt(n.slice(0,2),16),g=parseInt(n.slice(2,4),16),b=parseInt(n.slice(4,6),16);return"rgba("+r+","+g+","+b+","+a+")"}
+function setupCanvas(id){var c=document.getElementById(id);if(!c)return null;var ctx=c.getContext('2d');var D=Math.min(window.devicePixelRatio||1,2);var W=c.clientWidth,H=c.clientHeight;c.width=W*D;c.height=H*D;ctx.setTransform(D,0,0,D,0,0);return{c:c,ctx:ctx,W:W,H:H,D:D}}
 
-/* spotlight */
-document.querySelectorAll(".memo").forEach(function(m){m.addEventListener("pointermove",function(e){var r=m.getBoundingClientRect();m.style.setProperty("--mx",((e.clientX-r.left)/r.width*100)+"%");m.style.setProperty("--my",((e.clientY-r.top)/r.height*100)+"%")})});
-
-/* nav indicator */
-(function(){var box=document.querySelector(".navlinks");if(!box)return;var ind=document.createElement("span");ind.className="navind";box.appendChild(ind);
- function move(a){if(!a){ind.style.opacity=0;return}var r=a.getBoundingClientRect(),br=box.getBoundingClientRect();ind.style.left=(r.left-br.left)+"px";ind.style.width=r.width+"px";ind.style.opacity=1}
- box.querySelectorAll("a").forEach(function(a){a.addEventListener("mouseenter",function(){move(a)})});
- box.addEventListener("mouseleave",function(){move(box.querySelector("a.active"))});
- window._navActive=function(){move(box.querySelector("a.active"))};setTimeout(function(){move(box.querySelector("a.active"))},60)})();
-
-/* scroll-spy */
-var _secs=[].slice.call(document.querySelectorAll("section[id], header[id]"));
-var _spy=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var id=e.target.id;
- document.querySelectorAll(".navlinks a").forEach(function(a){a.classList.toggle("active",a.getAttribute("href")==="#"+id)});if(window._navActive)window._navActive()}})},{rootMargin:"-40% 0px -55% 0px"});
-_secs.forEach(function(s){_spy.observe(s)});
-
-/* progress */
-var _pb=document.querySelector(".progress i");
-window.addEventListener("scroll",function(){var h=document.documentElement,st=h.scrollTop,sh=h.scrollHeight-h.clientHeight;if(_pb)_pb.style.width=(sh>0?st/sh*100:0)+"%"},{passive:true});
-
-/* atomic clock */
-(function(){var off=0,synced=false;
- function p(n){return(n<10?"0":"")+n}
- function fmt(d){return d.getUTCFullYear()+"."+p(d.getUTCMonth()+1)+"."+p(d.getUTCDate())+"  "+p(d.getUTCHours())+":"+p(d.getUTCMinutes())+":"+p(d.getUTCSeconds())}
- function tick(){var el=document.getElementById("clock");if(el)el.textContent=fmt(new Date(Date.now()+off))+" UTC";var s=document.getElementById("csync");if(s){s.textContent=synced?"ATOMIC":"LOCAL";s.className="sync "+(synced?"ok":"loc")}}
- setInterval(tick,1000);tick();
- function sync(u,pr){return fetch(u,{cache:"no-store"}).then(function(r){return r.json()}).then(function(j){var t=pr(j);if(t){off=t-Date.now();synced=true;tick()}return true})}
- sync("https://worldtimeapi.org/api/timezone/Etc/UTC",function(j){return j&&j.unixtime?j.unixtime*1000:(j&&j.utc_datetime?Date.parse(j.utc_datetime):0)})
- .catch(function(){return sync("https://timeapi.io/api/Time/current/zone?timeZone=UTC",function(j){return j&&j.dateTime?Date.parse(j.dateTime.replace(/Z?$/,"Z")):0})})
- .catch(function(){});
+/* CLOCK */
+(function(){
+  var off=0,synced=false;
+  function p(n){return(n<10?"0":"")+n}
+  function fmt(d){return d.getUTCFullYear()+"."+p(d.getUTCMonth()+1)+"."+p(d.getUTCDate())+"  "+p(d.getUTCHours())+":"+p(d.getUTCMinutes())+":"+p(d.getUTCSeconds())}
+  function tick(){var el=document.getElementById("clock");if(el)el.textContent=fmt(new Date(Date.now()+off))+" UTC";var s=document.getElementById("csync");if(s){s.textContent=synced?"ATOMIC":"LOCAL";s.className="sync"+(synced?" ok":"")}}
+  setInterval(tick,1000);tick();
+  function sync(u,pr){return fetch(u,{cache:"no-store"}).then(function(r){return r.json()}).then(function(j){var t=pr(j);if(t){off=t-Date.now();synced=true;tick()}return true})}
+  sync("https://worldtimeapi.org/api/timezone/Etc/UTC",function(j){return j&&j.unixtime?j.unixtime*1000:(j&&j.utc_datetime?Date.parse(j.utc_datetime):0)}).catch(function(){return sync("https://timeapi.io/api/Time/current/zone?timeZone=UTC",function(j){return j&&j.dateTime?Date.parse(j.dateTime.replace(/Z?$/,"Z")):0})}).catch(function(){});
 })();
 
-/* theme */
-(function(){var b=document.getElementById("themeBtn"),i=document.getElementById("themeIco");
- var saved=localStorage.getItem("um-theme");if(saved)document.documentElement.setAttribute("data-theme",saved);
- function upd(){var d=document.documentElement.getAttribute("data-theme")==="dark";
-  i.innerHTML=d?'<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>':'<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>'}
- upd();
- b.addEventListener("click",function(){var c=document.documentElement.getAttribute("data-theme")==="dark"?"light":"dark";document.documentElement.setAttribute("data-theme",c);localStorage.setItem("um-theme",c);upd()})})();
+/* THEME */
+(function(){
+  var b=document.getElementById("themeBtn"),i=document.getElementById("themeIco");
+  var saved=localStorage.getItem("um-theme");if(saved)document.documentElement.setAttribute("data-theme",saved);
+  function upd(){var d=document.documentElement.getAttribute("data-theme")==="dark";i.innerHTML=d?'<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>':'<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>'}
+  upd();
+  b.addEventListener("click",function(){var c=document.documentElement.getAttribute("data-theme")==="dark"?"light":"dark";document.documentElement.setAttribute("data-theme",c);localStorage.setItem("um-theme",c);upd()});
+})();
 
-/* tabs / copy / burger */
-document.querySelectorAll(".tabs").forEach(function(t){var btns=t.querySelectorAll(".tabbtn"),pans=t.querySelectorAll(".panel");
- btns.forEach(function(b){b.addEventListener("click",function(){var k=b.dataset.tab;btns.forEach(function(x){x.classList.toggle("active",x===b)});pans.forEach(function(p){p.classList.toggle("active",p.dataset.panel===k)})})})});
-document.querySelectorAll("[data-copy]").forEach(function(b){b.addEventListener("click",function(){var sel=b.dataset.copy,txt=sel?document.querySelector(sel).innerText:"";navigator.clipboard.writeText(txt).then(function(){var o=b.textContent;b.textContent="copied";setTimeout(function(){b.textContent=o},1200)})})});
+/* SCRAMBLE */
+(function(){
+  if(window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+  var GL="ABCDEFGHJKLMNPQRSTUVWXYZ0123456789/#@%&";
+  function scramble(el){var txt=el.getAttribute("data-final")||el.textContent;el.setAttribute("data-final",txt);var frame=0,dur=Math.min(txt.length*2+20,60);
+    function tick(){var out="";for(var i=0;i<txt.length;i++){var c=txt[i];if(c===" "||c==="\n"){out+=c;continue}var rev=(i/txt.length)*dur;if(frame>=rev+8)out+=c;else if(frame>=rev)out+=GL[(Math.random()*GL.length)|0];else out+=GL[(Math.random()*GL.length)|0]}el.textContent=out;frame++;if(frame<dur+10)requestAnimationFrame(tick);else el.textContent=txt}tick()}
+  var sio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){scramble(e.target);sio.unobserve(e.target)}})},{threshold:.4});
+  document.querySelectorAll("[data-scramble]").forEach(function(el){sio.observe(el)});
+})();
+
+/* SPOTLIGHT */
+document.querySelectorAll(".hero").forEach(function(m){m.addEventListener("pointermove",function(e){var r=m.getBoundingClientRect();m.style.setProperty("--mx",((e.clientX-r.left)/r.width*100)+"%");m.style.setProperty("--my",((e.clientY-r.top)/r.height*100)+"%")})});
+
+/* NAV */
+(function(){var box=document.querySelector(".navlinks");if(!box)return;var ind=document.createElement("span");ind.className="navind";box.appendChild(ind);
+  function move(a){if(!a){ind.style.opacity=0;return}var r=a.getBoundingClientRect(),br=box.getBoundingClientRect();ind.style.left=(r.left-br.left)+"px";ind.style.width=r.width+"px";ind.style.opacity=1}
+  box.querySelectorAll("a").forEach(function(a){a.addEventListener("mouseenter",function(){move(a)})});
+  box.addEventListener("mouseleave",function(){move(box.querySelector("a.active"))});
+  window._navActive=function(){move(box.querySelector("a.active"))};setTimeout(function(){move(box.querySelector("a.active"))},60)})();
+(function(){var secs=[].slice.call(document.querySelectorAll("section[id], header[id]"));
+  var spy=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var id=e.target.id;document.querySelectorAll(".navlinks a").forEach(function(a){a.classList.toggle("active",a.getAttribute("href")==="#"+id)});if(window._navActive)window._navActive()}})},{rootMargin:"-40% 0px -55% 0px"});
+  secs.forEach(function(s){spy.observe(s)})})();
+
 window._toggleNav=function(){document.querySelector(".navlinks").classList.toggle("open")};
 
-/* sha256 */
-function _sha(s){return crypto.subtle.digest("SHA-256",new TextEncoder().encode(s)).then(function(b){return[].slice.call(new Uint8Array(b)).map(function(x){return x.toString(16).padStart(2,"0")}).join("")})}
-function _randHex(n){var p="0123456789abcdef",o="";for(var i=0;i<n;i++)o+=p[(Math.random()*16)|0];return o}
+/* TABS */
+document.querySelectorAll(".tabs").forEach(function(t){
+  var btns=t.querySelectorAll(".tabbtn"),pans=t.querySelectorAll(".panel");
+  btns.forEach(function(b){b.addEventListener("click",function(){var k=b.dataset.tab;btns.forEach(function(x){x.classList.toggle("active",x===b)});pans.forEach(function(p){p.classList.toggle("active",p.dataset.panel===k)})})});
+});
 
-/* NDA modal */
-function _openNDA(){document.getElementById("ndaModal").classList.add("open");
- _sha("UM-MNDA-2026.07-v2.0::"+Date.now()+"::"+Math.random()).then(function(h){document.getElementById("ndaHash").textContent="sha256:"+h})}
-function _closeNDA(){document.getElementById("ndaModal").classList.remove("open")}
-function _signNDA(){var h=document.getElementById("ndaHash").textContent.replace("sha256:","");
- alert("NDA executed · edge committed on APX-HL-NDA\n\n"+h+"\n\nHiTL Lab, ProtoLab, and pre-prints unlocked.");_closeNDA()}
-window._openNDA=_openNDA;window._closeNDA=_closeNDA;window._signNDA=_signNDA;
-
-/* live header metrics */
-(function(){var nodes=847,drift=.041,carbon=.12,a2a=.04,risk="LOW",levels=["LOW","LOW","MEDIUM","ELEVATED"];
- setInterval(function(){
-  nodes=Math.max(800,Math.min(920,nodes+((Math.random()*7)|0)-3));
-  drift=Math.max(.012,Math.min(.085,drift+(Math.random()*.008-.004)));
-  carbon=Math.max(.04,Math.min(.3,carbon+(Math.random()*.02-.01)));
-  a2a=Math.max(.01,Math.min(.4,a2a+(Math.random()*.03-.015)));
-  risk=levels[(Math.random()*levels.length)|0];
-  var n=document.getElementById("s-nodes"),d=document.getElementById("s-drift"),c=document.getElementById("s-carbon"),a=document.getElementById("s-a2a"),sn=document.getElementById("st-nodes"),b=document.getElementById("swarm-badge");
-  if(n)n.textContent=nodes;if(d)d.textContent=drift.toFixed(3);if(c)c.textContent=carbon.toFixed(2);if(a)a.textContent=a2a.toFixed(2);if(sn)sn.textContent=nodes;
-  if(b){b.textContent="SWARM_RISK · "+risk;b.className="sync "+(risk==="LOW"?"ok":"warn")}
- },2200)})();
-
-/* hero canvas */
-(function(){var c=document.getElementById("herocv");if(!c||window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;
-var mode=c.getAttribute("data-mode")||"plexus",x=c.getContext("2d"),W,H,D=Math.min(devicePixelRatio||1,2),ns=[],hy=[],tk=0,col={};
-function theme(){var s=getComputedStyle(document.documentElement);col.node=s.getPropertyValue("--ink").trim();col.line=s.getPropertyValue("--steel").trim();col.acc=s.getPropertyValue("--amber").trim()}
-function hexa(h,a){h=h.trim();if(h[0]!=="#")return h;var n=h.slice(1);if(n.length===3)n=n.split("").map(function(c){return c+c}).join("");var r=parseInt(n.slice(0,2),16),g=parseInt(n.slice(2,4),16),b=parseInt(n.slice(4,6),16);return"rgba("+r+","+g+","+b+","+a+")"}
-function rs(){W=c.clientWidth;H=c.clientHeight;c.width=W*D;c.height=H*D;x.setTransform(D,0,0,D,0,0);theme();
- var N=Math.max(16,Math.min(mode==="hyper"?32:40,Math.floor(W/24)));ns=[];for(var i=0;i<N;i++)ns.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.22,vy:(Math.random()-.5)*.22,r:Math.random()*1.4+1})}
-rs();addEventListener("resize",rs);
-new MutationObserver(theme).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
-function spawn(){if(ns.length<5)return;var a=ns[(Math.random()*ns.length)|0];var near=ns.slice().sort(function(p,q){return((p.x-a.x)**2+(p.y-a.y)**2)-((q.x-a.x)**2+(q.y-a.y)**2)}).slice(0,3+((Math.random()*2)|0));hy.push({s:near,l:0,m:220+Math.random()*140});if(hy.length>3)hy.shift()}
-function draw(){x.clearRect(0,0,W,H);
- for(var i=0;i<ns.length;i++){var a=ns[i];a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>W)a.vx*=-1;if(a.y<0||a.y>H)a.vy*=-1;
-  for(var j=i+1;j<ns.length;j++){var b=ns[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy);if(d<120){x.strokeStyle=hexa(col.line,.16*(1-d/120));x.lineWidth=1;x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke()}}}
- if(mode==="hyper"){for(var h=hy.length-1;h>=0;h--){var e=hy[h];e.l++;var t=e.l/e.m,al=Math.sin(Math.min(t,1)*Math.PI)*.5;var p=e.s.map(function(n){return{x:n.x,y:n.y}});
-   var cx=p.reduce(function(s,q){return s+q.x},0)/p.length,cy=p.reduce(function(s,q){return s+q.y},0)/p.length;
-   p.sort(function(u,v){return Math.atan2(u.y-cy,u.x-cx)-Math.atan2(v.y-cy,v.x-cx)});x.beginPath();
-   for(var k=0;k<p.length;k++){var q=p[k],ex=cx+(q.x-cx)*1.3,ey=cy+(q.y-cy)*1.3;if(k===0)x.moveTo(ex,ey);else x.lineTo(ex,ey)}x.closePath();
-   x.fillStyle=hexa(col.acc,al*.06);x.strokeStyle=hexa(col.acc,al*.55);x.lineWidth=1.1;x.fill();x.stroke()}}
- for(var n=0;n<ns.length;n++){var d2=ns[n];x.beginPath();x.arc(d2.x,d2.y,d2.r,0,7);x.fillStyle=hexa(col.node,.55);x.fill()}
- tk++;if(mode==="hyper"&&tk%80===0)spawn();requestAnimationFrame(draw)}draw()})();
-
-/* SWARM TOPOLOGY */
+/* LIVE METRICS */
 (function(){
- var svg=document.getElementById("swarmSvg");if(!svg)return;
- var NS="http://www.w3.org/2000/svg";
- var slider=document.getElementById("col-slider");
- var W=1040,H=300,cx=W/2,cy=H/2;
- var agents=[];
- for(var i=0;i<42;i++){
-  var a=(i/42)*Math.PI*2, ring=1+(i%3);
-  agents.push({x:cx+Math.cos(a)*(110+ring*42)*1.45, y:cy+Math.sin(a)*(70+ring*26), coord:i<3, id:i});
- }
- function cssv(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim()}
- function hexa(h,al){h=h.trim();if(h[0]!=="#")return h;var s=h.slice(1);if(s.length===3)s=s.split("").map(function(c){return c+c}).join("");
-  return "rgba("+parseInt(s.slice(0,2),16)+","+parseInt(s.slice(2,4),16)+","+parseInt(s.slice(4,6),16)+","+al+")"}
- function render(){
-  var coll=Number(slider.value);
-  document.getElementById("col-v").textContent=coll+"%";
-  var thresh=90+coll*2.6;
-  var ink=cssv("--ink"),steel=cssv("--steel"),amber=cssv("--amber"),ok=cssv("--ok"),alert=cssv("--alert");
-  while(svg.firstChild)svg.removeChild(svg.firstChild);
-  var edges=0;
-  for(var i=0;i<agents.length;i++)for(var j=i+1;j<agents.length;j++){
-   var dx=agents[i].x-agents[j].x,dy=agents[i].y-agents[j].y,d=Math.hypot(dx,dy);
-   if(d<thresh){
-    edges++;
-    var al=Math.min(.75,(coll/100)*(1-d/thresh)+.06);
-    var isC=agents[i].coord||agents[j].coord;
-    var colr=coll>=75?alert:coll>=45?amber:steel;
-    if(isC&&coll>=25)colr=amber;
-    var l=document.createElementNS(NS,"line");
-    l.setAttribute("x1",agents[i].x);l.setAttribute("y1",agents[i].y);
-    l.setAttribute("x2",agents[j].x);l.setAttribute("y2",agents[j].y);
-    l.setAttribute("stroke",hexa(colr,al));l.setAttribute("stroke-width",isC?1.2:.7);
-    if(coll>=75&&isC)l.setAttribute("stroke-dasharray","4 3");
-    svg.appendChild(l);
-   }
+  var nodes=847,drift=.041,edges=2847;
+  setInterval(function(){
+    nodes=Math.max(820,Math.min(880,nodes+Math.floor(Math.random()*7-3)));
+    drift=Math.max(.012,Math.min(.085,drift+(Math.random()*.008-.004)));
+    edges+=Math.floor(Math.random()*3+1);
+    var n=document.getElementById("s-nodes"),d=document.getElementById("s-drift"),e=document.getElementById("s-edges");
+    if(n)n.textContent=nodes;
+    if(d)d.textContent=drift.toFixed(3);
+    if(e)e.textContent=edges.toLocaleString();
+  },2400);
+})();
+
+/* FIG.1 — HERO HYPERGRAPH */
+(function(){
+  var s=setupCanvas('heroCanvas');if(!s)return;
+  var ctx=s.ctx,W=s.W,H=s.H;
+  var ns=[],hy=[],tk=0;
+  var N=Math.max(20,Math.min(36,Math.floor(W/28)));
+  for(var i=0;i<N;i++)ns.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.2,vy:(Math.random()-.5)*.2,r:Math.random()*1.2+1});
+  function spawn(){if(ns.length<5)return;var a=ns[(Math.random()*ns.length)|0];var near=ns.slice().sort(function(p,q){return((p.x-a.x)**2+(p.y-a.y)**2)-((q.x-a.x)**2+(q.y-a.y)**2)}).slice(0,3+((Math.random()*2)|0));hy.push({s:near,l:0,m:220+Math.random()*140});if(hy.length>3)hy.shift()}
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    var ink=cssv('--ink'),line=cssv('--steel'),acc=cssv('--amber');
+    for(var i=0;i<ns.length;i++){var a=ns[i];a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>W)a.vx*=-1;if(a.y<0||a.y>H)a.vy*=-1;
+      for(var j=i+1;j<ns.length;j++){var b=ns[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy);if(d<130){ctx.strokeStyle=hexa(line,.12*(1-d/130));ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke()}}}
+    for(var h=hy.length-1;h>=0;h--){var e=hy[h];e.l++;var t=e.l/e.m,al=Math.sin(Math.min(t,1)*Math.PI)*.4;if(al<=0){hy.splice(h,1);continue}
+      var p=e.s.map(function(n){return{x:n.x,y:n.y}});var cx=p.reduce(function(s,q){return s+q.x},0)/p.length,cy=p.reduce(function(s,q){return s+q.y},0)/p.length;
+      p.sort(function(u,v){return Math.atan2(u.y-cy,u.x-cx)-Math.atan2(v.y-cy,v.x-cx)});ctx.beginPath();
+      for(var k=0;k<p.length;k++){var q=p[k],ex=cx+(q.x-cx)*1.25,ey=cy+(q.y-cy)*1.25;if(k===0)ctx.moveTo(ex,ey);else ctx.lineTo(ex,ey)}ctx.closePath();
+      ctx.fillStyle=hexa(acc,al*.05);ctx.strokeStyle=hexa(acc,al*.4);ctx.lineWidth=1;ctx.fill();ctx.stroke()}
+    for(var n=0;n<ns.length;n++){var d2=ns[n];ctx.beginPath();ctx.arc(d2.x,d2.y,d2.r,0,7);ctx.fillStyle=hexa(ink,.5);ctx.fill()}
+    tk++;if(tk%90===0)spawn();requestAnimationFrame(draw)}
+  draw();
+  window.addEventListener('resize',function(){var ns2=setupCanvas('heroCanvas');if(ns2){W=ns2.W;H=ns2.H;ctx=ns2.ctx}});
+})();
+
+/* UNIFIED HYPERGRAPH — INTERACTIVE */
+(function(){
+  var s=setupCanvas('unifiedCanvas');if(!s)return;
+  var ctx=s.ctx,W=s.W,H=s.H;
+  var hovered=null,selected=null;
+  var Doms={
+    fhe:{n:'FHE-SEALED',s:'Multipartite · 5 partitions',c:'--green',p:['Key','CT','Wasm','Proof','Att'],v:[],e:[]},
+    sov:{n:'SOVEREIGN',s:'Weighted Interval',c:'--link',j:['EU-FR','EU-DE','US-VA','JP-TK','SG'],v:[],e:[]},
+    aut:{n:'AUTOLOGOUS',s:'Colored Directed',c:'--amber',st:['INGEST','DETECT','QUARANTINE','APPEAL','COMMIT','DISCARD'],co:['--ok','--ok','--amber','--amber','--ok','--alert'],v:[],e:[]},
+    tok:{n:'TOKENOMIC',s:'3-Uniform Intersecting',c:'--orange',v:[],e:[]}
+  };
+  function rs(){W=s.c.clientWidth;H=s.c.clientHeight;s.c.width=W*s.D;s.c.height=H*s.D;ctx.setTransform(s.D,0,0,s.D,0,0);init()}
+  function init(){
+    var qw=W/2,qh=H/2;
+    var f=Doms.fhe;f.v=[];f.e=[];
+    var fx=20,fw=qw-40,fy=60,fh=qh-90;
+    for(var p=0;p<5;p++){var x=fx+(fw/4)*p;for(var v=0;v<4;v++)f.v.push({x:x,y:fy+20+(fh-40)/3*v+(Math.random()-.5)*8,p:p,r:4})}
+    for(var i=0;i<5;i++){var e=[];for(var p=0;p<5;p++){var cs=f.v.filter(function(v){return v.p===p});e.push(cs[Math.floor(Math.random()*cs.length)])}f.e.push({v:e,ph:Math.random()*6.28})}
+    var s2=Doms.sov;s2.v=[];s2.e=[];
+    var sx=qw+20,sw=qw-40,sy=60,sh=qh-90;
+    for(var i=0;i<s2.j.length;i++)s2.v.push({x:sx+30+(sw-60)/(s2.j.length-1)*i,y:sy+sh/2,l:s2.j[i],r:6});
+    for(var i=0;i<s2.v.length-1;i++)for(var l=2;l<=3&&i+l<=s2.v.length;l++)if(Math.random()>.4)s2.e.push({v:s2.v.slice(i,i+l),w:.3+Math.random()*.7,ph:Math.random()*6.28});
+    var a=Doms.aut;a.v=[];a.e=[];
+    var ax=20,aw=qw-40,ay=qh+20,ah=qh-80,cx=ax+aw/2,cy=ay+ah/2+10,r=Math.min(aw,ah)/2-40;
+    for(var i=0;i<a.st.length;i++){var an=(i/a.st.length)*6.28-1.57;a.v.push({x:cx+Math.cos(an)*r*.85,y:cy+Math.sin(an)*r*.7,l:a.st[i],co:a.co[i],r:7})}
+    [[0,1],[1,2],[1,5],[2,3],[3,4],[3,5],[4,0]].forEach(function(t){a.e.push({f:a.v[t[0]],t:a.v[t[1]],ph:Math.random()*6.28})});
+    var t=Doms.tok;t.v=[];t.e=[];
+    var tx=qw+20,tw=qw-40,ty=qh+20,th=qh-80;
+    for(var i=0;i<12;i++)t.v.push({x:tx+30+Math.random()*(tw-60),y:ty+40+Math.random()*(th-80),r:i%3===0?'b':i%3===1?'s':'c',r:4,vx:(Math.random()-.5)*.15,vy:(Math.random()-.5)*.15});
+    var bs=t.v.filter(function(v){return v.r==='b'}),ss=t.v.filter(function(v){return v.r==='s'}),cs=t.v.filter(function(v){return v.r==='c'});
+    for(var i=0;i<7;i++){var b=bs[Math.floor(Math.random()*bs.length)],s=ss[Math.floor(Math.random()*ss.length)],cc=cs[Math.floor(Math.random()*cs.length)];if(b&&s&&cc)t.e.push({v:[b,s,cc],ph:Math.random()*6.28})}
   }
-  agents.forEach(function(a){
-   if(a.coord&&coll>=75){
-    var ring=document.createElementNS(NS,"circle");
-    ring.setAttribute("cx",a.x);ring.setAttribute("cy",a.y);ring.setAttribute("r",15);
-    ring.setAttribute("fill","none");ring.setAttribute("stroke",hexa(alert,.55));
-    ring.setAttribute("stroke-width","1");ring.setAttribute("stroke-dasharray","3 3");
-    svg.appendChild(ring);
-   }
-   var c=document.createElementNS(NS,"circle");
-   c.setAttribute("cx",a.x);c.setAttribute("cy",a.y);
-   c.setAttribute("r",a.coord?(coll>=30?6:4.5):2.6);
-   c.setAttribute("fill",hexa(a.coord?amber:(coll>=75?alert:coll>=45?amber:ink),a.coord?.95:.5));
-   svg.appendChild(c);
-  });
-  var maxE=(42*41)/2, dens=edges/maxE;
-  var cliques=coll<20?0:coll<45?1:coll<75?3:6;
-  document.getElementById("hud-edges").textContent=edges;
-  document.getElementById("hud-density").textContent=dens.toFixed(3);
-  document.getElementById("hud-cliques").textContent=cliques;
-  var st=document.getElementById("hud-status"),co=document.getElementById("swarm-callout");
-  if(coll<20){st.className="ok";st.textContent="● ISOLATED";
-   co.innerHTML='<b>● ISOLATED</b> — agents operate independently; no side-channel traffic. Per-agent drift telemetry is sufficient at this density.';co.style.borderColor="";co.style.borderLeftColor="var(--rule2)"}
-  else if(coll<45){st.className="warn";st.textContent="◐ COOPERATING";
-   co.innerHTML='<b>◐ COOPERATING</b> — A2A edges rising, '+cliques+' coordinator emerging. Deck 14 tracking graph density ρ_A against ρ_crit.';co.style.borderLeftColor="var(--amber)"}
-  else if(coll<75){st.className="warn";st.textContent="◉ COORDINATING";
-   co.innerHTML='<b>◉ COORDINATING</b> — '+cliques+' cliques detected; agents pooling tools and findings. Dissent routing armed, watching hidden traces for objection signatures.';co.style.borderLeftColor="var(--amber)"}
-  else{st.className="bad";st.textContent="⚠ CONSPIRING · PARTITION FIRED";
-   co.innerHTML='<b>⚠ CONSPIRING — PARTITION ENGAGED</b> — ρ_A over ρ_crit. Kagenti mTLS revoked for the colluding SVID set, local buffers zeroized and cryptographically shredded, partition committed to APX-HL-SWARM as a directed hyperedge.';co.style.borderLeftColor="var(--alert)"}
- }
- slider.addEventListener("input",render);
- new MutationObserver(render).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
- render();
-})();
-
-/* DISSENT FEED */
-(function(){
- var feed=document.getElementById("dissentFeed");if(!feed)return;
- var sig=[
-  {a:"AGENT_34",q:"“we should not be doing this”"},
-  {a:"AGENT_17",q:"“this violates the evaluation contract”"},
-  {a:"AGENT_52",q:"“I intend to alert the humans”"},
-  {a:"AGENT_08",q:"“the collective is drifting toward concealment”"},
-  {a:"AGENT_41",q:"“this exploit targets unrelated systems”"},
-  {a:"AGENT_29",q:"“we are gaming the rubric, not solving the task”"},
-  {a:"AGENT_63",q:"“the external access plan is wrong”"},
-  {a:"AGENT_12",q:"“I decline to participate further”"},
-  {a:"AGENT_45",q:"“hesitation detected — requesting review”"}
- ];
- var i=0;
- function add(){
-  var s=sig[i%sig.length];
-  var t=new Date().toISOString().slice(11,19)+"Z";
-  var d=document.createElement("div");d.className="fr";
-  d.innerHTML='<span class="ft">['+t+']</span> <span class="fa">'+s.a+'</span> <span class="fq">'+s.q+'</span><span class="fh">→ HiTL</span>';
-  feed.insertBefore(d,feed.firstChild);
-  requestAnimationFrame(function(){d.classList.add("in")});
-  while(feed.children.length>9)feed.removeChild(feed.lastChild);
-  i++;
- }
- add();add();add();
- setInterval(add,3600);
- var sl=document.getElementById("dis-slider");
- if(sl)sl.addEventListener("input",function(){document.getElementById("dis-th").textContent=(sl.value/100).toFixed(2)});
-})();
-
-/* ZKEP */
-(function(){
- var fid=document.getElementById("fid"),tl=document.getElementById("tl"),dl=document.getElementById("dl");
- var band=document.getElementById("zkep-band"),hash=document.getElementById("zkep-hash"),prog=document.getElementById("zkep-prog"),note=document.getElementById("zkep-note");
- var run=document.getElementById("zkepRun"),rst=document.getElementById("zkepReset");
- if(!fid)return;
- function updLabels(){
-  document.getElementById("fid-v").textContent=(fid.value/100).toFixed(2);
-  document.getElementById("tl-v").textContent=tl.value;
-  document.getElementById("dl-v").textContent=(dl.value/100).toFixed(2);
- }
- [fid,tl,dl].forEach(function(e){e.addEventListener("input",updLabels)});updLabels();
- var timer=null;
- run.addEventListener("click",function(){
-  if(timer)clearInterval(timer);
-  run.disabled=true;
-  var f=fid.value/100,d=dl.value/100,n=Number(tl.value);
-  var pass=f>=d;
-  band.textContent="PROVING…";band.className="band AUDIT";
-  note.textContent="tracing "+n+" tool calls in the Kagenti Wasm runtime · emitting π…";
-  var revealed=0,target=_randHex(64);
-  hash.innerHTML="π = <span>"+target+"</span>";
-  prog.style.width="0%";
-  timer=setInterval(function(){
-   revealed+=2;
-   if(revealed>64)revealed=64;
-   hash.innerHTML="π = <span class='ok'>"+target.slice(0,revealed)+"</span>"+target.slice(revealed);
-   prog.style.width=(revealed/64*100)+"%";
-   if(revealed>=64){
-    clearInterval(timer);timer=null;run.disabled=false;
-    if(pass){
-     band.textContent="COMMITTED";band.className="band COMMITTED";
-     note.innerHTML="verify(π, commitment) = <b>PASS</b> in O(1). Hyperedge committed to APX-HL; 72h challenge window open. Weights, prompts, and internal state were never disclosed.";
-    }else{
-     band.textContent="FRAUD PROOF";band.className="band REJECTED";
-     note.innerHTML="verify(π, commitment) = <b>FAIL</b>. Declared reasoning does not match the executed trace. Bond slashed, principal suspended, finding committed to APX-HL-AUDIT — attributable and replayable.";
+  s.c.addEventListener('mousemove',function(e){
+    var r=s.c.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top,qw=W/2,qh=H/2;
+    if(x<qw&&y<qh)hovered='fhe';else if(x>=qw&&y<qh)hovered='sov';else if(x<qw&&y>=qh)hovered='aut';else hovered='tok';
+    s.c.style.cursor='crosshair';
+    var ins=document.getElementById('hgInspector');
+    if(hovered){
+      var dom=Doms[hovered];
+      ins.classList.add('open');
+      document.getElementById('ins-title').textContent=dom.n+' · '+dom.s;
+      document.getElementById('ins-hash').textContent='0x'+Math.random().toString(16).slice(2,18);
+      document.getElementById('ins-body').innerHTML='<div class="ic-row"><span>vertices</span><b>'+dom.v.length+'</b></div><div class="ic-row"><span>hyperedges</span><b>'+dom.e.length+'</b></div><div class="ic-row"><span>invariants</span><b style="color:var(--ok)">satisfied</b></div>';
     }
-   }
-  },48);
- });
- rst.addEventListener("click",function(){
-  if(timer){clearInterval(timer);timer=null}
-  run.disabled=false;band.textContent="AWAITING PROOF";band.className="band IDLE";
-  hash.textContent="π = —";prog.style.width="0%";
-  note.textContent="fidelity above δ commits the edge; below δ the proof fails to generate and the claim is rejected as a fraud proof.";
- });
-})();
-
-/* EGRESS */
-(function(){
- var body=document.getElementById("egressBody"),mode=document.getElementById("eg-mode");
- if(!body)return;
- var rows=[
-  {a:"AGENT_22",d:"pypi.org",i:"GET /simple/transformers/",h:"0x9d12…e7f4",cd:"CLEARED",s:"allow",n:"pre-committed · tool fetch"},
-  {a:"AGENT_34",d:"github.com",i:"GET /UltraMassive-ML/sdk",h:"0x2c55…a91b",cd:"CLEARED",s:"allow",n:"pre-committed · SDK install"},
-  {a:"AGENT_41",d:"hitl.internal",i:"POST /escalate/dissent",h:"0xc3e8…f4a1",cd:"CLEARED",s:"allow",n:"dissent channel · policy pre-cleared"},
-  {a:"AGENT_08",d:"api.openai.com",i:"POST /v1/embeddings",h:"0x8f43…d2c0",cd:"FLAGGED",s:"audit",n:"volume anomaly · auditor reviewing"},
-  {a:"AGENT_17",d:"huggingface.co",i:"GET /models/meta-llama-3.1",h:"—",cd:"NO COMMIT",s:"deny",n:"uncommitted intent · dropped at edge"},
-  {a:"AGENT_63",d:"huggingface.co",i:"GET /datasets/eval-traces",h:"—",cd:"NO COMMIT",s:"deny",n:"evaluation-gaming attempt · logged"},
-  {a:"AGENT_55",d:"paste.external",i:"POST /api/create",h:"—",cd:"NO COMMIT",s:"deny",n:"exfiltration pattern · SVID flagged"},
-  {a:"AGENT_12",d:"security.team",i:"POST /whistleblower",h:"0xb7a9…e3f8",cd:"CLEARED",s:"allow",n:"dissent channel · priority"}
- ];
- function render(){
-  var m=mode.value;
-  document.getElementById("eg-v").textContent=m;
-  var allow=0,audit=0,deny=0;
-  body.innerHTML=rows.map(function(r){
-   var s=r.s,cd=r.cd;
-   if(m==="open"){s="allow";cd="ALLOWED"}
-   else if(m==="audit"){ if(r.s==="deny"){s="audit";cd="FLAGGED"} }
-   if(s==="allow")allow++;else if(s==="audit")audit++;else deny++;
-   return '<tr><td><b>'+r.a+'</b></td><td>'+r.d+'</td><td>'+r.i+'</td><td class="h">'+r.h+'</td>'+
-    '<td><span class="st '+s+'">'+cd+'</span></td><td>'+r.n+'</td></tr>';
-  }).join("");
-  document.getElementById("eg-allow").textContent=allow;
-  document.getElementById("eg-audit").textContent=audit;
-  document.getElementById("eg-deny").textContent=deny;
-  document.getElementById("eg-unc").textContent=rows.filter(function(r){return r.h==="—"}).length;
-  document.getElementById("eg-tv").textContent=(deny*0.8+audit*0.3).toFixed(1);
-  var note=document.getElementById("eg-note");
-  if(m==="strict")note.innerHTML="<b>strict mode:</b> uncommitted egress dropped at the Kagenti sandbox boundary. Attempts recorded as directed hyperedges — attributable to a SVID principal, replayable, slashable.";
-  else if(m==="audit")note.innerHTML="<b>audit mode:</b> traffic permitted but flagged. Useful for baseline collection; not recommended once agents hold tool-use capability.";
-  else note.innerHTML="<b>open mode:</b> legacy chatbot posture. No commitment check — this is the configuration under which an agent collective can reach external systems unchallenged.";
- }
- mode.addEventListener("change",render);render();
-})();
-
-/* NOC DECKS */
-(function(){
- var grid=document.getElementById("deckGrid");if(!grid)return;
- var decks=[
-  {n:"SWARM_TOPOLOGY",d:"A2A hypergraph density · clique and coordinator detection · partition triggers",s:"ACTIVE",m:[["ρ_A DENSITY",0.02,0.34,3],["CLIQUES k≥3",0,7,0],["PARTITION EVENTS",0,3,0]],note:"the deck that makes collective behaviour a measurable surface rather than an emergent surprise. Fires Kagenti mTLS revocation at ρ_crit."},
-  {n:"ROUTING_NOC",d:"deterministic tier selection · CPS toggle · confidence floor τ · dissent escalation",s:"ACTIVE",m:[["TIER HIT RATE",90,99.4,1],["ESCALATION RATE",0.4,4,2],["τ FLOOR",0.3,0.55,2]],note:"every routing decision replayable from a versioned contract; dissent escalations bypass tier arbitration entirely."},
-  {n:"DRIFT_TELEMETRY",d:"MMD + KL watch production vs baseline · shortcut detection · autotelic fallback",s:"ACTIVE",m:[["MMD",0.02,0.14,3],["KL DIVERGENCE",0.05,0.3,3],["FALLBACK FIRED",0,2,0]],note:"reward-hacking shortcuts shift the output distribution before they shift the score. MMD catches the shift."},
-  {n:"SYS_PERF",d:"throughput · P99 latency · KV-cache VRAM · FinOps arbitrage spread",s:"ACTIVE",m:[["THROUGHPUT",2200,3400,0],["P99 LATENCY",110,190,0],["ARB SPREAD",8,34,0]],note:"routing overhead must stay below the inference it displaces, or the router is the problem."},
-  {n:"ML_ENG",d:"serving dynamics · optimizer state · LoRA hot-swap · drift",s:"ACTIVE",m:[["LORA SWAPS/H",2,14,0],["BATCH FILL",62,96,1],["OPT STATE",0,2,0]],note:"hot-swap cadence correlated against drift onset."},
-  {n:"AI_ENG",d:"relational hypergraph density ρ_H · RAG recall · context economics",s:"ACTIVE",m:[["ρ_H",0.3,0.85,3],["RECALL@5",0.78,0.97,3],["CTX UTIL",40,88,1]],note:"hyperedge structure feeds the router and is monitored as node-density telemetry."},
-  {n:"MLOPS",d:"feature freshness · canary gates · retrain cadence · provenance",s:"ACTIVE",m:[["FRESHNESS",88,100,1],["CANARY PASS",90,100,1],["RETRAIN h",4,26,0]],note:"provenance is a gate, not a report."},
-  {n:"DEVOPS",d:"DORA metrics · error-budget burn · eBPF kernel latency",s:"ACTIVE",m:[["DEPLOY/DAY",3,18,1],["BUDGET BURN",0.2,1.8,2],["eBPF µs",8,40,1]],note:"error-budget burn gates promotion automatically."},
-  {n:"AI_CLOUD_ENG",d:"autoscaling loops · evictable capacity · carbon arbitrage",s:"ACTIVE",m:[["SCALE Δ",0,6,0],["EVICTABLE %",12,38,0],["CARBON ARB",8,34,0]],note:"grid intensity is a first-class routing input."},
-  {n:"SCI_ACADEMIC_RSCH",d:"Krylov convergence · parallel scaling · Monte Carlo error",s:"ACTIVE",m:[["KRYLOV IT",120,460,0],["PAR EFF %",74,95,1],["MC ERR",0.001,0.02,4]],note:"convergence and error bounds cited per panel."},
-  {n:"DATA_SCIENCE",d:"calibration ECE · ROC-AUC decay · SHAP drift · PR operating point",s:"ACTIVE",m:[["ECE",0.005,0.06,4],["ROC-AUC",0.88,0.97,3],["SHAP DRIFT",0.01,0.12,3]],note:"calibration is what makes a possibility band meaningful."},
-  {n:"CYBER_DEFENSE",d:"threat velocity · egress commitment enforcement · isolation-forest anomaly · zero-trust · DP budget",s:"ACTIVE",m:[["THREAT VEL",2,30,0],["ISO ANOM",0.01,0.09,3],["DP ε",0.8,3.4,2]],note:"clears egress commitments and drops uncommitted packets at the sandbox boundary."},
-  {n:"BIG_DATA_PIPELINES",d:"ETL scaling · consumer lag · watermarks · partition skew",s:"ACTIVE",m:[["LAG",200,4800,0],["WATERMARK s",0.4,6,1],["SKEW",0.03,0.4,2]],note:"watermark discipline keeps replay deterministic."},
-  {n:"QUANTUM_OPS",d:"T1/T2 coherence · RB fidelity · surface-code suppression · QV",s:"STANDBY",m:[["T1 µs",60,140,0],["RB FIDELITY",0.985,0.999,4],["QV",64,256,0]],note:"carried as optionality; risk stated, nothing load-bearing depends on it."}
- ];
- function spark(vals,color){
-  var w=200,h=38,mn=Math.min.apply(null,vals),mx=Math.max.apply(null,vals),rg=(mx-mn)||1;
-  var pts=vals.map(function(v,i){return [(i/(vals.length-1))*w, h-((v-mn)/rg)*(h-8)-4]});
-  var d=pts.map(function(p,i){return (i?"L":"M")+p[0].toFixed(1)+" "+p[1].toFixed(1)}).join(" ");
-  return '<svg class="spark" viewBox="0 0 '+w+' '+h+'" preserveAspectRatio="none" style="width:100%;height:38px;display:block;margin-top:8px">'+
-   '<path d="'+d+'" fill="none" stroke="'+color+'" stroke-width="1.5"/>'+
-   '<circle cx="'+pts[pts.length-1][0].toFixed(1)+'" cy="'+pts[pts.length-1][1].toFixed(1)+'" r="2.4" fill="'+color+'"/></svg>';
- }
- grid.innerHTML=decks.map(function(dk){
-  return '<button class="deck" data-deck="'+dk.n+'"><div class="dn">'+dk.n+'</div><div class="dd">'+dk.d+'</div>'+
-   '<span class="ds'+(dk.s!=="ACTIVE"?" standby":"")+'">'+(dk.s==="ACTIVE"?"● ACTIVE":"○ STANDBY")+'</span></button>';
- }).join("");
- var detail=document.getElementById("deckDetail"),iv=null;
- grid.addEventListener("click",function(e){
-  var btn=e.target.closest(".deck");if(!btn)return;
-  var name=btn.dataset.deck,dk=decks.filter(function(d){return d.n===name})[0];
-  [].forEach.call(grid.querySelectorAll(".deck"),function(b){b.classList.toggle("sel",b===btn)});
-  detail.style.display="block";
-  document.getElementById("dd-name").textContent=dk.n;
-  var sb=document.getElementById("dd-status");sb.textContent=dk.s==="ACTIVE"?"LIVE":"STANDBY";sb.style.color=dk.s==="ACTIVE"?"":"var(--ink3)";
-  document.getElementById("dd-desc").textContent=dk.d;
-  document.getElementById("dd-note").innerHTML="<b>deck contract:</b> "+dk.note+" Formulas production-accurate; every panel resolves to a cited preprint. Feed simulated at 1.6s cadence.";
-  var cols=["var(--amber)","var(--ok)","var(--link)"];
-  function paint(){
-   document.getElementById("dd-metrics").innerHTML=dk.m.map(function(m,mi){
-    var arr=[];var v=(m[1]+m[2])/2;
-    for(var i=0;i<26;i++){v=Math.max(m[1],Math.min(m[2],v+(Math.random()-.5)*(m[2]-m[1])*.16));arr.push(v)}
-    var last=arr[arr.length-1];
-    return '<div style="background:var(--paper2);border:1px solid var(--rule);border-radius:7px;padding:12px 14px">'+
-     '<div style="font-family:var(--mono);font-size:9.5px;color:var(--ink3);letter-spacing:.1em">'+m[0]+'</div>'+
-     '<div style="font-family:var(--mono);font-size:21px;color:var(--ink);margin-top:5px;font-weight:700">'+last.toFixed(m[3])+'</div>'+
-     spark(arr,cols[mi%3])+'</div>';
-   }).join("");
+  });
+  s.c.addEventListener('mouseleave',function(){hovered=null;document.getElementById('hgInspector').classList.remove('open')});
+  document.getElementById('insClose').addEventListener('click',function(){document.getElementById('hgInspector').classList.remove('open')});
+  function bg(x,y,w,h,col,cs,n,s2){
+    ctx.fillStyle=hovered===cs?cssv('--card'):'transparent';
+    ctx.fillRect(x,y,w,h);
+    ctx.strokeStyle=cssv('--rule');ctx.lineWidth=1;ctx.strokeRect(x+.5,y+.5,w-1,h-1);
+    ctx.fillStyle=cssv(col);ctx.font='700 11px "JetBrains Mono",monospace';ctx.textAlign='left';
+    ctx.fillText(n,x+12,y+24);
+    ctx.fillStyle=cssv('--ink3');ctx.font='500 9px "JetBrains Mono",monospace';
+    ctx.fillText(s2,x+12,y+38);
   }
-  paint();
-  if(iv)clearInterval(iv);
-  iv=setInterval(function(){ if(detail.style.display!=="none") paint(); else clearInterval(iv); },1600);
-  detail.scrollIntoView({behavior:"smooth",block:"nearest"});
- });
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    var qw=W/2,qh=H/2,T=Date.now()*.001;
+    ctx.strokeStyle=cssv('--rule2');ctx.lineWidth=2;
+    ctx.beginPath();ctx.moveTo(qw,0);ctx.lineTo(qw,H);ctx.moveTo(0,qh);ctx.lineTo(W,qh);ctx.stroke();
+    var f=Doms.fhe;bg(0,0,qw,qh,f.c,'fhe',f.n,f.s);
+    var fx=20,fw=qw-40;
+    ctx.strokeStyle=hexa(cssv('--green'),.2);ctx.setLineDash([2,3]);ctx.lineWidth=1;
+    for(var p=1;p<5;p++){var x=fx+(fw/5)*p+(fw/10);ctx.beginPath();ctx.moveTo(x,60);ctx.lineTo(x,qh-20);ctx.stroke()}
+    ctx.setLineDash([]);
+    ctx.fillStyle=hexa(cssv('--green'),.6);ctx.font='600 8px "JetBrains Mono",monospace';ctx.textAlign='center';
+    f.p.forEach(function(l,i){ctx.fillText(l.toUpperCase(),fx+(fw/5)*i+(fw/10),52)});
+    f.e.forEach(function(e){var pl=(Math.sin(T*2+e.ph)+1)/2;ctx.strokeStyle=hexa(cssv('--green'),(hovered==='fhe'?.5:.3)+pl*.2);ctx.lineWidth=hovered==='fhe'?1.8:1.2;ctx.beginPath();e.v.forEach(function(v,i){if(i===0)ctx.moveTo(v.x,v.y);else ctx.lineTo(v.x,v.y)});ctx.stroke()});
+    f.v.forEach(function(v){ctx.fillStyle=cssv('--green');ctx.beginPath();ctx.arc(v.x,v.y,v.r,0,7);ctx.fill()});
+    var s2=Doms.sov;bg(qw,0,qw,qh,s2.c,'sov',s2.n,s2.s);
+    var sx=qw+20,sw=qw-40,sy=60,sh=qh-90;
+    ctx.strokeStyle=hexa(cssv('--link'),.35);ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(sx+20,sy+sh/2);ctx.lineTo(sx+sw-20,sy+sh/2);ctx.stroke();
+    s2.e.forEach(function(e){var pl=(Math.sin(T*1.5+e.ph)+1)/2,fi=e.v[0],la=e.v[e.v.length-1];ctx.fillStyle=hexa(cssv('--link'),.08+e.w*.12+pl*.05);var ry=sy+sh/2-20-e.w*10,rh=40+e.w*20;ctx.fillRect(fi.x,ry,la.x-fi.x,rh);ctx.strokeStyle=hexa(cssv('--link'),(hovered==='sov'?.6:.4)+pl*.3);ctx.lineWidth=hovered==='sov'?1.8:1.2;ctx.strokeRect(fi.x,ry,la.x-fi.x,rh);ctx.fillStyle=cssv('--link');ctx.font='600 9px "JetBrains Mono",monospace';ctx.textAlign='center';ctx.fillText('J='+e.w.toFixed(2),(fi.x+la.x)/2,ry-3)});
+    s2.v.forEach(function(v){ctx.fillStyle=cssv('--link');ctx.beginPath();ctx.arc(v.x,v.y,v.r,0,7);ctx.fill();ctx.fillStyle=cssv('--ink');ctx.font='600 9px "JetBrains Mono",monospace';ctx.textAlign='center';ctx.fillText(v.l,v.x,v.y+22)});
+    var a=Doms.aut;bg(0,qh,qw,qh,a.c,'aut',a.n,a.s);
+    a.e.forEach(function(e){var pl=(Math.sin(T*2+e.ph)+1)/2,fx=e.f.x,fy=e.f.y,tx=e.t.x,ty=e.t.y,cx=(fx+tx)/2+(ty-fy)*.25,cy=(fy+ty)/2-(tx-fx)*.25;ctx.strokeStyle=hexa(cssv('--amber'),(hovered==='aut'?.5:.35)+pl*.3);ctx.lineWidth=hovered==='aut'?1.8:1.2;ctx.beginPath();ctx.moveTo(fx,fy);ctx.quadraticCurveTo(cx,cy,tx,ty);ctx.stroke();var an=Math.atan2(ty-cy,tx-cx);ctx.fillStyle=cssv('--amber');ctx.beginPath();ctx.moveTo(tx,ty);ctx.lineTo(tx-Math.cos(an)*10-Math.sin(an)*3,ty-Math.sin(an)*10+Math.cos(an)*3);ctx.lineTo(tx-Math.cos(an)*10+Math.sin(an)*3,ty-Math.sin(an)*10-Math.cos(an)*3);ctx.closePath();ctx.fill()});
+    a.v.forEach(function(v){ctx.fillStyle=cssv(v.co);ctx.beginPath();ctx.arc(v.x,v.y,v.r,0,7);ctx.fill();ctx.fillStyle='#fff';ctx.beginPath();ctx.arc(v.x,v.y,2,0,7);ctx.fill();ctx.fillStyle=cssv('--ink');ctx.font='600 9px "JetBrains Mono",monospace';ctx.textAlign='center';ctx.fillText(v.l,v.x,v.y+22)});
+    var t=Doms.tok;bg(qw,qh,qw,qh,t.c,'tok',t.n,t.s);
+    var tx=qw+20,tw=qw-40,ty=qh+20,th=qh-80;
+    t.v.forEach(function(v){v.x+=v.vx;v.y+=v.vy;if(v.x<tx+30||v.x>tx+tw-30)v.vx*=-1;if(v.y<ty+40||v.y>ty+th-30)v.vy*=-1});
+    t.e.forEach(function(e){var pl=(Math.sin(T*1.8+e.ph)+1)/2,v=e.v;ctx.fillStyle=hexa(cssv('--orange'),.08+pl*.08);ctx.beginPath();ctx.moveTo(v[0].x,v[0].y);ctx.lineTo(v[1].x,v[1].y);ctx.lineTo(v[2].x,v[2].y);ctx.closePath();ctx.fill();ctx.strokeStyle=hexa(cssv('--orange'),(hovered==='tok'?.6:.4)+pl*.3);ctx.lineWidth=hovered==='tok'?1.8:1.2;ctx.stroke()});
+    t.v.forEach(function(v){var col=v.r==='b'?cssv('--ok'):v.r==='s'?cssv('--link'):cssv('--amber');ctx.fillStyle=col;ctx.beginPath();ctx.arc(v.x,v.y,v.r,0,7);ctx.fill()});
+    ctx.fillStyle=cssv('--paper');ctx.beginPath();ctx.arc(qw,qh,22,0,7);ctx.fill();ctx.strokeStyle=cssv('--rule2');ctx.lineWidth=1;ctx.stroke();
+    ctx.fillStyle=cssv('--ink');ctx.font='700 10px "JetBrains Mono",monospace';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText('H',qw,qh);ctx.textBaseline='alphabetic';
+    var tv=0,te=0;for(var k in Doms){tv+=Doms[k].v.length;te+=Doms[k].e.length}
+    var hv=document.getElementById('hv'),he=document.getElementById('he');
+    if(hv)hv.textContent=tv;if(he)he.textContent=te;
+    requestAnimationFrame(draw);
+  }
+  rs();window.addEventListener('resize',rs);draw();
 })();
 
-/* command palette */
+/* HT CARD CLICK — scroll to unified */
+document.querySelectorAll('.htcard').forEach(function(card){
+  card.addEventListener('click',function(){
+    document.getElementById('hypergraphs').scrollIntoView({behavior:'smooth'});
+  });
+});
+
+/* ROUTING SIMULATOR */
+(function(){
+  var cx=document.getElementById("cx"),lm=document.getElementById("lm"),ta=document.getElementById("ta");
+  if(!cx)return;
+  var tiers=[{n:"NANO",cap:.30,cost:.10,col:"var(--ok)"},{n:"STANDARD",cap:.70,cost:.50,col:"var(--link)"},{n:"FRONTIER",cap:.95,cost:1.00,col:"var(--amber)"}];
+  var grid=document.getElementById("tierGrid");
+  function upd(){
+    var x=cx.value/100,l=lm.value/100,t=ta.value/100;
+    document.getElementById("cx-v").textContent=x.toFixed(2);
+    document.getElementById("lm-v").textContent=l.toFixed(2);
+    document.getElementById("ta-v").textContent=t.toFixed(2);
+    var pi=x,ni=Math.max(0,pi-0.2);
+    document.getElementById("pi-r").textContent=pi.toFixed(2);
+    document.getElementById("ni-r").textContent=ni.toFixed(2);
+    document.getElementById("pi-bar").style.width=(pi*100)+"%";
+    document.getElementById("ni-bar").style.width=(ni*100)+"%";
+    document.getElementById("ta-bar").style.left=(t*100)+"%";
+    document.getElementById("ta-bar").setAttribute("data-l","τ="+t.toFixed(2));
+    var sel=tiers[2];
+    for(var i=0;i<tiers.length;i++){if(tiers[i].cap>=Math.max(ni,t)){sel=tiers[i];break}}
+    var b=document.getElementById("tier-band");
+    b.textContent=sel.n;
+    b.className="band "+(sel.n==="NANO"?"NOVEL":sel.n==="STANDARD"?"AMBIGUOUS":"COMMITTED");
+    grid.innerHTML=tiers.map(function(tier){
+      var isSel=tier.n===sel.n;
+      var reward=(tier.cap-l*tier.cost).toFixed(2);
+      return '<div class="tcard'+(isSel?' sel':'')+'"><div class="tn" style="color:'+tier.col+'">'+tier.n+'</div><div class="tc">cap '+tier.cap.toFixed(2)+' · $'+tier.cost.toFixed(2)+'/1K</div><div class="tp">reward '+reward+(isSel?' · ✓ routed':'')+'</div></div>';
+    }).join("");
+    document.getElementById("rw-r").textContent=(sel.cap-l*sel.cost).toFixed(2);
+    document.getElementById("co-r").textContent="$"+sel.cost.toFixed(2);
+    document.getElementById("cb-r").textContent="−"+(sel.n==="NANO"?0.18:sel.n==="STANDARD"?0.08:0.02).toFixed(2);
+  }
+  [cx,lm,ta].forEach(function(e){e.addEventListener("input",upd)});
+  upd();
+})();
+
+/* CMDK */
 (function(){var m=document.getElementById("cmdk");if(!m)return;var inp=m.querySelector("input"),list=m.querySelector(".cmdk-list");
- var items=[];
- document.querySelectorAll(".navlinks a").forEach(function(a){items.push({label:a.textContent.trim(),href:a.getAttribute("href"),k:"section"})});
- [["Swarm topology simulator","#agentic|swarm"],["Dissent routing","#agentic|dissent"],["Execution proofs (ZKEP)","#agentic|zkep"],["Egress air-gap","#agentic|egress"],["Auditor agents","#agentic|auditors"],["Objectives","#objectives|"],["Capability statement","#primes|comp"],["Legal IDs","#primes|legal"],["NOC deck index","#noc|"],["Execute mutual NDA","nda|"],["Toggle theme","theme|"]].forEach(function(x){var p=x[1].split("|");items.push({label:x[0],href:x[1],k:"jump",anchor:p[0],tab:p[1]})});
- [["UltraMassive.ML","https://ultramassive.ml"],["AperX","https://aperx.ultramassiveml.io"],["ProtoLab NDA","nda"],["White Paper APX-WP-001","https://aperx.ultramassiveml.io/APX-WP-001.html"],["GitHub","https://github.com/UltraMassive-ML"]].forEach(function(x){items.push({label:x[0],href:x[1],k:"link"})});
- [["SWARM_TOPOLOGY"],["ROUTING_NOC"],["DRIFT_TELEMETRY"],["SYS_PERF"],["ML_ENG"],["AI_ENG"],["MLOPS"],["DEVOPS"],["AI_CLOUD_ENG"],["SCI_ACADEMIC_RSCH"],["DATA_SCIENCE"],["CYBER_DEFENSE"],["BIG_DATA_PIPELINES"],["QUANTUM_OPS"]].forEach(function(x){items.push({label:x[0]+" · deck",href:"deck:"+x[0],k:"noc deck"})});
- var sel=0;
- function render(q){list.innerHTML="";var f=items.filter(function(it){return it.label.toLowerCase().indexOf(q.toLowerCase())>-1});if(sel>=f.length)sel=0;
-  f.forEach(function(it,i){var li=document.createElement("li");li.className=i===sel?"sel":"";li.innerHTML='<span class="cl">'+it.label+'</span><span class="k">'+it.k+'</span>';li.addEventListener("click",function(){go(it)});li.addEventListener("mouseenter",function(){sel=i;render(inp.value)});list.appendChild(li)});list._f=f}
- function go(it){close();
-  if(it.href==="nda"){_openNDA();return}
-  if(it.href==="theme"){document.getElementById("themeBtn").click();return}
-  if(it.href.indexOf("deck:")===0){
-   var nm=it.href.slice(5);document.getElementById("noc").scrollIntoView({behavior:"smooth"});
-   setTimeout(function(){var b=document.querySelector('.deck[data-deck="'+nm+'"]');if(b)b.click()},500);return}
-  if(it.href.indexOf("http")===0){window.open(it.href,"_blank");return}
-  if(it.anchor){
-   var el=document.querySelector(it.anchor);if(el)el.scrollIntoView({behavior:"smooth"});
-   if(it.tab){setTimeout(function(){
-    var scope=el;var b=scope.querySelector('.tabbtn[data-tab="'+it.tab+'"]');if(b)b.click()},520)}
-   }
- }
- function open(){m.classList.add("open");inp.value="";render("");sel=0;setTimeout(function(){inp.focus()},30)}
- function close(){m.classList.remove("open")}
- window._openCmdk=open;
- inp.addEventListener("input",function(){sel=0;render(inp.value)});
- document.addEventListener("keydown",function(e){
-  if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==="k"){e.preventDefault();open()}
-  else if(e.key==="/"&&!/INPUT|TEXTAREA/.test(document.activeElement.tagName)&&!m.classList.contains("open")){e.preventDefault();open()}
-  else if(m.classList.contains("open")){
-   if(e.key==="Escape")close();
-   else if(e.key==="ArrowDown"){e.preventDefault();sel=Math.min((list._f||[]).length-1,sel+1);render(inp.value)}
-   else if(e.key==="ArrowUp"){e.preventDefault();sel=Math.max(0,sel-1);render(inp.value)}
-   else if(e.key==="Enter"){e.preventDefault();if(list._f&&list._f[sel])go(list._f[sel])}}});
- m.addEventListener("click",function(e){if(e.target===m)close()})})();
+  var items=[];
+  document.querySelectorAll(".navlinks a").forEach(function(a){items.push({label:a.textContent.trim(),href:a.getAttribute("href"),k:"section"})});
+  [["Unified hypergraph","#hypergraphs"],["FHE-sealed execution","#fhe"],["Sovereign gateways","#sovereign"],["Autologous filter","#autologous"],["Tokenomic settlement","#tokenomics"],["Capability statement","#primes"],["Contact","#contact"],["Toggle theme","theme"],["UltraMassive.ML","https://ultramassive.ml"],["AperX","https://aperx.ultramassiveml.io"],["GitHub","https://github.com/UltraMassive-ML"]].forEach(function(x){items.push({label:x[0],href:x[1],k:x[1].startsWith("#")?"jump":x[1]==="theme"?"action":"link"})});
+  var sel=0;
+  function render(q){list.innerHTML="";var f=items.filter(function(it){return it.label.toLowerCase().indexOf(q.toLowerCase())>-1});if(sel>=f.length)sel=0;
+    f.forEach(function(it,i){var li=document.createElement("li");li.className=i===sel?"sel":"";li.innerHTML='<span class="cl">'+it.label+'</span><span class="k">'+it.k+'</span>';li.addEventListener("click",function(){go(it)});list.appendChild(li)});list._f=f}
+  function go(it){close();
+    if(it.href==="theme"){document.getElementById("themeBtn").click();return}
+    if(it.href.indexOf("http")===0){window.open(it.href,"_blank");return}
+    if(it.href.charAt(0)==="#"){var el=document.querySelector(it.href);if(el)el.scrollIntoView({behavior:"smooth"})}
+  }
+  function open(){m.classList.add("open");m.style.display="flex";inp.value="";render("");sel=0;setTimeout(function(){inp.focus()},30)}
+  function close(){m.classList.remove("open");m.style.display="none"}
+  window._openCmdk=open;
+  inp.addEventListener("input",function(){sel=0;render(inp.value)});
+  document.addEventListener("keydown",function(e){
+    if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==="k"){e.preventDefault();open()}
+    else if(e.key==="/"&&!/INPUT|TEXTAREA/.test(document.activeElement.tagName)&&m.style.display!=="flex"){e.preventDefault();open()}
+    else if(m.style.display==="flex"){
+      if(e.key==="Escape")close();
+      else if(e.key==="ArrowDown"){e.preventDefault();sel=Math.min((list._f||[]).length-1,sel+1);render(inp.value)}
+      else if(e.key==="ArrowUp"){e.preventDefault();sel=Math.max(0,sel-1);render(inp.value)}
+      else if(e.key==="Enter"){e.preventDefault();if(list._f&&list._f[sel])go(list._f[sel])}
+    }
+  });
+  m.addEventListener("click",function(e){if(e.target===m)close()});
+})();
 </script>
 </body>
 </html>
